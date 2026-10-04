@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import EmergencyBanner from './components/EmergencyBanner';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -45,7 +44,6 @@ export default function App() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <ScrollToTop />
-      <EmergencyBanner />
       <Header />
       <main style={{ flex: 1 }}>
         <Routes>
