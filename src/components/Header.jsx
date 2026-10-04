@@ -89,27 +89,23 @@ export default function Header() {
         >
           <div style={{
             position: 'relative',
-            width: '40px',
-            height: '40px',
-            backgroundColor: '#eff6ff',
-            border: '1px solid #bfdbfe',
-            borderRadius: '8px',
+            width: '42px',
+            height: '42px',
+            backgroundColor: '#ffffff',
+            border: '1px solid var(--border-subtle)',
+            borderRadius: '10px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 2px 6px rgba(0, 98, 255, 0.12)'
+            boxShadow: '0 2px 8px rgba(0, 98, 255, 0.08)',
+            padding: '4px'
           }}>
-            <Shield size={22} color="#0062ff" strokeWidth={2.2} />
-            <div style={{
-              position: 'absolute',
-              top: '4px',
-              right: '4px',
-              width: '6px',
-              height: '6px',
-              borderRadius: '50%',
-              backgroundColor: '#10b981',
-              boxShadow: '0 0 4px #10b981'
-            }} />
+            <img
+              src="/logo-brand.png"
+              alt="EminSecurity Logo"
+              style={{ width: '35px', height: '35px', objectFit: 'contain', display: 'block' }}
+            />
+
           </div>
           <div>
             <div style={{

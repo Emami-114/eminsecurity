@@ -43,16 +43,32 @@ export default function Footer() {
               gap: '0.75rem',
               marginBottom: '0.4rem'
             }}>
-              <Shield size={22} color="#38bdf8" />
+              <div style={{
+                width: '38px',
+                height: '38px',
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '3px'
+              }}>
+                <img 
+                  src="/logo-dark-mode.png" 
+                  alt="EminSecurity Logo" 
+                  style={{ width: '28px', height: '28px', objectFit: 'contain', display: 'block' }} 
+                />
+              </div>
               <span style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
                 fontSize: '1.3rem',
                 color: '#fff'
               }}>
-                Emin<span style={{ color: '#38bdf8' }}>Security</span>
+                Emin<span style={{ color: '#0062ff' }}>Security</span>
               </span>
-              <span className="tech-badge" style={{ backgroundColor: 'rgba(56, 189, 248, 0.15)', borderColor: 'rgba(56, 189, 248, 0.3)', color: '#38bdf8' }}>
+              <span className="tech-badge" style={{ backgroundColor: 'rgba(0, 98, 255, 0.12)', borderColor: 'rgba(0, 98, 255, 0.3)', color: '#60a5fa' }}>
                 MADE IN THÜRINGEN
               </span>
             </div>
