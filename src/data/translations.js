@@ -2,8 +2,8 @@ export const translations = {
   de: {
     nav: {
       services: "Leistungen",
-      compliance: "Compliance & Regulierung",
-      magazine: "Magazin & News",
+      compliance: "Compliance",
+      magazine: "Magazin",
       locations: "Standorte",
       about: "Über uns",
       contact: "Kontakt",
@@ -14,7 +14,7 @@ export const translations = {
     emergencyBanner: {
       activeAlert: "AKUTER VORFALL?",
       text: "24/7 Incident Response Hotline für Thüringen:",
-      phone: "+49 (0) 3641 9283-911",
+      phone: "+49 152 33513651",
       button: "Sofort-Einsatz anfordern"
     },
     hero: {
@@ -67,15 +67,14 @@ export const translations = {
       companyCol: "Unternehmen",
       legalCol: "Rechtliches",
       emergencyNotice: "Bei laufenden Ransomware-Angriffen oder Systemstillständen wählen Sie sofort unsere Notfallnummer.",
-      rights: "Alle Rechte vorbehalten. Made with precision in Thüringen.",
-      pgpLabel: "PGP Fingerprint für verschlüsselte Meldungen:"
+      rights: "Alle Rechte vorbehalten."
     }
   },
   en: {
     nav: {
       services: "Services",
-      compliance: "Compliance & Regulations",
-      magazine: "Magazine & Intel",
+      compliance: "Compliance",
+      magazine: "Magazine",
       locations: "Locations",
       about: "About Us",
       contact: "Contact",
@@ -86,7 +85,7 @@ export const translations = {
     emergencyBanner: {
       activeAlert: "ACTIVE BREACH?",
       text: "24/7 Incident Response Hotline for Thuringia:",
-      phone: "+49 (0) 3641 9283-911",
+      phone: "+49 152 33513651",
       button: "Dispatch Emergency Team"
     },
     hero: {
@@ -139,8 +138,7 @@ export const translations = {
       companyCol: "Company",
       legalCol: "Legal & Privacy",
       emergencyNotice: "In case of active ransomware execution or IT collapse, call our emergency dispatcher immediately.",
-      rights: "All rights reserved. Engineered with precision in Thuringia.",
-      pgpLabel: "PGP Public Fingerprint for Encrypted Triage:"
+      rights: "All rights reserved."
     }
   }
 };
@@ -148,7 +146,7 @@ export const translations = {
 export const servicesData = [
   {
     id: "offensive-security",
-    path: "/leistungen/offensive-security",
+    path: "/services/offensive-security",
     title: {
       de: "Offensive Security & Pentesting",
       en: "Offensive Security & Pentesting"
@@ -188,7 +186,7 @@ export const servicesData = [
   },
   {
     id: "defensive-security",
-    path: "/leistungen/defensive-security",
+    path: "/services/defensive-security",
     title: {
       de: "Defensive Security & 24/7 SOC",
       en: "Defensive Security & 24/7 SOC"
@@ -224,7 +222,7 @@ export const servicesData = [
   },
   {
     id: "it-administration",
-    path: "/leistungen/it-administration",
+    path: "/services/it-administration",
     title: {
       de: "IT-Administration & Systemintegration",
       en: "IT Administration & Systems Integration"
@@ -260,7 +258,7 @@ export const servicesData = [
   },
   {
     id: "awareness-training",
-    path: "/leistungen/awareness-training",
+    path: "/services/awareness-training",
     title: {
       de: "Awareness-Schulungen & Phishing-Simulation",
       en: "Security Awareness & Phishing Drills"
@@ -292,7 +290,7 @@ export const servicesData = [
   },
   {
     id: "software-testing",
-    path: "/leistungen/software-testing",
+    path: "/services/software-testing",
     title: {
       de: "Software Security & Code Audits",
       en: "Software Security & Code Audits"
@@ -562,7 +560,7 @@ export const locationsData = [
       en: "High-Tech Manufacturing, Photonics, University Hospital Jena (UKJ) Suppliers & DeepTech"
     },
     address: "Carl-Zeiss-Promenade 10, 07745 Jena",
-    phone: "+49 (0) 3641 9283-10",
+    phone: "+49 152 33513651",
     slaMinutes: 30,
     description: {
       de: "Jena ist das Herz der mitteldeutschen High-Tech-Industrie. Weltmarktführer in Optik und Präzisionsfertigung sowie innovative Medizintechnik-Unternehmen vertrauen auf unsere Penetrationstests und 24/7 Abwehrsysteme. Unser Einsatzteam ist innerhalb von 30 Minuten direkt bei Ihnen vor Ort.",
@@ -586,7 +584,7 @@ export const locationsData = [
       en: "State Capital Administration, Enterprise Services, Logistics Hub & E-Commerce"
     },
     address: "Anger 42, 99084 Erfurt",
-    phone: "+49 (0) 361 6539-20",
+    phone: "+49 152 33513651",
     slaMinutes: 45,
     description: {
       de: "Als Landeshauptstadt beherbergt Erfurt Ministerien, Körperschaften, große Finanz- und Logistikdienstleister sowie florierende E-Commerce-Zentren. Wir unterstützen öffentliche Institutionen und Unternehmen bei der Einhaltung von NIS-2, ISO 27001 und BSI IT-Grundschutz.",
@@ -610,7 +608,7 @@ export const locationsData = [
       en: "Legal Consultancies, Notaries, Research Institutes & Premium Enterprises"
     },
     address: "Theaterplatz 8, 99423 Weimar",
-    phone: "+49 (0) 3643 8122-30",
+    phone: "+49 152 33513651",
     slaMinutes: 35,
     description: {
       de: "In Weimar stehen Vertraulichkeit und der Schutz von Berufsgeheimnissen im Vordergrund. Wir sichern Anwaltskanzleien, Steuerberater, Notariate und wissenschaftliche Institute gegen Wirtschaftsspionage und Datenabfluss ab.",
@@ -634,7 +632,7 @@ export const locationsData = [
       en: "Heavy Machinery, Automotive Supply Chain & Regional Healthcare Providers"
     },
     address: "Heinrichstraße 14, 07545 Gera",
-    phone: "+49 (0) 365 4821-40",
+    phone: "+49 152 33513651",
     slaMinutes: 40,
     description: {
       de: "Gera und Ostthüringen sind geprägt von traditionsreicher Industrie, Zulieferern und starken regionalen Gesundheitsversorgern. Wir schützen Produktionsstraßen (OT/SCADA) vor Stillstand durch Krypto-Trojaner und stellen 24/7 Überwachung bereit.",
@@ -658,7 +656,7 @@ export const locationsData = [
       en: "Tridelta Technology Park, Advanced Ceramics, Sensor Systems & A4/A9 Hub"
     },
     address: "Technologiepark 1, 07629 Hermsdorf",
-    phone: "+49 (0) 36601 5590-50",
+    phone: "+49 152 33513651",
     slaMinutes: 20,
     description: {
       de: "Hermsdorf ist mit dem Tridelta-Areal ein europäisches Kompetenzzentrum für technische Keramik, Elektronik und Mikrokomponenten am Schnittpunkt von A4 und A9. Dank unserer Lage vor Ort erreichen wir Betriebe im Gewerbegebiet in unter 20 Minuten.",

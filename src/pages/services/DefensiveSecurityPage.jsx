@@ -10,7 +10,7 @@ export default function DefensiveSecurityPage() {
     <div className="section-spacing">
       <div className="container" style={{ maxWidth: '1000px' }}>
         <div style={{ fontSize: '0.85rem', color: 'var(--text-faint)', marginBottom: '1.5rem', fontFamily: 'var(--font-mono)' }}>
-          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <Link to="/leistungen" style={{ color: 'var(--text-muted)' }}>LEISTUNGEN</Link> / <span style={{ color: 'var(--accent-emerald)' }}>DEFENSIVE SECURITY &amp; SOC</span>
+          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <Link to="/services" style={{ color: 'var(--text-muted)' }}>{lang === 'de' ? 'LEISTUNGEN' : 'SERVICES'}</Link> / <span style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>DEFENSIVE SECURITY &amp; SOC</span>
         </div>
 
         <span className="tech-badge emerald" style={{ marginBottom: '1rem' }}>
@@ -49,9 +49,9 @@ export default function DefensiveSecurityPage() {
               Schalten Sie betroffene Systeme NICHT aus (flüchtiger Speicher geht verloren). Rufen Sie sofort unsere 24/7 Notfall-Hotline an.
             </p>
           </div>
-          <a href="tel:+4936419283911" className="btn btn-danger">
+          <a href="tel:+4915233513651" className="btn btn-danger">
             <PhoneCall size={16} />
-            +49 (0) 3641 9283-911
+            +49 152 33513651
           </a>
         </div>
 
@@ -99,27 +99,27 @@ export default function DefensiveSecurityPage() {
         </div>
 
         {/* Retainer Model */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2rem', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2rem', marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Der EminSecurity Incident Retainer: Vor-Ort-Garantie in Thüringen' : 'EminSecurity Incident Response Retainer'}
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
             Im Ernstfall zählt jede Minute. Mit unserem Rahmenvertrag reservieren Sie dedizierte Expertenkontingente mit vertraglich zugesicherter Reaktionszeit direkt an Ihren Standorten in Jena, Erfurt, Weimar, Gera und Hermsdorf.
           </p>
           <div className="grid-3">
-            <div style={{ padding: '1rem', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
-              <div style={{ color: '#10b981', fontWeight: 700, fontSize: '1.1rem' }}>&lt; 15 Minuten</div>
-              <div style={{ fontSize: '0.85rem', color: '#fff', margin: '0.2rem 0' }}>Remote Triage SLA</div>
+            <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
+              <div style={{ color: '#059669', fontWeight: 700, fontSize: '1.1rem' }}>&lt; 15 Minuten</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: '0.2rem 0', fontWeight: 600 }}>Remote Triage SLA</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Sofortige telefonische Einsatzleitung und Beginn der Netzwerkisolierung.</div>
             </div>
-            <div style={{ padding: '1rem', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
-              <div style={{ color: '#00e5ff', fontWeight: 700, fontSize: '1.1rem' }}>&lt; 90 Minuten</div>
-              <div style={{ fontSize: '0.85rem', color: '#fff', margin: '0.2rem 0' }}>Vor-Ort Thüringen SLA</div>
+            <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
+              <div style={{ color: 'var(--accent-blue)', fontWeight: 700, fontSize: '1.1rem' }}>&lt; 90 Minuten</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: '0.2rem 0', fontWeight: 600 }}>Vor-Ort Thüringen SLA</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Unsere Forensiker treffen direkt an Ihrem Serverraum oder Rechenzentrum ein.</div>
             </div>
-            <div style={{ padding: '1rem', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
-              <div style={{ color: '#f59e0b', fontWeight: 700, fontSize: '1.1rem' }}>100% Inklusive</div>
-              <div style={{ fontSize: '0.85rem', color: '#fff', margin: '0.2rem 0' }}>BSI- &amp; Versicherungskonform</div>
+            <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
+              <div style={{ color: '#d97706', fontWeight: 700, fontSize: '1.1rem' }}>100% Inklusive</div>
+              <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: '0.2rem 0', fontWeight: 600 }}>BSI- &amp; Versicherungskonform</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Anerkannte Dokumentation für alle gängigen deutschen Cyber-Versicherer.</div>
             </div>
           </div>

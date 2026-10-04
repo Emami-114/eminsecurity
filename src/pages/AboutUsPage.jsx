@@ -61,15 +61,15 @@ export default function AboutUsPage() {
         </div>
 
         {/* Credentials & Certifications */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2.5rem', marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '1.25rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2.5rem', marginBottom: '3.5rem' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '1.25rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Akkreditierungen & Qualifikationen unseres Kernteams' : 'Our Certifications & Credentials'}
           </h2>
           <div className="grid-2" style={{ gap: '1rem' }}>
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
               <CheckCircle2 size={18} color="#10b981" style={{ marginTop: '2px', flexShrink: 0 }} />
               <div>
-                <strong style={{ color: '#fff' }}>OSCP (Offensive Security Certified Professional):</strong>
+                <strong style={{ color: 'var(--text-main)' }}>OSCP (Offensive Security Certified Professional):</strong>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Praktischer 24-stündiger Hacking-Standard für manuelle Netzwerk- und Host-Exploitation.</div>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function AboutUsPage() {
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
               <CheckCircle2 size={18} color="#10b981" style={{ marginTop: '2px', flexShrink: 0 }} />
               <div>
-                <strong style={{ color: '#fff' }}>ISO/IEC 27001 Lead Auditor:</strong>
+                <strong style={{ color: 'var(--text-main)' }}>ISO/IEC 27001 Lead Auditor:</strong>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Zertifizierte Auditorenbefähigung für den Aufbau und die Auditierung von Managementsystemen.</div>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function AboutUsPage() {
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
               <CheckCircle2 size={18} color="#10b981" style={{ marginTop: '2px', flexShrink: 0 }} />
               <div>
-                <strong style={{ color: '#fff' }}>BSI IT-Grundschutz Praktiker:</strong>
+                <strong style={{ color: 'var(--text-main)' }}>BSI IT-Grundschutz Praktiker:</strong>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Anerkannte Ausbildung für KRITIS, öffentliche Verwaltung und Landesbetriebe.</div>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function AboutUsPage() {
             <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.75rem' }}>
               <CheckCircle2 size={18} color="#10b981" style={{ marginTop: '2px', flexShrink: 0 }} />
               <div>
-                <strong style={{ color: '#fff' }}>CISSP (Certified Information Systems Security Professional):</strong>
+                <strong style={{ color: 'var(--text-main)' }}>CISSP (Certified Information Systems Security Professional):</strong>
                 <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>Umfassende Governance-, Architektur- und Sicherheitsmanagement-Zertifizierung.</div>
               </div>
             </div>

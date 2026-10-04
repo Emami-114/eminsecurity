@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -49,33 +49,52 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           
-          {/* Services */}
-          <Route path="/leistungen" element={<ServicesOverviewPage />} />
-          <Route path="/leistungen/offensive-security" element={<OffensiveSecurityPage />} />
-          <Route path="/leistungen/defensive-security" element={<DefensiveSecurityPage />} />
-          <Route path="/leistungen/it-administration" element={<ItAdministrationPage />} />
-          <Route path="/leistungen/awareness-training" element={<AwarenessTrainingPage />} />
-          <Route path="/leistungen/software-testing" element={<SoftwareTestingPage />} />
+          {/* Services (English routing) */}
+          <Route path="/services" element={<ServicesOverviewPage />} />
+          <Route path="/services/offensive-security" element={<OffensiveSecurityPage />} />
+          <Route path="/services/defensive-security" element={<DefensiveSecurityPage />} />
+          <Route path="/services/it-administration" element={<ItAdministrationPage />} />
+          <Route path="/services/awareness-training" element={<AwarenessTrainingPage />} />
+          <Route path="/services/software-testing" element={<SoftwareTestingPage />} />
+
+          {/* Legacy /leistungen redirects */}
+          <Route path="/leistungen" element={<Navigate to="/services" replace />} />
+          <Route path="/leistungen/offensive-security" element={<Navigate to="/services/offensive-security" replace />} />
+          <Route path="/leistungen/defensive-security" element={<Navigate to="/services/defensive-security" replace />} />
+          <Route path="/leistungen/it-administration" element={<Navigate to="/services/it-administration" replace />} />
+          <Route path="/leistungen/awareness-training" element={<Navigate to="/services/awareness-training" replace />} />
+          <Route path="/leistungen/software-testing" element={<Navigate to="/services/software-testing" replace />} />
 
           {/* Compliance */}
           <Route path="/compliance" element={<ComplianceOverviewPage />} />
           <Route path="/compliance/nis-2" element={<Nis2Page />} />
           <Route path="/compliance/iso-27001" element={<Iso27001Page />} />
 
-          {/* Magazin */}
-          <Route path="/magazin" element={<MagazinPage />} />
+          {/* Magazine */}
+          <Route path="/magazine" element={<MagazinPage />} />
+          <Route path="/magazine/:slug" element={<MagazinDetailPage />} />
+          <Route path="/magazin" element={<Navigate to="/magazine" replace />} />
           <Route path="/magazin/:slug" element={<MagazinDetailPage />} />
 
-          {/* Standorte */}
-          <Route path="/standorte" element={<StandorteOverviewPage />} />
+          {/* Locations */}
+          <Route path="/locations" element={<StandorteOverviewPage />} />
+          <Route path="/locations/:city" element={<StandortDetailPage />} />
+          <Route path="/standorte" element={<Navigate to="/locations" replace />} />
           <Route path="/standorte/:city" element={<StandortDetailPage />} />
 
           {/* Company & Legal */}
-          <Route path="/kontakt" element={<ContactPage />} />
-          <Route path="/ueber-uns" element={<AboutUsPage />} />
-          <Route path="/karriere" element={<JobsPage />} />
-          <Route path="/wissen" element={<KnowledgePage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/kontakt" element={<Navigate to="/contact" replace />} />
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/ueber-uns" element={<Navigate to="/about-us" replace />} />
+          <Route path="/careers" element={<JobsPage />} />
+          <Route path="/karriere" element={<Navigate to="/careers" replace />} />
+          <Route path="/knowledge" element={<KnowledgePage />} />
+          <Route path="/wissen" element={<Navigate to="/knowledge" replace />} />
+          <Route path="/imprint" element={<ImpressumPage />} />
           <Route path="/impressum" element={<ImpressumPage />} />
+          <Route path="/privacy" element={<DatenschutzPage />} />
           <Route path="/datenschutz" element={<DatenschutzPage />} />
           <Route path="/sitemap" element={<SitemapPage />} />
 

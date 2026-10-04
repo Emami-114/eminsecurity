@@ -38,7 +38,7 @@ export default function ComplianceOverviewPage() {
                 <Scale size={18} color="var(--accent-cyan)" />
               </div>
               <h2 style={{ fontSize: '1.35rem', marginBottom: '0.75rem' }}>
-                <Link to={item.path} style={{ color: '#fff' }}>
+                <Link to={item.path} style={{ color: 'var(--text-main)' }}>
                   {item.title[lang]}
                 </Link>
               </h2>
@@ -57,25 +57,25 @@ export default function ComplianceOverviewPage() {
         </div>
 
         {/* Other Regulations: BSI, TISAX, PDSG */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2rem', marginBottom: '3.5rem' }}>
-          <h2 style={{ fontSize: '1.35rem', marginBottom: '1.25rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2rem', marginBottom: '3.5rem' }}>
+          <h2 style={{ fontSize: '1.35rem', marginBottom: '1.25rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Weitere unterstützte Rahmenwerke & Branchenstandards' : 'Additional Supported Frameworks'}
           </h2>
           <div className="grid-3" style={{ gap: '1.25rem' }}>
-            <div style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '4px' }}>
-              <h3 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.4rem' }}>BSI IT-Grundschutz</h3>
+            <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '6px' }}>
+              <h3 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.4rem' }}>BSI IT-Grundschutz</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                 Strukturierte Umsetzung der BSI-Standards 200-1, 200-2 und 200-3 für Landesbehörden, Kommunen und Stadtwerke in Thüringen.
               </p>
             </div>
-            <div style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '4px' }}>
-              <h3 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.4rem' }}>TISAX &amp; VDA-ISA</h3>
+            <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '6px' }}>
+              <h3 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.4rem' }}>TISAX &amp; VDA-ISA</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                 Sicherheitslabels für Automobilzulieferer in Gera, Jena und Eisenach. Schutz vertraulicher Prototypendaten.
               </p>
             </div>
-            <div style={{ padding: '1rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '4px' }}>
-              <h3 style={{ fontSize: '1.05rem', color: '#fff', marginBottom: '0.4rem' }}>PDSG &amp; § 75b SGB V</h3>
+            <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '6px' }}>
+              <h3 style={{ fontSize: '1.05rem', color: 'var(--text-main)', marginBottom: '0.4rem' }}>PDSG &amp; § 75b SGB V</h3>
               <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
                 Erfüllung der KBV-IT-Sicherheitsrichtlinie für Arztpraxen, MVZ und Dialysezentren inklusive Nachweisführung.
               </p>

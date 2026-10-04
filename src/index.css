@@ -303,6 +303,15 @@ code, pre, .font-mono {
   position: relative;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-smooth);
+  color: var(--text-main);
+}
+
+.cyber-card h1, .cyber-card h2, .cyber-card h3, .cyber-card h4, .cyber-card h5, .cyber-card h6 {
+  color: var(--text-main);
+}
+
+.cyber-card p {
+  color: var(--text-muted);
 }
 
 .cyber-card:hover {
@@ -313,6 +322,24 @@ code, pre, .font-mono {
 
 .cyber-card.accented-hover:hover {
   border-color: var(--accent-blue);
+}
+
+/* Dark Accent Card Utility */
+.cyber-card-dark {
+  background-color: var(--bg-dark-accent);
+  color: #ffffff;
+  border: 1px solid #1e293b;
+  border-radius: var(--radius-md);
+  padding: 1.85rem;
+  position: relative;
+}
+
+.cyber-card-dark h1, .cyber-card-dark h2, .cyber-card-dark h3, .cyber-card-dark h4 {
+  color: #ffffff;
+}
+
+.cyber-card-dark p {
+  color: #94a3b8;
 }
 
 /* Pulsing Live indicator */
@@ -334,6 +361,24 @@ code, pre, .font-mono {
 @keyframes pulse-glow {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+.form-checkbox {
+  accent-color: var(--accent-blue);
+  width: 1.15rem;
+  height: 1.15rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
 }
 
 /* Form Controls */

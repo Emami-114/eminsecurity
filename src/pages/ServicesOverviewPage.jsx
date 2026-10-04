@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Terminal, Server, Users, Code2, ArrowRight, CheckCircle2, FileCode, Cpu, Layers } from 'lucide-react';
+import { Shield, Terminal, Server, Users, Code2, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { servicesData } from '../data/translations';
 
@@ -8,19 +8,24 @@ export default function ServicesOverviewPage() {
   const { lang } = useLanguage();
 
   const serviceIcons = {
-    'offensive-security': <Terminal size={26} color="#00e5ff" />,
-    'defensive-security': <Shield size={26} color="#10b981" />,
-    'it-administration': <Server size={26} color="#38bdf8" />,
-    'awareness-training': <Users size={26} color="#f59e0b" />,
-    'software-testing': <Code2 size={26} color="#c084fc" />
+    'offensive-security': <Terminal size={26} color="var(--accent-blue)" />,
+    'defensive-security': <Shield size={26} color="var(--accent-emerald)" />,
+    'it-administration': <Server size={26} color="var(--accent-cyan)" />,
+    'awareness-training': <Users size={26} color="var(--accent-amber)" />,
+    'software-testing': <Code2 size={26} color="#7c3aed" />
   };
 
   return (
     <div className="section-spacing">
       <div className="container">
+        {/* Breadcrumb */}
+        <div style={{ fontSize: '0.85rem', color: 'var(--text-faint)', marginBottom: '1.5rem', fontFamily: 'var(--font-mono)' }}>
+          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <span style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>SERVICES</span>
+        </div>
+
         {/* Header */}
         <div style={{ maxWidth: '880px', marginBottom: '3.5rem' }}>
-          <span className="tech-badge cyan" style={{ marginBottom: '0.75rem' }}>
+          <span className="tech-badge blue" style={{ marginBottom: '0.75rem' }}>
             ENGINEERING CAPABILITIES // END-TO-END
           </span>
           <h1>
@@ -49,20 +54,21 @@ export default function ServicesOverviewPage() {
                   <div style={{
                     width: '54px',
                     height: '54px',
-                    backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                    border: '1px solid var(--border-strong)',
+                    backgroundColor: 'var(--bg-subtle)',
+                    border: '1px solid var(--border-subtle)',
                     borderRadius: 'var(--radius-sm)',
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center'
+                    justifyContent: 'center',
+                    flexShrink: 0
                   }}>
                     {serviceIcons[svc.id]}
                   </div>
                   <div>
-                    <span className="tech-badge" style={{ marginBottom: '0.3rem' }}>
+                    <span className="tech-badge" style={{ marginBottom: '0.35rem' }}>
                       {svc.category}
                     </span>
-                    <h2 style={{ fontSize: '1.6rem', margin: 0 }}>
+                    <h2 style={{ fontSize: '1.6rem', margin: 0, color: 'var(--text-main)' }}>
                       {svc.title[lang]}
                     </h2>
                   </div>
@@ -74,7 +80,7 @@ export default function ServicesOverviewPage() {
                 </Link>
               </div>
 
-              <p style={{ fontSize: '1.05rem', color: '#cbd5e1', marginBottom: '1.75rem' }}>
+              <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)', marginBottom: '1.75rem', lineHeight: 1.6 }}>
                 {svc.shortDesc[lang]}
               </p>
 
@@ -82,15 +88,15 @@ export default function ServicesOverviewPage() {
               <div className="grid-2" style={{ gap: '1.25rem', marginBottom: '1.75rem' }}>
                 {svc.subServices.map((sub, i) => (
                   <div key={i} style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                    backgroundColor: 'var(--bg-subtle)',
                     border: '1px solid var(--border-subtle)',
                     borderRadius: 'var(--radius-sm)',
-                    padding: '1rem'
+                    padding: '1.15rem 1.25rem'
                   }}>
-                    <div style={{ fontWeight: 600, color: '#f8fafc', marginBottom: '0.35rem', fontSize: '0.95rem' }}>
+                    <div style={{ fontWeight: 600, color: 'var(--text-main)', marginBottom: '0.4rem', fontSize: '0.98rem' }}>
                       {sub.title[lang]}
                     </div>
-                    <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', lineHeight: 1.5 }}>
+                    <div style={{ fontSize: '0.88rem', color: 'var(--text-muted)', lineHeight: 1.55 }}>
                       {sub.desc[lang]}
                     </div>
                   </div>
@@ -118,7 +124,7 @@ export default function ServicesOverviewPage() {
                 </div>
 
                 <div style={{ color: 'var(--text-muted)', maxWidth: '500px' }}>
-                  <strong style={{ color: '#fff' }}>Deliverables:</strong> {svc.deliverable[lang]}
+                  <strong style={{ color: 'var(--text-main)' }}>Deliverables:</strong> {svc.deliverable[lang]}
                 </div>
               </div>
             </div>
@@ -126,33 +132,33 @@ export default function ServicesOverviewPage() {
         </div>
 
         {/* Methodology & Vorgehensmodell */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2.5rem' }}>
-          <span className="tech-badge cyan" style={{ marginBottom: '0.75rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2.5rem' }}>
+          <span className="tech-badge blue" style={{ marginBottom: '0.75rem' }}>
             UNSER VORGEHENSMODELL // METHODOLOGY
           </span>
-          <h2 style={{ fontSize: '1.6rem', marginBottom: '1rem' }}>
+          <h2 style={{ fontSize: '1.6rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Strukturierter 4-Phasen-Prozess' : 'Structured 4-Phase Security Lifecycle'}
           </h2>
           <div className="grid-4" style={{ marginTop: '1.5rem' }}>
-            <div style={{ padding: '1rem', borderLeft: '2px solid var(--accent-cyan)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontSize: '0.85rem' }}>PHASE 1</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.3rem 0' }}>Scoping &amp; Recon</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0 }}>Definition des Prüfrahmens (Rules of Engagement), Asset-Identifikation und OSINT-Aufklärung.</p>
+            <div style={{ padding: '1.25rem', borderLeft: '3px solid var(--accent-blue)', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-blue)', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 1</div>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Scoping &amp; Recon</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Definition des Prüfrahmens (Rules of Engagement), Asset-Identifikation und OSINT-Aufklärung.</p>
             </div>
-            <div style={{ padding: '1rem', borderLeft: '2px solid #38bdf8' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#38bdf8', fontSize: '0.85rem' }}>PHASE 2</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.3rem 0' }}>Deep Inspection</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0 }}>Manuelle Schwachstellenanalyse, Ausnutzung (Exploitation), Privilegieneskalation und Lateral Movement.</p>
+            <div style={{ padding: '1.25rem', borderLeft: '3px solid #0284c7', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#0284c7', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 2</div>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Deep Inspection</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Manuelle Schwachstellenanalyse, Ausnutzung (Exploitation), Privilegieneskalation und Lateral Movement.</p>
             </div>
-            <div style={{ padding: '1rem', borderLeft: '2px solid #10b981' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#10b981', fontSize: '0.85rem' }}>PHASE 3</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.3rem 0' }}>Report &amp; Debrief</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0 }}>Technischer Nachweis mit CVSS-Scoring, Executive Summary und Vor-Ort-Präsentation mit der Geschäftsführung.</p>
+            <div style={{ padding: '1.25rem', borderLeft: '3px solid #10b981', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#059669', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 3</div>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Report &amp; Debrief</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Technischer Nachweis mit CVSS-Scoring, Executive Summary und Vor-Ort-Präsentation mit der Geschäftsführung.</p>
             </div>
-            <div style={{ padding: '1rem', borderLeft: '2px solid #c084fc' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#c084fc', fontSize: '0.85rem' }}>PHASE 4</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.3rem 0' }}>Remediation &amp; Retest</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0 }}>Unterstützung bei der Schließung der Sicherheitslücken und kostenloser Retest zur Validierung der Fixes.</p>
+            <div style={{ padding: '1.25rem', borderLeft: '3px solid #7c3aed', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#7c3aed', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 4</div>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Remediation &amp; Retest</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Unterstützung bei der Schließung der Sicherheitslücken und kostenloser Retest zur Validierung der Fixes.</p>
             </div>
           </div>
         </div>

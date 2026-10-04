@@ -91,24 +91,21 @@ export default function JobsPage() {
         </div>
 
         {/* How to apply */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2rem' }}>
-          <h2 style={{ fontSize: '1.25rem', marginBottom: '0.75rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2rem' }}>
+          <h2 style={{ fontSize: '1.25rem', marginBottom: '0.75rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Wie Sie sich initiativ bewerben:' : 'How to Submit Your Application:'}
           </h2>
           <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
             {lang === 'de'
-              ? 'Kein langes Anschreiben nötig: Senden Sie uns Ihren Lebenslauf, Links zu GitHub, HackTheBox oder relevanten Projekten sowie Ihre Gehaltsvorstellung direkt per E-Mail (gerne auch PGP-verschlüsselt).'
-              : 'No lengthy cover letter required: send your CV, links to your GitHub or HackTheBox handles, and salary expectations directly via email (optionally PGP-encrypted).'}
+              ? 'Kein langes Anschreiben nötig: Senden Sie uns Ihren Lebenslauf, Links zu GitHub, HackTheBox oder relevanten Projekten sowie Ihre Gehaltsvorstellung direkt per E-Mail.'
+              : 'No lengthy cover letter required: send your CV, links to your GitHub or HackTheBox handles, and salary expectations directly via email.'}
           </p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-            <a href="mailto:karriere@eminsecurity.de" className="btn btn-primary btn-sm">
+            <a href="mailto:kontakt@eminsec.de" className="btn btn-primary btn-sm">
               <Mail size={15} />
-              karriere@eminsecurity.de
+              kontakt@eminsec.de
             </a>
-            <span style={{ fontSize: '0.8rem', color: 'var(--text-faint)', fontFamily: 'var(--font-mono)' }}>
-              PGP Key ID: 4A7F 9B12 C884 10E3
-            </span>
           </div>
         </div>
       </div>

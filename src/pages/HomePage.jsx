@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Terminal, 
-  Server, 
-  Users, 
-  Code2, 
-  CheckCircle2, 
-  MapPin, 
-  ArrowRight, 
-  Clock, 
-  ShieldCheck, 
-  Stethoscope, 
-  Briefcase, 
-  Activity, 
-  Lock, 
+import {
+  Shield,
+  Terminal,
+  Server,
+  Users,
+  Code2,
+  CheckCircle2,
+  MapPin,
+  ArrowRight,
+  Clock,
+  ShieldCheck,
+  Stethoscope,
+  Briefcase,
+  Activity,
+  Lock,
   Award,
   Layers,
   ChevronRight
@@ -51,7 +51,7 @@ export default function HomePage() {
         <div className="container">
           <div style={{ maxWidth: '920px', margin: '0 auto', textAlign: 'center' }}>
             {/* Trust Pill Badges */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
+            {/*            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
               <span className="tech-badge blue">
                 MADE IN THÜRINGEN // CYBER DEFENSE
               </span>
@@ -62,7 +62,7 @@ export default function HomePage() {
               <span className="tech-badge">
                 100% DSGVO-KONFORM
               </span>
-            </div>
+            </div> */}
 
             <h1 style={{ marginBottom: '1.5rem', color: '#0f172a' }}>
               {t('hero.title')}
@@ -81,17 +81,17 @@ export default function HomePage() {
               gap: '1rem',
               marginBottom: '2rem'
             }}>
-              <Link to="/kontakt" className="btn btn-primary" style={{ padding: '0.85rem 1.85rem', fontSize: '1rem' }}>
+              <Link to="/contact" className="btn btn-primary" style={{ padding: '0.85rem 1.85rem', fontSize: '1rem' }}>
                 {t('hero.ctaPrimary')}
                 <ArrowRight size={17} />
               </Link>
-              <Link to="/leistungen" className="btn btn-secondary" style={{ padding: '0.85rem 1.85rem', fontSize: '1rem' }}>
+              <Link to="/services" className="btn btn-secondary" style={{ padding: '0.85rem 1.85rem', fontSize: '1rem' }}>
                 {lang === 'de' ? 'Leistungsübersicht' : 'Explore Capabilities'}
               </Link>
             </div>
 
             {/* SLA Badge */}
-            <div style={{
+            {/*  <div style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.55rem',
@@ -106,7 +106,8 @@ export default function HomePage() {
               <Clock size={15} color="#0062ff" />
               <span>{t('hero.slaNotice')}</span>
               <span style={{ color: '#16a34a', fontWeight: 700 }}>• AKTIV</span>
-            </div>
+            </div> */}
+            <div style={{ padding: '2rem' }}></div>
           </div>
 
           {/* Interactive Enginsight-style Capability Dashboard (replaces raw terminal) */}
@@ -326,7 +327,7 @@ export default function HomePage() {
               <h2>{t('servicesOverview.heading')}</h2>
               <p style={{ margin: 0 }}>{t('servicesOverview.subheading')}</p>
             </div>
-            <Link to="/leistungen" className="btn btn-secondary btn-sm">
+            <Link to="/services" className="btn btn-secondary btn-sm">
               {t('servicesOverview.viewAll')}
               <ArrowRight size={14} />
             </Link>
@@ -376,15 +377,15 @@ export default function HomePage() {
                     ))}
                   </div>
 
-                  <Link 
-                    to={svc.path} 
-                    style={{ 
-                      fontSize: '0.88rem', 
-                      color: 'var(--accent-blue)', 
-                      fontWeight: 600, 
-                      display: 'inline-flex', 
-                      alignItems: 'center', 
-                      gap: '0.3rem' 
+                  <Link
+                    to={svc.path}
+                    style={{
+                      fontSize: '0.88rem',
+                      color: 'var(--accent-blue)',
+                      fontWeight: 600,
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.3rem'
                     }}
                   >
                     {lang === 'de' ? 'Details ansehen' : 'View Scope'}
@@ -438,8 +439,8 @@ export default function HomePage() {
                   <span style={{ fontSize: '0.82rem', color: 'var(--text-faint)' }}>
                     {loc.phone}
                   </span>
-                  <Link 
-                    to={`/standorte/${loc.slug}`} 
+                  <Link
+                    to={`/locations/${loc.slug}`}
                     style={{ fontSize: '0.85rem', color: 'var(--accent-blue)', fontWeight: 600 }}
                   >
                     {lang === 'de' ? 'Standort-Details' : 'Hub Details'} &gt;
@@ -467,7 +468,7 @@ export default function HomePage() {
                 <strong>Garantierte Thüringen-SLA:</strong> Für Vertragspartner rückt unser forensisches Emergency-Team innerhalb von 90 Minuten an jedes Rechenzentrum in ganz Thüringen aus.
               </span>
             </div>
-            <Link to="/standorte" className="btn btn-secondary btn-sm">
+            <Link to="/locations" className="btn btn-secondary btn-sm">
               {lang === 'de' ? 'Alle Standorte ansehen' : 'View Hubs'}
             </Link>
           </div>
@@ -543,8 +544,8 @@ export default function HomePage() {
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-faint)' }}>
                     {article.readTime}
                   </span>
-                  <Link 
-                    to={`/magazin/${article.slug}`} 
+                  <Link
+                    to={`/magazin/${article.slug}`}
                     style={{ fontSize: '0.88rem', color: 'var(--accent-blue)', fontWeight: 600 }}
                   >
                     {lang === 'de' ? 'Bericht lesen' : 'Read Article'} &gt;
@@ -662,13 +663,13 @@ export default function HomePage() {
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link to="/kontakt" className="btn btn-primary" style={{ padding: '0.85rem 1.85rem' }}>
+            <Link to="/contact" className="btn btn-primary" style={{ padding: '0.85rem 1.85rem' }}>
               {lang === 'de' ? 'Sicherheitsaudit unverbindlich anfragen' : 'Request Security Audit'}
               <ArrowRight size={16} />
             </Link>
-            <a href="tel:+4936419283911" className="btn btn-secondary" style={{ padding: '0.85rem 1.85rem', backgroundColor: '#1e293b', color: '#fff', borderColor: '#334155' }}>
+            <a href="tel:+4915233513651" className="btn btn-secondary" style={{ padding: '0.85rem 1.85rem', backgroundColor: '#1e293b', color: '#fff', borderColor: '#334155' }}>
               <Clock size={16} />
-              {lang === 'de' ? '+49 (0) 3641 9283-911 anrufen' : 'Call Dispatcher'}
+              {lang === 'de' ? '+49 152 33513651 anrufen' : 'Call Dispatcher'}
             </a>
           </div>
         </div>

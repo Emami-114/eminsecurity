@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { 
-  Shield, 
-  ChevronDown, 
-  Globe, 
-  Menu, 
-  X, 
-  Terminal, 
-  Lock, 
-  Server, 
-  Users, 
-  Code2, 
-  FileCheck2, 
-  Building2, 
-  MapPin, 
+import {
+  Shield,
+  ChevronDown,
+  Globe,
+  Menu,
+  X,
+  Terminal,
+  Lock,
+  Server,
+  Users,
+  Code2,
+  FileCheck2,
+  Building2,
+  MapPin,
   Flame,
   ArrowRight
 } from 'lucide-react';
@@ -58,7 +58,7 @@ export default function Header() {
   };
 
   return (
-    <header 
+    <header
       ref={navRef}
       style={{
         position: 'sticky',
@@ -78,8 +78,8 @@ export default function Header() {
         height: '76px'
       }}>
         {/* Logo */}
-        <Link 
-          to="/" 
+        <Link
+          to="/"
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -129,13 +129,13 @@ export default function Header() {
               color: 'var(--text-muted)',
               letterSpacing: '0.04em'
             }}>
-              Cyber Defense // Thüringen
+              Cyber Defense
             </div>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav 
+        <nav
           style={{
             display: 'flex',
             alignItems: 'center',
@@ -167,12 +167,12 @@ export default function Header() {
               }}
             >
               {t('nav.services')}
-              <ChevronDown 
-                size={15} 
+              <ChevronDown
+                size={15}
                 style={{
                   transform: servicesOpen ? 'rotate(180deg)' : 'none',
                   transition: 'transform var(--transition-fast)'
-                }} 
+                }}
               />
             </button>
 
@@ -235,11 +235,11 @@ export default function Header() {
                   marginTop: '0.4rem',
                   textAlign: 'center'
                 }}>
-                  <Link 
-                    to="/leistungen" 
-                    style={{ 
-                      fontSize: '0.85rem', 
-                      color: 'var(--accent-blue)', 
+                  <Link
+                    to="/services"
+                    style={{
+                      fontSize: '0.85rem',
+                      color: 'var(--accent-blue)',
                       fontWeight: 600,
                       display: 'inline-flex',
                       alignItems: 'center',
@@ -278,12 +278,12 @@ export default function Header() {
               }}
             >
               {t('nav.compliance')}
-              <ChevronDown 
-                size={15} 
+              <ChevronDown
+                size={15}
                 style={{
                   transform: complianceOpen ? 'rotate(180deg)' : 'none',
                   transition: 'transform var(--transition-fast)'
-                }} 
+                }}
               />
             </button>
 
@@ -348,11 +348,11 @@ export default function Header() {
                   marginTop: '0.4rem',
                   textAlign: 'center'
                 }}>
-                  <Link 
-                    to="/compliance" 
-                    style={{ 
-                      fontSize: '0.85rem', 
-                      color: 'var(--accent-blue)', 
+                  <Link
+                    to="/compliance"
+                    style={{
+                      fontSize: '0.85rem',
+                      color: 'var(--accent-blue)',
                       fontWeight: 600,
                       display: 'inline-flex',
                       alignItems: 'center',
@@ -380,18 +380,8 @@ export default function Header() {
               padding: '0.5rem 0'
             })}
           >
-            <Flame size={15} color="#ef4444" />
             {t('nav.magazine')}
-            <span style={{
-              fontSize: '0.68rem',
-              backgroundColor: '#fee2e2',
-              color: '#b91c1c',
-              padding: '0.15rem 0.45rem',
-              borderRadius: '9999px',
-              fontWeight: 700
-            }}>
-              BERLIN 09/26
-            </span>
+
           </NavLink>
 
           {/* Standorte Dropdown */}
@@ -418,12 +408,12 @@ export default function Header() {
             >
               <MapPin size={15} color="#0062ff" />
               {t('nav.locations')}
-              <ChevronDown 
-                size={15} 
+              <ChevronDown
+                size={15}
                 style={{
                   transform: locationsOpen ? 'rotate(180deg)' : 'none',
                   transition: 'transform var(--transition-fast)'
-                }} 
+                }}
               />
             </button>
 
@@ -454,7 +444,7 @@ export default function Header() {
                 {locationsData.map((loc) => (
                   <Link
                     key={loc.slug}
-                    to={`/standorte/${loc.slug}`}
+                    to={`/locations/${loc.slug}`}
                     style={{
                       display: 'flex',
                       alignItems: 'center',
@@ -485,11 +475,11 @@ export default function Header() {
                   marginTop: '0.4rem',
                   textAlign: 'center'
                 }}>
-                  <Link 
-                    to="/standorte" 
-                    style={{ 
-                      fontSize: '0.85rem', 
-                      color: 'var(--accent-blue)', 
+                  <Link
+                    to="/locations"
+                    style={{
+                      fontSize: '0.85rem',
+                      color: 'var(--accent-blue)',
                       fontWeight: 600
                     }}
                   >
@@ -531,7 +521,7 @@ export default function Header() {
 
           {/* Primary Action Button */}
           <Link
-            to="/kontakt"
+            to="/contact"
             className="btn btn-primary btn-sm"
             style={{ fontWeight: 600 }}
           >
@@ -603,16 +593,16 @@ export default function Header() {
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-blue)', marginBottom: '0.5rem' }}>
               MAGAZIN &amp; STANDORTE
             </div>
-            <Link to="/magazin" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
+            <Link to="/magazine" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
               Magazin &amp; News (Stadt Berlin Hack)
             </Link>
-            <Link to="/standorte" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
+            <Link to="/locations" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
               Thüringen Standorte (Jena, Erfurt, Weimar, Gera, Hermsdorf)
             </Link>
           </div>
 
           <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1rem' }}>
-            <Link to="/kontakt" className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>
+            <Link to="/contact" className="btn btn-primary" style={{ width: '100%', textAlign: 'center' }}>
               {t('nav.requestCta')}
             </Link>
           </div>

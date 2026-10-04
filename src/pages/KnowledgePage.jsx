@@ -41,7 +41,7 @@ export default function KnowledgePage() {
                   <span className="tech-badge" style={{ marginBottom: '0.5rem' }}>
                     {item.tag}
                   </span>
-                  <h2 style={{ fontSize: '1.35rem', margin: 0, color: '#fff' }}>
+                  <h2 style={{ fontSize: '1.35rem', margin: 0, color: 'var(--text-main)' }}>
                     {item.title[lang]}
                   </h2>
                 </div>
@@ -80,13 +80,13 @@ export default function KnowledgePage() {
 
         {/* Custom Guideline CTA */}
         <div style={{
-          backgroundColor: '#090c14',
-          border: '1px solid var(--border-strong)',
+          backgroundColor: 'var(--bg-subtle)',
+          border: '1px solid var(--border-subtle)',
           borderRadius: 'var(--radius-md)',
           padding: '2.5rem',
           textAlign: 'center'
         }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Benötigen Sie ein maßgeschneidertes Sicherheits-Playbook?' : 'Require a Custom Incident Playbook?'}
           </h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>

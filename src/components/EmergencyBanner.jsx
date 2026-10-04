@@ -30,11 +30,11 @@ export default function EmergencyBanner() {
           }}>
             {t('emergencyBanner.activeAlert')}
           </span>
-          <span style={{ color: 'var(--text-muted)' }}>
+          <span style={{ color: '#cbd5e1' }}>
             {t('emergencyBanner.text')}
           </span>
           <a 
-            href="tel:+4936419283911"
+            href="tel:+4915233513651"
             style={{
               color: '#fff',
               fontWeight: 700,

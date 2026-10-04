@@ -11,7 +11,7 @@ export default function OffensiveSecurityPage() {
       <div className="container" style={{ maxWidth: '1000px' }}>
         {/* Breadcrumb */}
         <div style={{ fontSize: '0.85rem', color: 'var(--text-faint)', marginBottom: '1.5rem', fontFamily: 'var(--font-mono)' }}>
-          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <Link to="/leistungen" style={{ color: 'var(--text-muted)' }}>LEISTUNGEN</Link> / <span style={{ color: 'var(--accent-cyan)' }}>OFFENSIVE SECURITY</span>
+          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <Link to="/services" style={{ color: 'var(--text-muted)' }}>{lang === 'de' ? 'LEISTUNGEN' : 'SERVICES'}</Link> / <span style={{ color: 'var(--accent-blue)', fontWeight: 600 }}>OFFENSIVE SECURITY</span>
         </div>
 
         <span className="tech-badge cyan" style={{ marginBottom: '1rem' }}>
@@ -72,24 +72,24 @@ export default function OffensiveSecurityPage() {
         </div>
 
         {/* Pentest Report & Deliverables */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2rem', marginBottom: '3rem' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2rem', marginBottom: '3rem' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Der EminSecurity Prüfbericht: Verständlich für Vorstand & Entwickler' : 'The EminSecurity Audit Report'}
           </h2>
           <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
             Kein automatisierter PDF-Dump: Jeder gefundene Befund wird von unseren Analysten manuell reproduziert, mit einem CVSS-Schweregrad bewertet und mit einer sofort umsetzbaren Handlungsempfehlung versehen.
           </p>
           <div className="grid-3">
-            <div style={{ padding: '0.75rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '4px' }}>
-              <div style={{ color: 'var(--accent-cyan)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.3rem' }}>Management Summary</div>
+            <div style={{ padding: '0.85rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
+              <div style={{ color: 'var(--accent-blue)', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.3rem' }}>Management Summary</div>
               <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Risikobewertung in Schulnoten und Priorisierung der Geschäftsrisiken für Geschäftsführung und Aufsichtsrat.</div>
             </div>
-            <div style={{ padding: '0.75rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '4px' }}>
-              <div style={{ color: '#10b981', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.3rem' }}>Technical Proof-of-Concept</div>
+            <div style={{ padding: '0.85rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
+              <div style={{ color: '#059669', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.3rem' }}>Technical Proof-of-Concept</div>
               <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Exakte HTTP-Requests, Payloads und Screenshots, mit denen Administratoren den Befund sofort nachvollziehen können.</div>
             </div>
-            <div style={{ padding: '0.75rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: '4px' }}>
-              <div style={{ color: '#f59e0b', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.3rem' }}>Kostenloser Retest</div>
+            <div style={{ padding: '0.85rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
+              <div style={{ color: '#d97706', fontWeight: 600, fontSize: '0.9rem', marginBottom: '0.3rem' }}>Kostenloser Retest</div>
               <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>Nach Behebung der Schwachstellen prüfen wir innerhalb von 60 Tagen kostenlos nach und stellen ein Testat aus.</div>
             </div>
           </div>
