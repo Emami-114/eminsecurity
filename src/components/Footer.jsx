@@ -55,7 +55,7 @@ export default function Footer() {
                 padding: '3px'
               }}>
                 <img 
-                  src="/logo-dark-mode.png" 
+                  src={`${import.meta.env.BASE_URL}logo-dark-mode.png`} 
                   alt="EminSecurity Logo" 
                   style={{ width: '28px', height: '28px', objectFit: 'contain', display: 'block' }} 
                 />

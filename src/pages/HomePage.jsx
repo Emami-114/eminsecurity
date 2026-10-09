@@ -177,7 +177,7 @@ export default function HomePage() {
                 {/* Blended Image Canvas */}
                 <div className="hero-image-blend-box">
                   <img
-                    src="/image.png"
+                    src={`${import.meta.env.BASE_URL}image.png`}
                     alt="EminSecurity IT-Sicherheit &amp; Rechenzentrum Experte vor Ort"
                     loading="eager"
                   />

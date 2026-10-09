@@ -101,7 +101,7 @@ export default function Header() {
             padding: '4px'
           }}>
             <img
-              src="/logo-brand.png"
+              src={`${import.meta.env.BASE_URL}logo-brand.png`}
               alt="EminSecurity Logo"
               style={{ width: '35px', height: '35px', objectFit: 'contain', display: 'block' }}
             />
