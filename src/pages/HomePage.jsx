@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Shield,
@@ -27,6 +27,43 @@ export default function HomePage() {
   const { lang, t } = useLanguage();
   const [activeTab, setActiveTab] = useState('offensive');
 
+  // Dynamic Typewriter Animation for Target Audiences (Mittelstand, Praxen, Kliniken, Industrie...)
+  const [typeIndex, setTypeIndex] = useState(0);
+  const [displayedWord, setDisplayedWord] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const targetWords = lang === 'de'
+    ? ['Mittelstand', 'Praxen & Ärzte', 'Industrie', 'Kanzleien']
+    : ['Enterprises', 'Medical Practices', 'Manufacturing', 'Law Firms'];
+
+  useEffect(() => {
+    const fullWord = targetWords[typeIndex % targetWords.length];
+    let timer;
+
+    if (!isDeleting) {
+      if (displayedWord.length < fullWord.length) {
+        timer = setTimeout(() => {
+          setDisplayedWord(fullWord.slice(0, displayedWord.length + 1));
+        }, 80);
+      } else {
+        timer = setTimeout(() => {
+          setIsDeleting(true);
+        }, 2200);
+      }
+    } else {
+      if (displayedWord.length > 0) {
+        timer = setTimeout(() => {
+          setDisplayedWord(fullWord.slice(0, displayedWord.length - 1));
+        }, 40);
+      } else {
+        setIsDeleting(false);
+        setTypeIndex((prev) => (prev + 1) % targetWords.length);
+      }
+    }
+
+    return () => clearTimeout(timer);
+  }, [displayedWord, isDeleting, typeIndex, lang]);
+
   const serviceIcons = {
     'offensive-security': <Terminal size={22} color="#0062ff" />,
     'defensive-security': <Shield size={22} color="#10b981" />,
@@ -38,123 +75,217 @@ export default function HomePage() {
   return (
     <div>
       {/* =========================================================================
-          HERO SECTION (Enginsight-Inspired Minimalist & Clean)
+          HERO SECTION (High-End Dark Cyber Command Center with Server Room Visual)
          ========================================================================= */}
-      <section style={{
-        paddingTop: '5rem',
-        paddingBottom: '5rem',
-        position: 'relative',
-        backgroundColor: '#ffffff',
-        borderBottom: '1px solid var(--border-subtle)',
-        background: 'linear-gradient(180deg, #f8fafc 0%, #ffffff 100%)'
-      }}>
+      <section className="hero-dark-section">
         <div className="container">
-          <div style={{ maxWidth: '920px', margin: '0 auto', textAlign: 'center' }}>
-            {/* Trust Pill Badges */}
-            {/*            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.65rem', marginBottom: '1.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <span className="tech-badge blue">
-                MADE IN THÜRINGEN // CYBER DEFENSE
-              </span>
-              <span className="tech-badge emerald">
-                <CheckCircle2 size={13} />
-                BSI &amp; ISO 27001 AUDITORIERT
-              </span>
-              <span className="tech-badge">
-                100% DSGVO-KONFORM
-              </span>
-            </div> */}
+          <div className="hero-dark-split">
+            {/* Left Column: Core Value Proposition & CTAs */}
+            <div>
 
-            <h1 style={{ marginBottom: '1.5rem', color: '#0f172a' }}>
-              {t('hero.title')}
-            </h1>
 
-            <p className="lead" style={{ margin: '0 auto 2.5rem', maxWidth: '780px' }}>
-              {t('hero.description')}
-            </p>
+              {/* Animated Typewriter Headline */}
+              <h1 style={{
+                marginBottom: '1.25rem',
+                color: '#ffffff',
+                fontSize: 'clamp(2.1rem, 3.8vw, 3.4rem)',
+                lineHeight: 1.2,
+                fontWeight: 700,
+                letterSpacing: '-0.025em',
+                minHeight: '2.4em'
+              }}>
+                {lang === 'de' ? 'Kompromisslose IT-Sicherheit für ' : 'Uncompromising IT Security for '}
+                <br />
+                <span className="hero-typed-target">
+                  {displayedWord}
+                  <span className="hero-typing-cursor">|</span>
+                </span>
+              </h1>
 
-            {/* Hero CTAs */}
-            <div style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '1rem',
-              marginBottom: '2rem'
-            }}>
-              <Link to="/contact" className="btn btn-primary" style={{ padding: '0.85rem 1.85rem', fontSize: '1rem' }}>
-                {t('hero.ctaPrimary')}
-                <ArrowRight size={17} />
-              </Link>
-              <Link to="/services" className="btn btn-secondary" style={{ padding: '0.85rem 1.85rem', fontSize: '1rem' }}>
-                {lang === 'de' ? 'Leistungsübersicht' : 'Explore Capabilities'}
-              </Link>
+              <p className="lead" style={{
+                margin: '0 0 1.75rem',
+                maxWidth: '620px',
+                color: '#94a3b8',
+                fontSize: '1.15rem',
+                lineHeight: 1.65
+              }}>
+                {t('hero.description')}
+              </p>
+
+              {/* Quick Trust Highlights (No minute claims) */}
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                gap: '0.65rem',
+                marginBottom: '2.25rem'
+              }}>
+                <span className="hero-trust-pill">
+                  <CheckCircle2 size={14} color="#10b981" />
+                  BSI &amp; ISO 27001 Auditor-Prüfung
+                </span>
+                <span className="hero-trust-pill">
+                  <CheckCircle2 size={14} color="#10b981" />
+                  100% DSGVO-konform
+                </span>
+                <span className="hero-trust-pill">
+                  <CheckCircle2 size={14} color="#10b981" />
+                  Persönlicher Vor-Ort-Einsatz
+                </span>
+              </div>
+
+              {/* Hero CTAs */}
+              <div style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                alignItems: 'center',
+                gap: '1rem',
+                marginBottom: '1.75rem'
+              }}>
+                <Link
+                  to="/contact"
+                  className="btn btn-primary"
+                  style={{
+                    padding: '0.9rem 1.95rem',
+                    fontSize: '1.02rem',
+                    boxShadow: '0 4px 20px rgba(0, 98, 255, 0.45)'
+                  }}
+                >
+                  {t('hero.ctaPrimary')}
+                  <ArrowRight size={17} />
+                </Link>
+                <Link
+                  to="/services"
+                  className="btn btn-glass-hero"
+                  style={{
+                    padding: '0.9rem 1.95rem',
+                    fontSize: '1.02rem'
+                  }}
+                >
+                  {lang === 'de' ? 'Leistungsübersicht' : 'Explore Capabilities'}
+                </Link>
+              </div>
+
+
             </div>
 
-            {/* SLA Badge */}
-            {/*  <div style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.55rem',
-              backgroundColor: '#eff6ff',
-              border: '1px solid #bfdbfe',
-              padding: '0.45rem 1rem',
-              borderRadius: 'var(--radius-pill)',
-              fontSize: '0.85rem',
-              fontWeight: 500,
-              color: '#1e40af'
-            }}>
-              <Clock size={15} color="#0062ff" />
-              <span>{t('hero.slaNotice')}</span>
-              <span style={{ color: '#16a34a', fontWeight: 700 }}>• AKTIV</span>
-            </div> */}
-            <div style={{ padding: '2rem' }}></div>
+            {/* Right Column: Hero Visual - Server Room Expert Seamlessly Blended */}
+            <div>
+              <div className="hero-image-wrap">
+                {/* Cyber Glow Backdrop */}
+                <div className="hero-image-glow" />
+
+                {/* Blended Image Canvas */}
+                <div className="hero-image-blend-box">
+                  <img
+                    src="/image.png"
+                    alt="EminSecurity IT-Sicherheit &amp; Rechenzentrum Experte vor Ort"
+                    loading="eager"
+                  />
+                  {/* Seamless Fade Overlays (Melts with #070b13) */}
+                  <div className="hero-blend-fade-left" />
+                  <div className="hero-blend-fade-right" />
+                  <div className="hero-blend-fade-top" />
+                  <div className="hero-blend-fade-bottom" />
+                  <div className="hero-blend-vignette" />
+                </div>
+
+                {/* Floating SLA / Security Badge Bottom */}
+                <div className="hero-floating-card">
+                  <div style={{
+                    width: '38px',
+                    height: '38px',
+                    borderRadius: '8px',
+                    backgroundColor: 'rgba(0, 98, 255, 0.2)',
+                    border: '1px solid rgba(0, 98, 255, 0.4)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#38bdf8'
+                  }}>
+                    <Server size={19} />
+                  </div>
+                  <div>
+                    <div style={{
+                      fontSize: '0.72rem',
+                      color: '#94a3b8',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.04em',
+                      fontWeight: 600
+                    }}>
+                    </div>
+                    <div style={{
+                      fontSize: '0.94rem',
+                      fontWeight: 700,
+                      color: '#f8fafc'
+                    }}>
+                      Direkt &amp; persönlich vor Ort
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Interactive Enginsight-style Capability Dashboard (replaces raw terminal) */}
-          <div style={{ marginTop: '4rem' }}>
-            <div className="cyber-card" style={{
-              padding: 0,
+          {/* Interactive Enginsight-style Capability Dashboard (Cyber Defense Matrix) */}
+          <div style={{ marginTop: '4.5rem' }}>
+            <div style={{
+              borderRadius: 'var(--radius-md)',
               overflow: 'hidden',
-              border: '1px solid var(--border-subtle)',
-              boxShadow: 'var(--shadow-lg)'
+              backgroundColor: 'rgba(11, 17, 32, 0.85)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7)',
+              backdropFilter: 'blur(16px)',
+              WebkitBackdropFilter: 'blur(16px)'
             }}>
               {/* Dashboard Nav Bar */}
               <div style={{
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
-                padding: '0.85rem 1.5rem',
-                backgroundColor: '#f8fafc',
-                borderBottom: '1px solid var(--border-subtle)',
+                padding: '0.95rem 1.6rem',
+                backgroundColor: 'rgba(7, 11, 20, 0.95)',
+                borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
                 flexWrap: 'wrap',
                 gap: '1rem'
               }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-                  <ShieldCheck size={20} color="#0062ff" />
-                  <span style={{ fontWeight: 700, fontSize: '0.95rem', color: '#0f172a' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
+                  <ShieldCheck size={20} color="#38bdf8" />
+                  <span style={{ fontWeight: 700, fontSize: '0.95rem', color: '#f8fafc' }}>
                     EminSec Cyber Defense Matrix
                   </span>
-                  <span className="tech-badge blue" style={{ fontSize: '0.7rem', padding: '0.15rem 0.5rem' }}>
+                  <span style={{
+                    fontSize: '0.7rem',
+                    padding: '0.2rem 0.55rem',
+                    borderRadius: 'var(--radius-pill)',
+                    backgroundColor: 'rgba(0, 98, 255, 0.2)',
+                    border: '1px solid rgba(0, 98, 255, 0.4)',
+                    color: '#60a5fa',
+                    fontWeight: 600,
+                    letterSpacing: '0.03em'
+                  }}>
                     LIVE ARCHITEKTUR
                   </span>
                 </div>
 
-                <div style={{ display: 'flex', gap: '0.5rem' }}>
+                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                   <button
                     onClick={() => setActiveTab('offensive')}
-                    className={`btn btn-sm ${activeTab === 'offensive' ? 'btn-primary' : 'btn-secondary'}`}
+                    className={`btn btn-sm ${activeTab === 'offensive' ? 'btn-primary' : 'btn-glass-hero'}`}
+                    style={activeTab !== 'offensive' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
                   >
                     Offensive Testing
                   </button>
                   <button
                     onClick={() => setActiveTab('defensive')}
-                    className={`btn btn-sm ${activeTab === 'defensive' ? 'btn-primary' : 'btn-secondary'}`}
+                    className={`btn btn-sm ${activeTab === 'defensive' ? 'btn-primary' : 'btn-glass-hero'}`}
+                    style={activeTab !== 'defensive' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
                   >
                     24/7 SOC &amp; Forensik
                   </button>
                   <button
                     onClick={() => setActiveTab('compliance')}
-                    className={`btn btn-sm ${activeTab === 'compliance' ? 'btn-primary' : 'btn-secondary'}`}
+                    className={`btn btn-sm ${activeTab === 'compliance' ? 'btn-primary' : 'btn-glass-hero'}`}
+                    style={activeTab !== 'compliance' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
                   >
                     NIS-2 &amp; ISO 27001
                   </button>
@@ -162,33 +293,33 @@ export default function HomePage() {
               </div>
 
               {/* Dashboard Content Panel */}
-              <div style={{ padding: '2rem 2.5rem', backgroundColor: '#ffffff' }}>
+              <div style={{ padding: '2.25rem 2.5rem', backgroundColor: 'rgba(8, 13, 24, 0.75)' }}>
                 {activeTab === 'offensive' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
-                      <div style={{ color: 'var(--accent-blue)', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         WEB &amp; API PENTESTING
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Manuelle Prüfung nach OWASP ASVS 4.0</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Manuelle Prüfung nach OWASP ASVS 4.0</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Identifikation von Logikfehlern, Authentifizierungs-Bypasses und API-Schwachstellen durch zertifizierte OSCP-Engineers.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: 'var(--accent-blue)', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         ACTIVE DIRECTORY AUDITS
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Angriffspfade zur Domänenübernahme</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Angriffspfade zur Domänenübernahme</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Systematisches Aufdecken von Kerberoasting, schwachen ACLs und NTLM-Schwachstellen vor realen Erpressern.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: 'var(--accent-blue)', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         PROOF-OF-CONCEPT BERICHT
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Verständlich für Vorstand &amp; IT-Team</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Verständlich für Vorstand &amp; IT-Team</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Exakte Nachweise, CVSS v4.0 Risikobewertung, konkrete Code-Fixes und kostenloser Retest innerhalb von 60 Tagen.
                       </p>
                     </div>
@@ -198,29 +329,29 @@ export default function HomePage() {
                 {activeTab === 'defensive' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
-                      <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         24/7 SOC-AS-A-SERVICE
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Permanente Telemetrie-Überwachung</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Permanente Telemetrie-Überwachung</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Deutsche Analysten überwachen Ihre Endpoints, Server und Netzwerke rund um die Uhr ohne Alarm-Müdigkeit.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         INCIDENT FORENSIK
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Beweissicherung &amp; Eindämmung</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Beweissicherung &amp; Eindämmung</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         RAM-Forensik, Triage, Isolation infizierter Systeme und gerichtsverwertbare Berichte für BSI und Cyberversicherer.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         VOR-ORT-EINSATZGARANTIE
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Unter 90 Minuten in Thüringen</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Direkte Präsenz in ganz Thüringen</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Unsere Forensiker rücken bei aktiven Vorfällen direkt an Ihr Rechenzentrum in Jena, Erfurt, Weimar, Gera oder Hermsdorf aus.
                       </p>
                     </div>
@@ -230,29 +361,29 @@ export default function HomePage() {
                 {activeTab === 'compliance' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
-                      <div style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         NIS-2 UMSETZUNGSGESETZ
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Haftungsvermeidung für Geschäftsführer</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Haftungsvermeidung für Geschäftsführer</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Umsetzung der 10 technischen Mindestkontrollen, Etablierung des 24h-Frühwarnprozesses und Supply-Chain-Audits.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         ISO/IEC 27001:2022
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Zertifizierungsvorbereitung</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Zertifizierungsvorbereitung</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Pragmatischer Aufbau eines schlanken ISMS nach den 93 Annex A Kontrollen inklusive Begleitung durch Lead Auditoren.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: '#0284c7', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem' }}>
+                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
                         PRAXEN &amp; KLINIKEN (§ 75b SGB V)
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#0f172a', marginBottom: '0.5rem' }}>Telematik &amp; Patientenschutz</h4>
-                      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Telematik &amp; Patientenschutz</h4>
+                      <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
                         Sichere Segmentierung von Praxisnetzen, Schutz vor Datenabfluss nach § 203 StGB und Erfüllung der KBV-Richtlinien.
                       </p>
                     </div>
@@ -422,9 +553,6 @@ export default function HomePage() {
                       {loc.city}
                     </h3>
                   </div>
-                  <span className="tech-badge emerald">
-                    &lt; {loc.slaMinutes} Min SLA
-                  </span>
                 </div>
 
                 <div style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--accent-blue)', marginBottom: '0.75rem' }}>
@@ -465,7 +593,7 @@ export default function HomePage() {
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <CheckCircle2 size={20} color="#10b981" />
               <span style={{ fontSize: '0.95rem', color: '#1e293b' }}>
-                <strong>Garantierte Thüringen-SLA:</strong> Für Vertragspartner rückt unser forensisches Emergency-Team innerhalb von 90 Minuten an jedes Rechenzentrum in ganz Thüringen aus.
+                <strong>Garantierte Thüringen-SLA:</strong> Für Vertragspartner rückt unser forensisches Emergency-Team auf schnellstem Weg direkt an jedes Rechenzentrum in ganz Thüringen aus.
               </span>
             </div>
             <Link to="/locations" className="btn btn-secondary btn-sm">

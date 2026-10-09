@@ -108,12 +108,12 @@ export default function DefensiveSecurityPage() {
           </p>
           <div className="grid-3">
             <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
-              <div style={{ color: '#059669', fontWeight: 700, fontSize: '1.1rem' }}>&lt; 15 Minuten</div>
+              <div style={{ color: '#059669', fontWeight: 700, fontSize: '1.1rem' }}>{lang === 'de' ? 'Sofort-Triage' : 'Instant Triage'}</div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: '0.2rem 0', fontWeight: 600 }}>Remote Triage SLA</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Sofortige telefonische Einsatzleitung und Beginn der Netzwerkisolierung.</div>
             </div>
             <div style={{ padding: '1rem', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderRadius: '4px' }}>
-              <div style={{ color: 'var(--accent-blue)', fontWeight: 700, fontSize: '1.1rem' }}>&lt; 90 Minuten</div>
+              <div style={{ color: 'var(--accent-blue)', fontWeight: 700, fontSize: '1.1rem' }}>{lang === 'de' ? 'Vor-Ort-Garantie' : 'On-Site Guarantee'}</div>
               <div style={{ fontSize: '0.85rem', color: 'var(--text-main)', margin: '0.2rem 0', fontWeight: 600 }}>Vor-Ort Thüringen SLA</div>
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Unsere Forensiker treffen direkt an Ihrem Serverraum oder Rechenzentrum ein.</div>
             </div>

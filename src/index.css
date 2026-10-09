@@ -453,3 +453,246 @@ code, pre, .font-mono {
   outline: 2px solid var(--accent-blue);
   outline-offset: 2px;
 }
+
+/* ==========================================================================
+   Dark Cyber Hero Section & Image Blending
+   ========================================================================== */
+.hero-dark-section {
+  position: relative;
+  background-color: #070b13;
+  background-image: 
+    radial-gradient(ellipse 65% 55% at 75% 35%, rgba(0, 98, 255, 0.16) 0%, transparent 70%),
+    radial-gradient(circle 500px at 20% 80%, rgba(2, 132, 199, 0.1) 0%, transparent 60%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: auto, auto, 40px 40px, 40px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 4.5rem;
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.hero-dark-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (max-width: 991px) {
+  .hero-dark-split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+/* Image Blend Container (Vertically Longer & Sideways Seamless Blend) */
+.hero-image-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image-glow {
+  position: absolute;
+  width: 85%;
+  height: 85%;
+  top: 8%;
+  left: 8%;
+  background: radial-gradient(circle, rgba(0, 98, 255, 0.38) 0%, rgba(2, 132, 199, 0.18) 50%, transparent 75%);
+  filter: blur(55px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image-blend-box {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  max-height: 680px;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  z-index: 2;
+  /* Smooth radial fade on edges */
+  mask-image: radial-gradient(ellipse 75% 88% at 54% 48%, black 35%, rgba(0, 0, 0, 0.85) 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 88% at 54% 48%, black 35%, rgba(0, 0, 0, 0.85) 60%, transparent 100%);
+}
+
+@media (max-width: 991px) {
+  .hero-image-blend-box {
+    min-height: 460px;
+    max-height: 540px;
+  }
+}
+
+.hero-image-blend-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+/* Multi-directional gradient overlays melting the image into the text and dark color #070b13 */
+.hero-blend-fade-left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 52%;
+  background: linear-gradient(to right, #070b13 0%, rgba(7, 11, 19, 0.98) 18%, rgba(7, 11, 19, 0.82) 42%, rgba(7, 11, 19, 0.35) 75%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-blend-fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 36%;
+  background: linear-gradient(to left, #070b13 0%, rgba(7, 11, 19, 0.95) 15%, rgba(7, 11, 19, 0.5) 60%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-blend-fade-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 42%;
+  background: linear-gradient(to top, #070b13 0%, rgba(7, 11, 19, 0.98) 22%, rgba(7, 11, 19, 0.5) 65%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-blend-fade-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 32%;
+  background: linear-gradient(to bottom, #070b13 0%, rgba(7, 11, 19, 0.9) 16%, rgba(7, 11, 19, 0.35) 65%, transparent 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-blend-vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 52% 46%, transparent 40%, rgba(7, 11, 19, 0.45) 70%, #070b13 100%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Dynamic Typing Title Styles */
+.hero-typed-target {
+  display: inline-block;
+  color: #38bdf8;
+  background: linear-gradient(135deg, #38bdf8 0%, #60a5fa 60%, #93c5fd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(56, 189, 248, 0.45));
+  border-bottom: 2px solid rgba(56, 189, 248, 0.5);
+  padding-bottom: 2px;
+}
+
+.hero-typing-cursor {
+  display: inline-block;
+  margin-left: 3px;
+  color: #38bdf8;
+  font-weight: 300;
+  -webkit-text-fill-color: #38bdf8;
+  animation: blinkCursor 0.9s infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Floating Badges on the Image */
+.hero-floating-pill {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(11, 17, 32, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  color: #f8fafc;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.hero-floating-card {
+  position: absolute;
+  bottom: 24px;
+  right: 14px;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius-md);
+  background-color: rgba(11, 17, 32, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 98, 255, 0.35);
+  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+}
+
+.btn-glass-hero {
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-glass-hero:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.hero-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 540px) {
+  .hero-floating-pill {
+    top: 12px;
+    left: 8px;
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
+  }
+  .hero-floating-card {
+    bottom: 12px;
+    right: 8px;
+    padding: 0.5rem 0.8rem;
+    gap: 0.5rem;
+  }
+}

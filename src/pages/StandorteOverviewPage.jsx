@@ -22,8 +22,8 @@ export default function StandorteOverviewPage() {
           </h1>
           <p className="lead">
             {lang === 'de'
-              ? 'Im Ernstfall eines Ransomware-Angriffs oder bei physischen Einbruchstests nützt kein Support-Callcenter am anderen Ende der Welt. Wir sind direkt vor Ort bei unseren Kunden in Thüringen verankert – mit garantierter Reaktionszeit unter 90 Minuten.'
-              : 'During an active cyber disaster or on-site physical infiltration audit, remote ticketing centers fall short. We maintain physical proximity throughout Thuringia with guaranteed on-site response SLAs.'}
+              ? 'Im Ernstfall eines Ransomware-Angriffs oder bei physischen Einbruchstests nützt kein Support-Callcenter am anderen Ende der Welt. Wir sind direkt vor Ort bei unseren Kunden in Thüringen verankert – mit persönlicher Vor-Ort-Präsenz und direkter Einsatzbereitschaft.'
+              : 'During an active cyber disaster or on-site physical infiltration audit, remote ticketing centers fall short. We maintain direct physical proximity throughout Thuringia with guaranteed on-site response readiness.'}
           </p>
         </div>
 

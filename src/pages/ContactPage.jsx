@@ -339,8 +339,8 @@ export default function ContactPage() {
                 <p style={{ maxWidth: '620px', margin: '0 auto 2rem', color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: 1.6 }}>
                   {formData.urgency === 'critical'
                     ? (lang === 'de' 
-                        ? 'Ihr Notfallticket wurde mit höchster Priorität (P1) im Incident-Dispatch eingesteuert. Ein Senior Incident Responder ruft Sie binnen 15 Minuten unter Ihrer angegebenen Telefonnummer an.' 
-                        : 'Your incident dispatch ticket has been assigned highest priority (P1). A senior responder will call you within 15 minutes.')
+                        ? 'Ihr Notfallticket wurde mit höchster Priorität (P1) im Incident-Dispatch eingesteuert. Ein Senior Incident Responder ruft Sie schnellstmöglich unter Ihrer angegebenen Telefonnummer an.' 
+                        : 'Your incident dispatch ticket has been assigned highest priority (P1). A senior responder will call you immediately.')
                     : (lang === 'de' 
                         ? 'Ihre Daten wurden verschlüsselt an unser Engineering-Team übermittelt. Ein zertifizierter Sicherheitsberater prüft Ihr Anliegen und meldet sich innerhalb von 4 Arbeitsstunden bei Ihnen.' 
                         : 'Your inquiry has been securely transmitted. A certified engineer will analyze your request and follow up within 4 business hours.')}

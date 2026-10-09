@@ -23,11 +23,11 @@ export const translations = {
       description: "EminSecurity schützt kritische Infrastrukturen, Unternehmen und medizinische Einrichtungen in Jena, Erfurt, Weimar, Gera und Hermsdorf. Keine theoretischen Konzepte, sondern reale Angriffs-Simulationen, 24/7 SOC-Überwachung und zertifizierte Incident Response.",
       ctaPrimary: "Audit & Beratung anfragen",
       ctaSecondary: "Live Bedrohungslage prüfen",
-      slaNotice: "Vor-Ort-Einsatzzeit in Thüringen: unter 90 Minuten"
+      slaNotice: "Vor-Ort-Einsatz in Thüringen: Schnelle Sofort-Bereitschaft"
     },
     metrics: {
-      responseTime: "< 90 Min",
-      responseTimeLabel: "Vor-Ort-Reaktionszeit Thüringen",
+      responseTime: "Vor Ort",
+      responseTimeLabel: "Direkte Vor-Ort-Bereitschaft Thüringen",
       pentesters: "100%",
       pentestersLabel: "Zertifizierte Engineers (OSCP/CISSP)",
       incidentsHandled: "24/7/365",
@@ -94,11 +94,11 @@ export const translations = {
       description: "EminSecurity defends critical infrastructure, medium-sized enterprises, and healthcare providers across Jena, Erfurt, Weimar, Gera, and Hermsdorf. Real offensive penetration testing, 24/7 SOC operations, and certified incident response.",
       ctaPrimary: "Request Security Audit",
       ctaSecondary: "Check Threat Intelligence",
-      slaNotice: "On-site dispatch SLA across Thuringia: under 90 minutes"
+      slaNotice: "On-site dispatch across Thuringia: Rapid direct response readiness"
     },
     metrics: {
-      responseTime: "< 90 Min",
-      responseTimeLabel: "On-site Dispatch SLA Thuringia",
+      responseTime: "On-Site",
+      responseTimeLabel: "Direct Dispatch Readiness Thuringia",
       pentesters: "100%",
       pentestersLabel: "Certified Senior Engineers (OSCP/CISSP)",
       incidentsHandled: "24/7/365",
@@ -563,11 +563,11 @@ export const locationsData = [
     phone: "+49 152 33513651",
     slaMinutes: 30,
     description: {
-      de: "Jena ist das Herz der mitteldeutschen High-Tech-Industrie. Weltmarktführer in Optik und Präzisionsfertigung sowie innovative Medizintechnik-Unternehmen vertrauen auf unsere Penetrationstests und 24/7 Abwehrsysteme. Unser Einsatzteam ist innerhalb von 30 Minuten direkt bei Ihnen vor Ort.",
-      en: "Jena is the innovation engine of Central Germany. Global photonics pioneers and medical device manufacturers rely on EminSecurity for offensive security testing and 24/7 incident response with a 30-minute local on-site SLA."
+      de: "Jena ist das Herz der mitteldeutschen High-Tech-Industrie. Weltmarktführer in Optik und Präzisionsfertigung sowie innovative Medizintechnik-Unternehmen vertrauen auf unsere Penetrationstests und 24/7 Abwehrsysteme. Unser Einsatzteam ist auf direktem Weg schnell bei Ihnen vor Ort.",
+      en: "Jena is the innovation engine of Central Germany. Global photonics pioneers and medical device manufacturers rely on EminSecurity for offensive security testing and 24/7 incident response with direct regional on-site presence."
     },
     regionalHighlights: [
-      { de: "Vor-Ort Incident Response in unter 30 Minuten", en: "On-site incident response in under 30 minutes" },
+      { de: "Vor-Ort Incident Response in Thüringen", en: "Direct on-site incident response across Thuringia" },
       { de: "Erfahrung mit Reinraum- & Labor-Netzwerken", en: "Specialized in laboratory and cleanroom IT environments" },
       { de: "Schutz von Patenten und F&E-Entwicklungsdaten", en: "Protection of proprietary R&D blueprints and patents" }
     ]
@@ -585,7 +585,7 @@ export const locationsData = [
     },
     address: "Anger 42, 99084 Erfurt",
     phone: "+49 152 33513651",
-    slaMinutes: 45,
+    slaMinutes: 0,
     description: {
       de: "Als Landeshauptstadt beherbergt Erfurt Ministerien, Körperschaften, große Finanz- und Logistikdienstleister sowie florierende E-Commerce-Zentren. Wir unterstützen öffentliche Institutionen und Unternehmen bei der Einhaltung von NIS-2, ISO 27001 und BSI IT-Grundschutz.",
       en: "As Thuringia's capital, Erfurt is home to ministries, financial services, and major logistics clusters. We assist government bodies and enterprises with NIS-2, ISO 27001, and BSI IT-Grundschutz compliance."
@@ -593,7 +593,7 @@ export const locationsData = [
     regionalHighlights: [
       { de: "NIS-2 Readiness & BSI Auditbegleitung", en: "NIS-2 readiness and official BSI audit support" },
       { de: "Erfurter Kreuz Industrie-Absicherung", en: "Industrial cybersecurity for Erfurter Kreuz manufacturing hub" },
-      { de: "Vor-Ort-Reaktionszeit unter 45 Minuten", en: "Under 45 minutes on-site emergency dispatch SLA" }
+      { de: "Direkte Vor-Ort-Reaktionsbereitschaft", en: "Rapid direct on-site emergency dispatch SLA" }
     ]
   },
   {
@@ -609,7 +609,7 @@ export const locationsData = [
     },
     address: "Theaterplatz 8, 99423 Weimar",
     phone: "+49 152 33513651",
-    slaMinutes: 35,
+    slaMinutes: 0,
     description: {
       de: "In Weimar stehen Vertraulichkeit und der Schutz von Berufsgeheimnissen im Vordergrund. Wir sichern Anwaltskanzleien, Steuerberater, Notariate und wissenschaftliche Institute gegen Wirtschaftsspionage und Datenabfluss ab.",
       en: "Weimar is characterized by high legal and research density. We defend law firms, audit practices, and scientific institutes against corporate espionage, data theft, and ransomware threats."
@@ -617,7 +617,7 @@ export const locationsData = [
     regionalHighlights: [
       { de: "Geheimnisschutz nach § 203 StGB konform", en: "Fully compliant with German legal privilege (§ 203 StGB)" },
       { de: "Verschlüsselte Datenräume & E-Mail-Härtung", en: "Hardened email architectures and encrypted deal rooms" },
-      { de: "35 Minuten Vor-Ort-Reaktionszeit", en: "35-minute on-site response time across Weimar" }
+      { de: "Direkte Vor-Ort-Reaktionsbereitschaft", en: "Direct on-site response readiness across Weimar" }
     ]
   },
   {
@@ -633,7 +633,7 @@ export const locationsData = [
     },
     address: "Heinrichstraße 14, 07545 Gera",
     phone: "+49 152 33513651",
-    slaMinutes: 40,
+    slaMinutes: 0,
     description: {
       de: "Gera und Ostthüringen sind geprägt von traditionsreicher Industrie, Zulieferern und starken regionalen Gesundheitsversorgern. Wir schützen Produktionsstraßen (OT/SCADA) vor Stillstand durch Krypto-Trojaner und stellen 24/7 Überwachung bereit.",
       en: "Gera represents Eastern Thuringia's industrial core. We insulate manufacturing OT networks against ransomware shutdowns and deliver round-the-clock SOC telemetry for regional enterprises."
@@ -641,7 +641,7 @@ export const locationsData = [
     regionalHighlights: [
       { de: "OT & Industrie-4.0 Sicherheitsaudits", en: "OT and Industrial IoT security audits" },
       { de: "Absicherung von Krankenhaus- und Zulieferernetzen", en: "Defense of hospital networks and healthcare infrastructure" },
-      { de: "40 Minuten Vor-Ort-Garantie", en: "40-minute guaranteed dispatch SLA across Gera" }
+      { de: "Garantierte Vor-Ort-Präsenz", en: "Guaranteed direct on-site presence across Gera" }
     ]
   },
   {
@@ -657,14 +657,14 @@ export const locationsData = [
     },
     address: "Technologiepark 1, 07629 Hermsdorf",
     phone: "+49 152 33513651",
-    slaMinutes: 20,
+    slaMinutes: 0,
     description: {
-      de: "Hermsdorf ist mit dem Tridelta-Areal ein europäisches Kompetenzzentrum für technische Keramik, Elektronik und Mikrokomponenten am Schnittpunkt von A4 und A9. Dank unserer Lage vor Ort erreichen wir Betriebe im Gewerbegebiet in unter 20 Minuten.",
-      en: "Hermsdorf is a European benchmark for technical ceramics and microelectronics positioned at the vital A4/A9 intersection. We reach local facilities inside 20 minutes for on-site forensic tasks."
+      de: "Hermsdorf ist mit dem Tridelta-Areal ein europäisches Kompetenzzentrum für technische Keramik, Elektronik und Mikrokomponenten am Schnittpunkt von A4 und A9. Dank unserer Lage vor Ort erreichen wir Betriebe im Gewerbegebiet auf direktem Weg.",
+      en: "Hermsdorf is a European benchmark for technical ceramics and microelectronics positioned at the vital A4/A9 intersection. We reach local facilities rapidly for direct on-site forensic tasks."
     },
     regionalHighlights: [
       { de: "Unmittelbare Nähe am Hermsdorfer Kreuz (A4/A9)", en: "Immediate access to A4/A9 transport interchange" },
-      { de: "Unter 20 Minuten Reaktionszeit am Technologiepark", en: "Under 20 minutes response time at Tridelta park" },
+      { de: "Schnelle Reaktionsbereitschaft am Technologiepark", en: "Rapid response readiness at Tridelta park" },
       { de: "Spezialisierung auf vernetzte Produktionsanlagen", en: "Specialization in industrial control systems & sensor networks" }
     ]
   }

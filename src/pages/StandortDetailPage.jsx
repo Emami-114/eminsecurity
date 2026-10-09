@@ -36,7 +36,7 @@ export default function StandortDetailPage() {
             <div style={{ flex: '1 1 520px' }}>
               <span className="tech-badge emerald" style={{ marginBottom: '0.85rem' }}>
                 <Clock size={13} />
-                VOR-ORT REAKTIONSZEIT: UNTER {loc.slaMinutes} MINUTEN
+                {lang === 'de' ? 'VOR-ORT EINSATZBEREITSCHAFT: DIREKT & PERSÖNLICH' : 'ON-SITE READINESS: DIRECT & RAPID'}
               </span>
               <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.6rem)', margin: '0.5rem 0', color: 'var(--text-main)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
                 {loc.title[lang]}
