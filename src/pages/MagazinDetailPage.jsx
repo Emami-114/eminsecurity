@@ -59,27 +59,27 @@ export default function MagazinDetailPage() {
 
         {/* Executive Summary Box */}
         <div style={{
-          backgroundColor: 'rgba(0, 229, 255, 0.05)',
-          borderLeft: '4px solid var(--accent-cyan)',
+          backgroundColor: 'var(--accent-blue-light)',
+          borderLeft: '4px solid var(--accent-blue)',
           padding: '1.25rem 1.5rem',
           borderRadius: 'var(--radius-sm)',
           marginBottom: '2.5rem',
           fontSize: '1.05rem',
-          color: '#e2e8f0',
+          color: '#1e3a8a',
           lineHeight: 1.6
         }}>
           <strong>Executive Summary:</strong> {article.summary[lang]}
         </div>
 
         {/* Main Article Content (Markdown style rendered) */}
-        <article className="article-body" style={{ color: '#cbd5e1', fontSize: '1.05rem', lineHeight: 1.75 }}>
+        <article className="article-body" style={{ color: 'var(--text-muted)', fontSize: '1.05rem', lineHeight: 1.75 }}>
           {article.content[lang].split('\n\n').map((paragraph, index) => {
             const trimmed = paragraph.trim();
             if (!trimmed) return null;
 
             if (trimmed.startsWith('### ')) {
               return (
-                <h2 key={index} style={{ fontSize: '1.5rem', color: '#fff', marginTop: '2.5rem', marginBottom: '1rem' }}>
+                <h2 key={index} style={{ fontSize: '1.5rem', color: 'var(--text-main)', marginTop: '2.5rem', marginBottom: '1rem' }}>
                   {trimmed.replace('### ', '')}
                 </h2>
               );
@@ -88,7 +88,7 @@ export default function MagazinDetailPage() {
             if (trimmed.startsWith('1. ') || trimmed.startsWith('- ')) {
               const lines = trimmed.split('\n');
               return (
-                <ul key={index} style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                <ul key={index} style={{ paddingLeft: '1.5rem', marginBottom: '1.5rem', color: 'var(--text-muted)' }}>
                   {lines.map((li, lIndex) => {
                     const cleanLi = li.replace(/^[0-9]+\.\s+/, '').replace(/^-\s+/, '');
                     return (
@@ -102,7 +102,7 @@ export default function MagazinDetailPage() {
             }
 
             return (
-              <p key={index} style={{ marginBottom: '1.5rem', color: '#cbd5e1' }}>
+              <p key={index} style={{ marginBottom: '1.5rem', color: 'var(--text-muted)' }}>
                 {trimmed}
               </p>
             );
@@ -112,16 +112,14 @@ export default function MagazinDetailPage() {
         {/* Author / Threat Intel Box */}
         <div style={{
           marginTop: '3.5rem',
-          borderTop: '1px solid var(--border-subtle)',
-          paddingTop: '2rem',
-          backgroundColor: 'var(--bg-surface)',
+          backgroundColor: 'var(--bg-subtle)',
           padding: '1.75rem',
           borderRadius: 'var(--radius-md)',
-          border: '1px solid var(--border-strong)'
+          border: '1px solid var(--border-subtle)'
         }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.75rem' }}>
-            <Shield size={22} color="#00e5ff" />
-            <h3 style={{ margin: 0, fontSize: '1.15rem' }}>
+            <Shield size={22} color="var(--accent-blue)" />
+            <h3 style={{ margin: 0, fontSize: '1.15rem', color: 'var(--text-main)' }}>
               EminSecurity Threat Intelligence &amp; Forensik Cell
             </h3>
           </div>

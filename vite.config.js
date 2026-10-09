@@ -3,8 +3,13 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/',
   server: {
     port: 5173,
-    host: true
+    host: true,
+    watch: {
+      usePolling: true,
+      interval: 100
+    }
   }
 });

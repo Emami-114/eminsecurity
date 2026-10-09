@@ -34,7 +34,7 @@ export default function MagazinPage() {
         <div style={{ marginBottom: '3rem' }}>
           <div className="cyber-card" style={{
             border: '1px solid rgba(239, 68, 68, 0.4)',
-            backgroundColor: '#0a0b12',
+            backgroundColor: '#ffffff54',
             padding: '2.5rem'
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '0.75rem', marginBottom: '1.25rem' }}>
@@ -52,12 +52,12 @@ export default function MagazinPage() {
             </div>
 
             <h2 style={{ fontSize: '1.8rem', lineHeight: 1.25, marginBottom: '1rem' }}>
-              <Link to={`/magazin/${magazineArticles[0].slug}`} style={{ color: '#fff' }}>
+              <Link to={`/magazin/${magazineArticles[0].slug}`} style={{ color: 'var(--text-main)' }}>
                 {magazineArticles[0].title[lang]}
               </Link>
             </h2>
 
-            <p style={{ fontSize: '1.05rem', color: '#cbd5e1', marginBottom: '1.5rem', lineHeight: 1.6 }}>
+            <p style={{ fontSize: '1.05rem', color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.6 }}>
               {magazineArticles[0].summary[lang]}
             </p>
 
@@ -103,7 +103,7 @@ export default function MagazinPage() {
               </div>
 
               <h2 style={{ fontSize: '1.3rem', marginBottom: '0.75rem', lineHeight: 1.35 }}>
-                <Link to={`/magazin/${article.slug}`} style={{ color: '#fff' }}>
+                <Link to={`/magazin/${article.slug}`} style={{ color: 'var(--text-main)' }}>
                   {article.title[lang]}
                 </Link>
               </h2>
@@ -122,7 +122,7 @@ export default function MagazinPage() {
                 <span style={{ fontSize: '0.8rem', color: 'var(--text-faint)' }}>
                   {article.readTime}
                 </span>
-                <Link to={`/magazin/${article.slug}`} style={{ fontSize: '0.85rem', color: 'var(--accent-cyan)', fontWeight: 600 }}>
+                <Link to={`/magazin/${article.slug}`} style={{ fontSize: '0.85rem', color: 'var(--accent-blue)', fontWeight: 600 }}>
                   {lang === 'de' ? 'Artikel lesen' : 'Read Briefing'} &gt;
                 </Link>
               </div>

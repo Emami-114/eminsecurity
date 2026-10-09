@@ -42,16 +42,16 @@ export default function Nis2Page() {
           </div>
           <div className="grid-3" style={{ gap: '1rem', marginTop: '1rem' }}>
             <div>
-              <div style={{ color: '#fff', fontWeight: 600, fontSize: '0.95rem' }}>Bis zu 10 Mio. € Bußgeld</div>
-              <div style={{ fontSize: '0.82rem', color: '#fca5a5' }}>Oder bis zu 2% des weltweiten Jahresumsatzes bei Nichtbeachtung.</div>
+              <div style={{ color: '#991b1b', fontWeight: 700, fontSize: '0.95rem' }}>Bis zu 10 Mio. € Bußgeld</div>
+              <div style={{ fontSize: '0.84rem', color: '#7f1d1d' }}>Oder bis zu 2% des weltweiten Jahresumsatzes bei Nichtbeachtung.</div>
             </div>
             <div>
-              <div style={{ color: '#fff', fontWeight: 600, fontSize: '0.95rem' }}>24h Frühwarnung an BSI</div>
-              <div style={{ fontSize: '0.82rem', color: '#fca5a5' }}>Erste Meldung eines gravierenden Vorfalls binnen 24 Stunden zwingend vorgeschrieben.</div>
+              <div style={{ color: '#991b1b', fontWeight: 700, fontSize: '0.95rem' }}>24h Frühwarnung an BSI</div>
+              <div style={{ fontSize: '0.84rem', color: '#7f1d1d' }}>Erste Meldung eines gravierenden Vorfalls binnen 24 Stunden zwingend vorgeschrieben.</div>
             </div>
             <div>
-              <div style={{ color: '#fff', fontWeight: 600, fontSize: '0.95rem' }}>Persönliche GF-Haftung</div>
-              <div style={{ fontSize: '0.82rem', color: '#fca5a5' }}>Verbot des Haftungsausschlusses oder der einfachen Delegation an externe IT.</div>
+              <div style={{ color: '#991b1b', fontWeight: 700, fontSize: '0.95rem' }}>Persönliche GF-Haftung</div>
+              <div style={{ fontSize: '0.84rem', color: '#7f1d1d' }}>Verbot des Haftungsausschlusses oder der einfachen Delegation an externe IT.</div>
             </div>
           </div>
         </div>
@@ -111,8 +111,8 @@ export default function Nis2Page() {
         </div>
 
         {/* CTA */}
-        <div style={{ textAlign: 'center', backgroundColor: '#090c14', padding: '2.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-strong)' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
+        <div style={{ textAlign: 'center', backgroundColor: 'var(--bg-subtle)', padding: '2.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'NIS-2 Readiness Audit für Ihr Unternehmen anfordern' : 'Schedule a Comprehensive NIS-2 Readiness Audit'}
           </h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>

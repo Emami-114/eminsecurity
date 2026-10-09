@@ -33,33 +33,33 @@ export default function Iso27001Page() {
             {lang === 'de' ? 'Der pragmatische Weg zum Zertifikat in 4 Meilensteinen' : 'Roadmap to ISO 27001 Certification'}
           </h2>
           <div className="grid-2" style={{ gap: '1.5rem' }}>
-            <div style={{ padding: '1.25rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-cyan)', fontSize: '0.85rem' }}>MEILENSTEIN 1</div>
-              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem' }}>Gap-Analyse &amp; Scoping</h3>
+            <div style={{ padding: '1.25rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-blue)', fontSize: '0.85rem', fontWeight: 600 }}>MEILENSTEIN 1</div>
+              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem', color: 'var(--text-main)' }}>Gap-Analyse &amp; Scoping</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
                 Bestimmung des Geltungsbereichs (Scope), Abgleich des Ist-Zustands gegen die 93 Kontrollen des ISO 27001:2022 Annex A und Erstellung des Implementierungs-Fahrplans.
               </p>
             </div>
 
-            <div style={{ padding: '1.25rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#38bdf8', fontSize: '0.85rem' }}>MEILENSTEIN 2</div>
-              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem' }}>Risikoanalyse &amp; Richtlinien</h3>
+            <div style={{ padding: '1.25rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#0284c7', fontSize: '0.85rem', fontWeight: 600 }}>MEILENSTEIN 2</div>
+              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem', color: 'var(--text-main)' }}>Risikoanalyse &amp; Richtlinien</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
                 Asset-Inventarisierung, strukturierte Risikobewertung nach ISO 27005 und Ausarbeitung schlanker, betriebsnaher Richtlinien (Statement of Applicability - SoA).
               </p>
             </div>
 
-            <div style={{ padding: '1.25rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#10b981', fontSize: '0.85rem' }}>MEILENSTEIN 3</div>
-              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem' }}>Internes Audit &amp; Management Review</h3>
+            <div style={{ padding: '1.25rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#059669', fontSize: '0.85rem', fontWeight: 600 }}>MEILENSTEIN 3</div>
+              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem', color: 'var(--text-main)' }}>Internes Audit &amp; Management Review</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
                 Unabhängige Überprüfung aller Prozesse durch unsere Lead Auditoren vor dem Ernstfall, Behebung von Abweichungen und Durchführung des formalen Management Reviews.
               </p>
             </div>
 
-            <div style={{ padding: '1.25rem', backgroundColor: 'rgba(255,255,255,0.02)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#c084fc', fontSize: '0.85rem' }}>MEILENSTEIN 4</div>
-              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem' }}>Zertifizierungsaudit Begleitung</h3>
+            <div style={{ padding: '1.25rem', backgroundColor: 'var(--bg-subtle)', borderRadius: 'var(--radius-sm)', border: '1px solid var(--border-subtle)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#7c3aed', fontSize: '0.85rem', fontWeight: 600 }}>MEILENSTEIN 4</div>
+              <h3 style={{ fontSize: '1.1rem', margin: '0.3rem 0 0.5rem', color: 'var(--text-main)' }}>Zertifizierungsaudit Begleitung</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
                 Wir stehen während Stage 1 und Stage 2 des externen Zertifizierungs-Auditors (z. B. TÜV Thüringen) an Ihrer Seite und unterstützen bei der fachlichen Argumentation.
               </p>
@@ -67,8 +67,8 @@ export default function Iso27001Page() {
           </div>
         </div>
 
-        <div style={{ textAlign: 'center', backgroundColor: '#090c14', padding: '2.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-strong)' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
+        <div style={{ textAlign: 'center', backgroundColor: 'var(--bg-subtle)', padding: '2.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'ISO 27001 Projekt starten' : 'Begin Your ISO 27001 Journey'}
           </h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>

@@ -18,18 +18,18 @@ export default function ImpressumPage() {
         </span>
         <h1>Impressum</h1>
 
-        <div className="cyber-card" style={{ padding: '2.5rem', marginBottom: '2.5rem', lineHeight: 1.7, color: '#cbd5e1' }}>
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '0.75rem' }}>
+        <div className="cyber-card" style={{ padding: '2.5rem', marginBottom: '2.5rem', lineHeight: 1.7, color: 'var(--text-muted)' }}>
+          <h2 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.75rem' }}>
             Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)
           </h2>
           <p>
-            <strong>EminSecurity GmbH &amp; Co. KG</strong><br />
+            <strong style={{ color: 'var(--text-main)' }}>EminSecurity GmbH &amp; Co. KG</strong><br />
             Carl-Zeiss-Promenade 10<br />
             07745 Jena<br />
             Deutschland
           </p>
 
-          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
             Vertreten durch:
           </h3>
           <p>
@@ -37,17 +37,16 @@ export default function ImpressumPage() {
             Geschäftsführung: Senior Cyber Security Engineer Emin (Lead Auditor ISO 27001, OSCP)
           </p>
 
-          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
             Kontakt
           </h3>
           <p>
-            Telefon: +49 (0) 3641 9283-000<br />
-            24/7 Incident Hotline: +49 (0) 3641 9283-911<br />
-            E-Mail: security@eminsecurity.de<br />
-            PGP Fingerprint: 4A7F 9B12 C884 10E3 E5F2 90D1 B842 7A1F 09E1 C4D2
+            Telefon: +49 152 33513651<br />
+            24/7 Incident Hotline: +49 152 33513651<br />
+            E-Mail: kontakt@eminsec.de
           </p>
 
-          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
             Registereintrag
           </h3>
           <p>
@@ -56,7 +55,7 @@ export default function ImpressumPage() {
             Registernummer: HRA 512984
           </p>
 
-          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
             Umsatzsteuer-ID
           </h3>
           <p>
@@ -64,7 +63,7 @@ export default function ImpressumPage() {
             DE 384 912 401
           </p>
 
-          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
             Berufshaftpflichtversicherung für IT-Sicherheit &amp; Forensik
           </h3>
           <p>
@@ -72,7 +71,7 @@ export default function ImpressumPage() {
             Räumlicher Geltungsbereich: Weltweit (inkl. USA/Kanada).
           </p>
 
-          <h3 style={{ fontSize: '1.1rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
+          <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)', marginTop: '1.5rem', marginBottom: '0.5rem' }}>
             Verbraucherstreitbeilegung / Universalschlichtungsstelle
           </h3>
           <p>

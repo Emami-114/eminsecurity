@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Terminal, 
-  MapPin, 
-  PhoneCall, 
-  Mail, 
-  Key, 
-  CheckCircle2, 
-  Lock, 
-  FileText,
-  AlertCircle
+import {
+  Shield,
+  MapPin,
+  PhoneCall,
+  Mail,
+  CheckCircle2,
+  Lock,
+  FileText
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { servicesData, complianceData, locationsData } from '../data/translations';
@@ -20,8 +17,9 @@ export default function Footer() {
 
   return (
     <footer style={{
-      backgroundColor: '#05070a',
-      borderTop: '1px solid var(--border-subtle)',
+      backgroundColor: '#0b1120',
+      color: '#f8fafc',
+      borderTop: '1px solid #1e293b',
       paddingTop: '4.5rem',
       paddingBottom: '2.5rem',
       position: 'relative'
@@ -34,9 +32,9 @@ export default function Footer() {
           alignItems: 'center',
           justifyContent: 'space-between',
           gap: '1.5rem',
-          paddingBottom: '3rem',
+          paddingBottom: '2.5rem',
           marginBottom: '3rem',
-          borderBottom: '1px solid var(--border-subtle)'
+          borderBottom: '1px solid #1e293b'
         }}>
           <div>
             <div style={{
@@ -45,34 +43,50 @@ export default function Footer() {
               gap: '0.75rem',
               marginBottom: '0.4rem'
             }}>
-              <Shield size={22} color="#00e5ff" />
+              <div style={{
+                width: '38px',
+                height: '38px',
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.12)',
+                borderRadius: '8px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '3px'
+              }}>
+                <img 
+                  src="/logo-dark-mode.png" 
+                  alt="EminSecurity Logo" 
+                  style={{ width: '28px', height: '28px', objectFit: 'contain', display: 'block' }} 
+                />
+              </div>
               <span style={{
                 fontFamily: 'var(--font-display)',
                 fontWeight: 700,
-                fontSize: '1.25rem',
+                fontSize: '1.3rem',
                 color: '#fff'
               }}>
-                EminSecurity
+                Emin<span style={{ color: '#0062ff' }}>Security</span>
               </span>
-              <span className="tech-badge cyan">
-                THÜRINGEN OPERATIONAL
+              <span className="tech-badge" style={{ backgroundColor: 'rgba(0, 98, 255, 0.12)', borderColor: 'rgba(0, 98, 255, 0.3)', color: '#60a5fa' }}>
+                MADE IN THÜRINGEN
               </span>
             </div>
-            <p style={{ margin: 0, fontSize: '0.9rem', color: 'var(--text-muted)', maxWidth: '580px' }}>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: '#94a3b8', maxWidth: '580px' }}>
               {t('footer.tagline')}
             </p>
           </div>
 
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
-            <span className="tech-badge" style={{ backgroundColor: '#0d1117' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+            <span className="tech-badge" style={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#e2e8f0' }}>
               <CheckCircle2 size={13} color="#10b981" />
-              BSI IT-Grundschutz Praktiker
+              BSI IT-Grundschutz
             </span>
-            <span className="tech-badge" style={{ backgroundColor: '#0d1117' }}>
+            <span className="tech-badge" style={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#e2e8f0' }}>
               <CheckCircle2 size={13} color="#10b981" />
               ISO/IEC 27001 Lead Auditor
             </span>
-            <span className="tech-badge" style={{ backgroundColor: '#0d1117' }}>
+            <span className="tech-badge" style={{ backgroundColor: '#1e293b', borderColor: '#334155', color: '#e2e8f0' }}>
               <CheckCircle2 size={13} color="#10b981" />
               OSCP / OffSec Certified
             </span>
@@ -89,10 +103,9 @@ export default function Footer() {
           {/* Col 1: Services */}
           <div>
             <div style={{
-              fontFamily: 'var(--font-mono)',
               fontSize: '0.8rem',
               fontWeight: 700,
-              color: 'var(--accent-cyan)',
+              color: '#38bdf8',
               marginBottom: '1rem',
               letterSpacing: '0.04em'
             }}>
@@ -101,18 +114,18 @@ export default function Footer() {
             <ul style={{ listStyle: 'none' }}>
               {servicesData.map((svc) => (
                 <li key={svc.id} style={{ marginBottom: '0.65rem' }}>
-                  <Link 
-                    to={svc.path} 
-                    style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}
+                  <Link
+                    to={svc.path}
+                    style={{ fontSize: '0.9rem', color: '#94a3b8' }}
                     onMouseEnter={(e) => e.currentTarget.style.color = '#fff'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
                   >
                     {svc.title[lang]}
                   </Link>
                 </li>
               ))}
               <li style={{ marginTop: '0.75rem' }}>
-                <Link to="/leistungen" style={{ fontSize: '0.85rem', color: 'var(--accent-cyan)', fontWeight: 600 }}>
+                <Link to="/services" style={{ fontSize: '0.85rem', color: '#38bdf8', fontWeight: 600 }}>
                   &gt; {lang === 'de' ? 'Alle Leistungen' : 'All Services'}
                 </Link>
               </li>
@@ -122,10 +135,9 @@ export default function Footer() {
           {/* Col 2: Compliance */}
           <div>
             <div style={{
-              fontFamily: 'var(--font-mono)',
               fontSize: '0.8rem',
               fontWeight: 700,
-              color: 'var(--accent-cyan)',
+              color: '#38bdf8',
               marginBottom: '1rem',
               letterSpacing: '0.04em'
             }}>
@@ -134,28 +146,28 @@ export default function Footer() {
             <ul style={{ listStyle: 'none' }}>
               {complianceData.map((item) => (
                 <li key={item.id} style={{ marginBottom: '0.65rem' }}>
-                  <Link 
-                    to={item.path} 
-                    style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}
+                  <Link
+                    to={item.path}
+                    style={{ fontSize: '0.9rem', color: '#94a3b8' }}
                     onMouseEnter={(e) => e.currentTarget.style.color = '#fff'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
                   >
                     {item.title[lang]}
                   </Link>
                 </li>
               ))}
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/compliance" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/compliance" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   BSI IT-Grundschutz
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/compliance" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                  TISAX & VDA-ISA
+                <Link to="/compliance" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
+                  TISAX &amp; VDA-ISA
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/compliance" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/compliance" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   Patientendaten-Schutzgesetz (PDSG)
                 </Link>
               </li>
@@ -165,10 +177,9 @@ export default function Footer() {
           {/* Col 3: Standorte */}
           <div>
             <div style={{
-              fontFamily: 'var(--font-mono)',
               fontSize: '0.8rem',
               fontWeight: 700,
-              color: 'var(--accent-cyan)',
+              color: '#38bdf8',
               marginBottom: '1rem',
               letterSpacing: '0.04em'
             }}>
@@ -177,27 +188,27 @@ export default function Footer() {
             <ul style={{ listStyle: 'none' }}>
               {locationsData.map((loc) => (
                 <li key={loc.slug} style={{ marginBottom: '0.65rem' }}>
-                  <Link 
-                    to={`/standorte/${loc.slug}`} 
-                    style={{ 
-                      fontSize: '0.9rem', 
-                      color: 'var(--text-muted)',
+                  <Link
+                    to={`/locations/${loc.slug}`}
+                    style={{
+                      fontSize: '0.9rem',
+                      color: '#94a3b8',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'space-between'
                     }}
                     onMouseEnter={(e) => e.currentTarget.style.color = '#fff'}
-                    onMouseLeave={(e) => e.currentTarget.style.color = 'var(--text-muted)'}
+                    onMouseLeave={(e) => e.currentTarget.style.color = '#94a3b8'}
                   >
                     <span>{loc.city}</span>
-                    <span style={{ fontSize: '0.75rem', fontFamily: 'var(--font-mono)', color: 'var(--text-faint)' }}>
+                    <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
                       &lt; {loc.slaMinutes}m
                     </span>
                   </Link>
                 </li>
               ))}
               <li style={{ marginTop: '0.75rem' }}>
-                <Link to="/standorte" style={{ fontSize: '0.85rem', color: 'var(--accent-cyan)', fontWeight: 600 }}>
+                <Link to="/locations" style={{ fontSize: '0.85rem', color: '#38bdf8', fontWeight: 600 }}>
                   &gt; {lang === 'de' ? 'Übersicht Thüringen Hubs' : 'Thuringia Hub Overview'}
                 </Link>
               </li>
@@ -207,34 +218,28 @@ export default function Footer() {
           {/* Col 4: Resources & Knowledge */}
           <div>
             <div style={{
-              fontFamily: 'var(--font-mono)',
               fontSize: '0.8rem',
               fontWeight: 700,
-              color: 'var(--accent-cyan)',
+              color: '#38bdf8',
               marginBottom: '1rem',
               letterSpacing: '0.04em'
             }}>
-              KNOWLEDGE & NEWS
+              KNOWLEDGE &amp; NEWS
             </div>
             <ul style={{ listStyle: 'none' }}>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/magazin" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/magazine" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   {lang === 'de' ? 'Magazin & News Feed' : 'Magazine & Threat Intel'}
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/magazin/stadt-berlin-hack-september-2026" style={{ fontSize: '0.9rem', color: '#fca5a5' }}>
-                  Stadt Berlin Hack (09/2026)
-                </Link>
-              </li>
-              <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/wissen" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/knowledge" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   EminSec Knowledge Hub
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/wissen" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                  Whitepaper & Checklisten
+                <Link to="/knowledge" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
+                  Whitepaper &amp; Checklisten
                 </Link>
               </li>
             </ul>
@@ -243,10 +248,9 @@ export default function Footer() {
           {/* Col 5: Company & Career */}
           <div>
             <div style={{
-              fontFamily: 'var(--font-mono)',
               fontSize: '0.8rem',
               fontWeight: 700,
-              color: 'var(--accent-cyan)',
+              color: '#38bdf8',
               marginBottom: '1rem',
               letterSpacing: '0.04em'
             }}>
@@ -254,25 +258,22 @@ export default function Footer() {
             </div>
             <ul style={{ listStyle: 'none' }}>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/ueber-uns" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/about-us" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   {t('nav.about')}
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/karriere" style={{ fontSize: '0.9rem', color: 'var(--text-muted)', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
-                  <span>Karriere & Jobs</span>
-                  <span style={{ fontSize: '0.65rem', backgroundColor: 'rgba(255,255,255,0.08)', padding: '0.1rem 0.35rem', borderRadius: '3px' }}>
-                    Initiativ
-                  </span>
+                <Link to="/careers" style={{ fontSize: '0.9rem', color: '#94a3b8', display: 'flex', alignItems: 'center', gap: '0.35rem' }}>
+                  <span>Jobs</span>
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/kontakt" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/contact" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   {t('nav.contact')}
                 </Link>
               </li>
               <li style={{ marginBottom: '0.65rem' }}>
-                <Link to="/sitemap" style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                <Link to="/sitemap" style={{ fontSize: '0.9rem', color: '#94a3b8' }}>
                   HTML Sitemap
                 </Link>
               </li>
@@ -280,10 +281,10 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* PGP Encryption & Emergency Dispatch box */}
+        {/* Direct Contact & Dispatch box */}
         <div style={{
-          backgroundColor: 'var(--bg-surface)',
-          border: '1px solid var(--border-subtle)',
+          backgroundColor: '#111827',
+          border: '1px solid #1f2937',
           borderRadius: 'var(--radius-md)',
           padding: '1.25rem 1.5rem',
           display: 'flex',
@@ -293,52 +294,42 @@ export default function Footer() {
           gap: '1.25rem',
           marginBottom: '2.5rem'
         }}>
-          <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-              <Key size={15} color="#00e5ff" />
-              <span style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-main)', fontWeight: 600 }}>
-                {t('footer.pgpLabel')}
-              </span>
-            </div>
-            <code style={{
-              fontSize: '0.78rem',
-              color: 'var(--accent-cyan)',
-              backgroundColor: '#06080c',
-              padding: '0.2rem 0.5rem',
-              borderRadius: 'var(--radius-sm)',
-              border: '1px solid rgba(0, 229, 255, 0.2)'
-            }}>
-              4A7F 9B12 C884 10E3 E5F2 90D1 B842 7A1F 09E1 C4D2
-            </code>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+            <Shield size={18} color="var(--accent-blue)" />
+            <span style={{ fontSize: '0.88rem', color: '#f8fafc', fontWeight: 600 }}>
+              {lang === 'de' ? 'Zentrale Erreichbarkeit & Notfall-Hotline Thüringen:' : 'Central Dispatch & Incident Hotline Thuringia:'}
+            </span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-            <a 
-              href="mailto:security@eminsecurity.de" 
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a
+              href="mailto:kontakt@eminsec.de"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.4rem',
-                fontSize: '0.85rem',
-                color: 'var(--text-muted)'
+                gap: '0.45rem',
+                fontSize: '0.9rem',
+                color: '#cbd5e1',
+                textDecoration: 'none'
               }}
             >
-              <Mail size={14} />
-              security@eminsecurity.de
+              <Mail size={15} color="var(--accent-blue)" />
+              kontakt@eminsec.de
             </a>
-            <a 
-              href="tel:+4936419283911" 
+            <a
+              href="tel:+4915233513651"
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',
-                gap: '0.4rem',
-                fontSize: '0.85rem',
+                gap: '0.45rem',
+                fontSize: '0.95rem',
                 color: '#fca5a5',
-                fontWeight: 600
+                fontWeight: 700,
+                textDecoration: 'none'
               }}
             >
-              <PhoneCall size={14} color="#ef4444" />
-              +49 (0) 3641 9283-911
+              <PhoneCall size={15} color="#ef4444" />
+              +49 152 33513651
             </a>
           </div>
         </div>
@@ -351,22 +342,22 @@ export default function Footer() {
           justifyContent: 'space-between',
           gap: '1rem',
           fontSize: '0.82rem',
-          color: 'var(--text-faint)',
-          borderTop: '1px solid var(--border-subtle)',
+          color: '#64748b',
+          borderTop: '1px solid #1e293b',
           paddingTop: '1.5rem'
         }}>
           <div>
-            &copy; {new Date().getFullYear()} EminSecurity GmbH &amp; Co. KG. {t('footer.rights')}
+            &copy; {new Date().getFullYear()} EminSecurity GmbH {t('footer.rights')}
           </div>
 
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <Link to="/impressum" style={{ color: 'var(--text-muted)' }}>
-              Impressum (§ 5 DDG)
+            <Link to="/impressum" style={{ color: '#94a3b8' }}>
+              Impressum
             </Link>
-            <Link to="/datenschutz" style={{ color: 'var(--text-muted)' }}>
+            <Link to="/datenschutz" style={{ color: '#94a3b8' }}>
               Datenschutz (DSGVO)
             </Link>
-            <Link to="/sitemap" style={{ color: 'var(--text-muted)' }}>
+            <Link to="/sitemap" style={{ color: '#94a3b8' }}>
               Sitemap
             </Link>
           </div>

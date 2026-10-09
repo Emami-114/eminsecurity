@@ -10,7 +10,7 @@ export default function AwarenessTrainingPage() {
     <div className="section-spacing">
       <div className="container" style={{ maxWidth: '1000px' }}>
         <div style={{ fontSize: '0.85rem', color: 'var(--text-faint)', marginBottom: '1.5rem', fontFamily: 'var(--font-mono)' }}>
-          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <Link to="/leistungen" style={{ color: 'var(--text-muted)' }}>LEISTUNGEN</Link> / <span style={{ color: '#f59e0b' }}>AWARENESS SCHULUNG</span>
+          <Link to="/" style={{ color: 'var(--text-muted)' }}>HOME</Link> / <Link to="/services" style={{ color: 'var(--text-muted)' }}>{lang === 'de' ? 'LEISTUNGEN' : 'SERVICES'}</Link> / <span style={{ color: '#f59e0b', fontWeight: 600 }}>AWARENESS SCHULUNG</span>
         </div>
 
         <span className="tech-badge amber" style={{ marginBottom: '1rem' }}>
@@ -70,8 +70,8 @@ export default function AwarenessTrainingPage() {
           </div>
         </div>
 
-        <div style={{ textAlign: 'center', backgroundColor: '#090c14', padding: '2.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-strong)' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem' }}>
+        <div style={{ textAlign: 'center', backgroundColor: 'var(--bg-subtle)', padding: '2.5rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--border-subtle)' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '0.5rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Awareness-Workshop für Ihr Unternehmen anfragen' : 'Book a Security Awareness Workshop'}
           </h2>
           <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>

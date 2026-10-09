@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, AlertCircle, ArrowRight, CheckCircle2, XCircle } from 'lucide-react';
+import { ShieldCheck, AlertCircle, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -13,7 +13,6 @@ export default function Nis2QuickCheck() {
   const [incidentPlan, setIncidentPlan] = useState(false);
   const [pentestDone, setPentestDone] = useState(false);
 
-  // Compute readiness score
   let score = 20;
   if (mfa) score += 25;
   if (immutableBackup) score += 25;
@@ -24,8 +23,9 @@ export default function Nis2QuickCheck() {
 
   return (
     <div className="cyber-card" style={{
-      border: '1px solid rgba(0, 229, 255, 0.25)',
-      backgroundColor: '#0a0d15'
+      backgroundColor: '#ffffff',
+      border: '1px solid var(--border-subtle)',
+      boxShadow: 'var(--shadow-md)'
     }}>
       <div style={{
         display: 'flex',
@@ -36,24 +36,33 @@ export default function Nis2QuickCheck() {
         marginBottom: '1.25rem'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <ShieldCheck size={20} color="#00e5ff" />
-          <h3 style={{ margin: 0, fontSize: '1.2rem' }}>
+          <div style={{
+            width: '36px',
+            height: '36px',
+            borderRadius: '8px',
+            backgroundColor: 'var(--accent-blue-light)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}>
+            <ShieldCheck size={20} color="#0062ff" />
+          </div>
+          <h3 style={{ margin: 0, fontSize: '1.25rem', color: '#0f172a' }}>
             {lang === 'de' ? 'Interaktiver NIS-2 & Resilienz Schnell-Check' : 'Interactive NIS-2 & Resilience Quick-Check'}
           </h3>
         </div>
-        <span className="tech-badge cyan">
-          {lang === 'de' ? 'Live Auswertung 2026' : 'Live Assessment 2026'}
+        <span className="tech-badge blue">
+          {lang === 'de' ? 'Offizieller Prüfstandard 2026' : 'Audit Standard 2026'}
         </span>
       </div>
 
-      <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+      <p style={{ fontSize: '0.95rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
         {lang === 'de'
-          ? 'Prüfen Sie in 60 Sekunden, ob Ihr Unternehmen unter das NIS-2-Umsetzungsgesetz fällt und wie es um Ihre technische Abwehr steht.'
-          : 'Check in 60 seconds whether your organization falls under NIS-2 mandates and evaluate your technical defense readiness.'}
+          ? 'Ermitteln Sie in wenigen Klicks, ob Ihr Unternehmen unter das NIS-2-Umsetzungsgesetz fällt und wie hoch Ihr aktueller Reifegrad ist.'
+          : 'Determine in seconds whether your organization falls under NIS-2 statutory scope and evaluate your defense maturity.'}
       </p>
 
       <div className="grid-2" style={{ marginBottom: '1.5rem' }}>
-        {/* Sector */}
         <div className="form-group" style={{ margin: 0 }}>
           <label className="form-label">
             {lang === 'de' ? '1. Branche / Tätigkeitsfeld' : '1. Industry Sector'}
@@ -71,7 +80,6 @@ export default function Nis2QuickCheck() {
           </select>
         </div>
 
-        {/* Employees */}
         <div className="form-group" style={{ margin: 0 }}>
           <label className="form-label">
             {lang === 'de' ? '2. Mitarbeiteranzahl' : '2. Company Size'}
@@ -90,30 +98,30 @@ export default function Nis2QuickCheck() {
 
       {/* Checkbox controls */}
       <div style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.02)',
-        padding: '1rem',
+        backgroundColor: 'var(--bg-subtle)',
+        padding: '1.25rem',
         borderRadius: 'var(--radius-sm)',
         border: '1px solid var(--border-subtle)',
         marginBottom: '1.5rem'
       }}>
-        <div style={{ fontFamily: 'var(--font-mono)', fontSize: '0.8rem', color: 'var(--text-faint)', marginBottom: '0.75rem' }}>
-          {lang === 'de' ? '3. BEREITS IMPLEMENTIERTE MASSNAHMEN:' : '3. CURRENTLY IMPLEMENTED CONTROLS:'}
+        <div style={{ fontSize: '0.8rem', fontWeight: 600, color: 'var(--text-faint)', marginBottom: '0.85rem' }}>
+          {lang === 'de' ? '3. BEREITS IMPLEMENTIERTE SICHERHEITSMASSNAHMEN:' : '3. CURRENTLY IMPLEMENTED CONTROLS:'}
         </div>
         <div className="grid-2" style={{ gap: '0.85rem' }}>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.88rem' }}>
-            <input type="checkbox" checked={mfa} onChange={(e) => setMfa(e.target.checked)} />
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={mfa} onChange={(e) => setMfa(e.target.checked)} style={{ accentColor: '#0062ff' }} />
             <span>MFA für alle Benutzer &amp; VPN</span>
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.88rem' }}>
-            <input type="checkbox" checked={immutableBackup} onChange={(e) => setImmutableBackup(e.target.checked)} />
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={immutableBackup} onChange={(e) => setImmutableBackup(e.target.checked)} style={{ accentColor: '#0062ff' }} />
             <span>Unveränderliche Backups (WORM / Airgap)</span>
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.88rem' }}>
-            <input type="checkbox" checked={incidentPlan} onChange={(e) => setIncidentPlan(e.target.checked)} />
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={incidentPlan} onChange={(e) => setIncidentPlan(e.target.checked)} style={{ accentColor: '#0062ff' }} />
             <span>24h-Meldeplan &amp; Incident Runbook</span>
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', cursor: 'pointer', fontSize: '0.88rem' }}>
-            <input type="checkbox" checked={pentestDone} onChange={(e) => setPentestDone(e.target.checked)} />
+          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={pentestDone} onChange={(e) => setPentestDone(e.target.checked)} style={{ accentColor: '#0062ff' }} />
             <span>Regelmäßige Penetrationstests (letzte 12 Monate)</span>
           </label>
         </div>
@@ -121,10 +129,10 @@ export default function Nis2QuickCheck() {
 
       {/* Result Panel */}
       <div style={{
-        backgroundColor: 'var(--bg-surface-elevated)',
-        border: '1px solid var(--border-strong)',
+        backgroundColor: '#f8fafc',
+        border: '1px solid var(--border-subtle)',
         borderRadius: 'var(--radius-sm)',
-        padding: '1.25rem',
+        padding: '1.25rem 1.5rem',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
@@ -133,24 +141,24 @@ export default function Nis2QuickCheck() {
       }}>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
-            <span style={{ fontSize: '0.82rem', fontFamily: 'var(--font-mono)', color: 'var(--text-muted)' }}>
+            <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-muted)' }}>
               {lang === 'de' ? 'NIS-2 BETROFFENHEIT:' : 'NIS-2 SCOPE:'}
             </span>
             <span className={`tech-badge ${isAffected ? 'crimson' : 'amber'}`}>
               {isAffected 
-                ? (lang === 'de' ? 'Hohe Wahrscheinlichkeit (Pflichtbetrieb)' : 'High Likelihood (Mandatory Scope)')
-                : (lang === 'de' ? 'Lieferketten-Prüfung wahrscheinlich' : 'Supply-Chain Verification Likely')}
+                ? (lang === 'de' ? 'Pflichtbetrieb nach NIS-2' : 'Mandatory NIS-2 Scope')
+                : (lang === 'de' ? 'Lieferketten-Prüfpflicht' : 'Supply-Chain Obligation')}
             </span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginTop: '0.5rem' }}>
-            <div style={{ fontSize: '1.5rem', fontWeight: 700, fontFamily: 'var(--font-mono)', color: score >= 70 ? '#10b981' : score >= 45 ? '#f59e0b' : '#ef4444' }}>
+            <div style={{ fontSize: '1.6rem', fontWeight: 700, fontFamily: 'var(--font-display)', color: score >= 70 ? '#10b981' : score >= 45 ? '#d97706' : '#dc2626' }}>
               {score}%
             </div>
-            <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)' }}>
+            <div style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
               {lang === 'de' 
-                ? (score >= 70 ? 'Solide Basis, Dokumentation & Audit nötig.' : 'Kritische Sicherheitslücken. Handlungsbedarf hoch.')
-                : (score >= 70 ? 'Solid baseline, audit validation recommended.' : 'High exposure. Rapid remediation advised.')}
+                ? (score >= 70 ? 'Guter Reifegrad. Feinschliff & Zertifizierungsvorbereitung empfohlen.' : 'Kritische Lücken. Technische Nachrüstung dringend empfohlen.')
+                : (score >= 70 ? 'Solid posture. Certification preparation recommended.' : 'High exposure. Immediate remediation needed.')}
             </div>
           </div>
         </div>
@@ -158,7 +166,6 @@ export default function Nis2QuickCheck() {
         <Link
           to={`/kontakt?subject=NIS-2%20Audit%20Anfrage%20(Score:%20${score}%)`}
           className="btn btn-primary btn-sm"
-          style={{ alignSelf: 'center' }}
         >
           {lang === 'de' ? 'Kostenfreien NIS-2 Initial-Audit anfragen' : 'Request NIS-2 Initial Audit'}
           <ArrowRight size={14} />

@@ -22,8 +22,8 @@ export default function StandorteOverviewPage() {
           </h1>
           <p className="lead">
             {lang === 'de'
-              ? 'Im Ernstfall eines Ransomware-Angriffs oder bei physischen Einbruchstests nützt kein Support-Callcenter am anderen Ende der Welt. Wir sind direkt vor Ort bei unseren Kunden in Thüringen verankert – mit garantierter Reaktionszeit unter 90 Minuten.'
-              : 'During an active cyber disaster or on-site physical infiltration audit, remote ticketing centers fall short. We maintain physical proximity throughout Thuringia with guaranteed on-site response SLAs.'}
+              ? 'Im Ernstfall eines Ransomware-Angriffs oder bei physischen Einbruchstests nützt kein Support-Callcenter am anderen Ende der Welt. Wir sind direkt vor Ort bei unseren Kunden in Thüringen verankert – mit persönlicher Vor-Ort-Präsenz und direkter Einsatzbereitschaft.'
+              : 'During an active cyber disaster or on-site physical infiltration audit, remote ticketing centers fall short. We maintain direct physical proximity throughout Thuringia with guaranteed on-site response readiness.'}
           </p>
         </div>
 
@@ -33,8 +33,8 @@ export default function StandorteOverviewPage() {
             <div key={loc.slug} className="cyber-card" style={{ display: 'flex', flexDirection: 'column' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <MapPin size={22} color="#00e5ff" />
-                  <h2 style={{ fontSize: '1.4rem', margin: 0, color: '#fff' }}>
+                  <MapPin size={22} color="var(--accent-blue)" />
+                  <h2 style={{ fontSize: '1.4rem', margin: 0, color: 'var(--text-main)' }}>
                     {loc.city}
                   </h2>
                 </div>
@@ -52,18 +52,19 @@ export default function StandorteOverviewPage() {
               </p>
 
               <div style={{
-                backgroundColor: 'rgba(255, 255, 255, 0.02)',
+                backgroundColor: 'var(--bg-subtle)',
+                border: '1px solid var(--border-subtle)',
                 padding: '0.85rem',
                 borderRadius: 'var(--radius-sm)',
                 marginBottom: '1.25rem',
                 fontSize: '0.82rem'
               }}>
                 <div style={{ color: 'var(--text-faint)', marginBottom: '0.2rem' }}>STANDORT-KONTAKT:</div>
-                <div style={{ color: '#fff', fontWeight: 600 }}>{loc.address}</div>
+                <div style={{ color: 'var(--text-main)', fontWeight: 600 }}>{loc.address}</div>
                 <div style={{ color: 'var(--accent-cyan)' }}>{loc.phone}</div>
               </div>
 
-              <Link to={`/standorte/${loc.slug}`} className="btn btn-secondary btn-sm" style={{ width: '100%', justifyContent: 'center' }}>
+              <Link to={`/locations/${loc.slug}`} className="btn btn-secondary btn-sm" style={{ width: '100%', justifyContent: 'center' }}>
                 {lang === 'de' ? `Sicherheitsleistungen ${loc.city}` : `View ${loc.city} Hub`}
                 <ArrowRight size={14} />
               </Link>
@@ -72,25 +73,25 @@ export default function StandorteOverviewPage() {
         </div>
 
         {/* Regional Commitment */}
-        <div className="cyber-card" style={{ backgroundColor: '#090c14', padding: '2.5rem' }}>
-          <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem' }}>
+        <div className="cyber-card" style={{ backgroundColor: 'var(--bg-subtle)', border: '1px solid var(--border-subtle)', padding: '2.5rem' }}>
+          <h2 style={{ fontSize: '1.4rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
             {lang === 'de' ? 'Warum Vor-Ort-Präsenz für IT-Sicherheit in Thüringen unverzichtbar ist' : 'Why Local Presence Matters'}
           </h2>
           <div className="grid-3" style={{ gap: '1.5rem', marginTop: '1.5rem' }}>
             <div>
-              <h3 style={{ fontSize: '1.1rem', color: '#fff' }}>1. Unmittelbare Forensik</h3>
+              <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>1. Unmittelbare Forensik</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
                 Flüchtige Spuren im RAM und auf infizierten Switches verflüchtigen sich bei Neustart. Unsere Experten sichern Beweise direkt am Rack.
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.1rem', color: '#fff' }}>2. Physische Pentests</h3>
+              <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>2. Physische Pentests</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
                 Prüfung von Serverräumen, Ausweiskartenlesern und Werkstoren gegen Social-Engineering-Einbrüche vor Ort.
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.1rem', color: '#fff' }}>3. Regionale Betreuung</h3>
+              <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>3. Regionale Betreuung</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
                 Feste Ansprechpartner, die Ihre Betriebsbedingungen und lokalen Anforderungen im Thüringer Mittelstand genau kennen.
               </p>

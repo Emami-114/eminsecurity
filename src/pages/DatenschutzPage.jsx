@@ -18,34 +18,34 @@ export default function DatenschutzPage() {
         </span>
         <h1>Datenschutzerklärung</h1>
 
-        <div className="cyber-card" style={{ padding: '2.5rem', marginBottom: '2.5rem', lineHeight: 1.7, color: '#cbd5e1' }}>
+        <div className="cyber-card" style={{ padding: '2.5rem', marginBottom: '2.5rem', lineHeight: 1.7, color: 'var(--text-muted)' }}>
           {/* Privacy Ethos Box */}
           <div style={{
-            backgroundColor: 'rgba(16, 185, 129, 0.08)',
-            borderLeft: '4px solid #10b981',
+            backgroundColor: 'var(--accent-emerald-light)',
+            borderLeft: '4px solid var(--accent-emerald)',
             padding: '1rem 1.25rem',
             borderRadius: 'var(--radius-sm)',
             marginBottom: '2rem',
             fontSize: '0.95rem',
-            color: '#e2e8f0'
+            color: '#065f46'
           }}>
-            <strong>Unser Datenschutz-Grundsatz als IT-Sicherheitsunternehmen:</strong><br />
+            <strong style={{ color: '#064e3b' }}>Unser Datenschutz-Grundsatz als IT-Sicherheitsunternehmen:</strong><br />
             Wir setzen auf dieser Website bewusst KEINE Tracking-Pixel von Drittanbietern (kein Google Analytics, kein Meta Pixel) und keine zustimmungspflichtigen Werbe-Cookies ein. Ihre IP-Adresse wird ausschließlich zu technischen Betriebszwecken und zur Abwehr von Cyber-Angriffen verarbeitet.
           </div>
 
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '0.75rem' }}>
+          <h2 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginBottom: '0.75rem' }}>
             1. Name und Kontaktdaten des Verantwortlichen
           </h2>
           <p>
             Verantwortlicher im Sinne der EU-Datenschutz-Grundverordnung (DSGVO):<br />
-            <strong>EminSecurity GmbH &amp; Co. KG</strong><br />
+            <strong style={{ color: 'var(--text-main)' }}>EminSecurity GmbH &amp; Co. KG</strong><br />
             Carl-Zeiss-Promenade 10<br />
             07745 Jena, Deutschland<br />
-            Telefon: +49 (0) 3641 9283-000<br />
-            E-Mail: datenschutz@eminsecurity.de
+            Telefon: +49 152 33513651<br />
+            E-Mail: kontakt@eminsec.de
           </p>
 
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', marginTop: '2rem', marginBottom: '0.75rem' }}>
+          <h2 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.75rem' }}>
             2. Erhebung und Speicherung personenbezogener Daten beim Besuch der Website
           </h2>
           <p>
@@ -62,14 +62,14 @@ export default function DatenschutzPage() {
             Die genannten Daten werden durch uns verarbeitet, um einen reibungslosen Verbindungsaufbau und die Systemsicherheit (Erkennung von DDoS-Angriffen, Exploit-Versuchen) zu gewährleisten (Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO). Die Logdaten werden nach 7 Tagen automatisiert gelöscht.
           </p>
 
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', marginTop: '2rem', marginBottom: '0.75rem' }}>
+          <h2 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.75rem' }}>
             3. Kontaktaufnahme per Formular, E-Mail oder Telefon
           </h2>
           <p>
-            Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert (Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO zur Durchführung vorvertraglicher Maßnahmen). Zur verschlüsselten Übermittlung bieten wir Ihnen unseren öffentlichen PGP-Schlüssel an.
+            Wenn Sie uns per Kontaktformular oder E-Mail Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert (Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO zur Durchführung vorvertraglicher Maßnahmen).
           </p>
 
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', marginTop: '2rem', marginBottom: '0.75rem' }}>
+          <h2 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.75rem' }}>
             4. Ihre Rechte als betroffene Person
           </h2>
           <p>Sie haben das Recht:</p>
@@ -81,7 +81,7 @@ export default function DatenschutzPage() {
             <li>gemäß Art. 77 DSGVO sich bei einer Aufsichtsbehörde zu beschweren (zuständig: Thüringer Landesbeauftragter für den Datenschutz und die Informationsfreiheit - TLfDI).</li>
           </ul>
 
-          <h2 style={{ fontSize: '1.25rem', color: '#fff', marginTop: '2rem', marginBottom: '0.75rem' }}>
+          <h2 style={{ fontSize: '1.25rem', color: 'var(--text-main)', marginTop: '2rem', marginBottom: '0.75rem' }}>
             5. Datensicherheit
           </h2>
           <p>

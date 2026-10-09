@@ -41,11 +41,11 @@ export default function SitemapPage() {
 
           {/* Services */}
           <div className="cyber-card">
-            <h2 style={{ fontSize: '1.25rem', color: 'var(--accent-cyan)', marginBottom: '1rem' }}>
+            <h2 style={{ fontSize: '1.25rem', color: 'var(--accent-blue)', marginBottom: '1rem' }}>
               Sicherheitsleistungen (Services)
             </h2>
             <ul style={{ listStyle: 'none', lineHeight: 1.8 }}>
-              <li><Link to="/leistungen"><strong>Alle Leistungen Übersicht</strong></Link></li>
+              <li><Link to="/services"><strong>Alle Leistungen Übersicht</strong></Link></li>
               {servicesData.map((svc) => (
                 <li key={svc.id}>
                   <Link to={svc.path}>{svc.title[lang]}</Link>
@@ -56,7 +56,7 @@ export default function SitemapPage() {
 
           {/* Compliance */}
           <div className="cyber-card">
-            <h2 style={{ fontSize: '1.25rem', color: 'var(--accent-cyan)', marginBottom: '1rem' }}>
+            <h2 style={{ fontSize: '1.25rem', color: 'var(--accent-blue)', marginBottom: '1rem' }}>
               Compliance &amp; Regulierung
             </h2>
             <ul style={{ listStyle: 'none', lineHeight: 1.8 }}>
@@ -71,14 +71,14 @@ export default function SitemapPage() {
 
           {/* Standorte */}
           <div className="cyber-card">
-            <h2 style={{ fontSize: '1.25rem', color: 'var(--accent-cyan)', marginBottom: '1rem' }}>
+            <h2 style={{ fontSize: '1.25rem', color: 'var(--accent-blue)', marginBottom: '1rem' }}>
               Regionale Standorte Thüringen
             </h2>
             <ul style={{ listStyle: 'none', lineHeight: 1.8 }}>
-              <li><Link to="/standorte"><strong>Übersicht Thüringen Hubs</strong></Link></li>
+              <li><Link to="/locations"><strong>Übersicht Thüringen Hubs</strong></Link></li>
               {locationsData.map((loc) => (
                 <li key={loc.slug}>
-                  <Link to={`/standorte/${loc.slug}`}>
+                  <Link to={`/locations/${loc.slug}`}>
                     Standort {loc.city} (SLA &lt; {loc.slaMinutes}m)
                   </Link>
                 </li>
@@ -92,10 +92,10 @@ export default function SitemapPage() {
               Threat Intelligence &amp; Magazin
             </h2>
             <ul style={{ listStyle: 'none', lineHeight: 1.8 }}>
-              <li><Link to="/magazin"><strong>Magazin Übersicht</strong></Link></li>
+              <li><Link to="/magazine"><strong>Magazin Übersicht</strong></Link></li>
               {magazineArticles.map((art) => (
                 <li key={art.slug}>
-                  <Link to={`/magazin/${art.slug}`}>{art.title[lang]}</Link>
+                  <Link to={`/magazine/${art.slug}`}>{art.title[lang]}</Link>
                 </li>
               ))}
             </ul>
