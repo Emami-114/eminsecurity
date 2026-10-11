@@ -17,7 +17,7 @@ export default defineConfig({
       }
     }
   ],
-  base: '/eminsecurity/',
+  base: '/',
   server: {
     port: 5173,
     host: true,
