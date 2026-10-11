@@ -89,7 +89,7 @@ Nur verwenden, wenn ein gezielter Dark-Kontrastblock (z. B. Live-SOC-Terminal od
 ```jsx
 <span className="tech-badge">NEUTRAL</span>
 <span className="tech-badge blue">OFFIZIELLER STANDARD</span>
-<span className="tech-badge emerald">&lt; 30 MIN SLA</span>
+<span className="tech-badge emerald">VOR ORT BEREITSCHAFT</span>
 <span className="tech-badge crimson">AKUTER VORFALL</span>
 <span className="tech-badge amber">PRÜFPFLICHTIG</span>
 ```

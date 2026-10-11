@@ -1,0 +1,6 @@
+# robots.txt for https://eminsec.de
+User-agent: *
+Allow: /
+
+# Sitemap reference for Googlebot and other web crawlers
+Sitemap: https://eminsec.de/sitemap.xml

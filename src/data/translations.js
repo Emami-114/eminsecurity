@@ -561,7 +561,6 @@ export const locationsData = [
     },
     address: "Carl-Zeiss-Promenade 10, 07745 Jena",
     phone: "+49 152 33513651",
-    slaMinutes: 30,
     description: {
       de: "Jena ist das Herz der mitteldeutschen High-Tech-Industrie. Weltmarktführer in Optik und Präzisionsfertigung sowie innovative Medizintechnik-Unternehmen vertrauen auf unsere Penetrationstests und 24/7 Abwehrsysteme. Unser Einsatzteam ist auf direktem Weg schnell bei Ihnen vor Ort.",
       en: "Jena is the innovation engine of Central Germany. Global photonics pioneers and medical device manufacturers rely on EminSecurity for offensive security testing and 24/7 incident response with direct regional on-site presence."
@@ -585,7 +584,6 @@ export const locationsData = [
     },
     address: "Anger 42, 99084 Erfurt",
     phone: "+49 152 33513651",
-    slaMinutes: 0,
     description: {
       de: "Als Landeshauptstadt beherbergt Erfurt Ministerien, Körperschaften, große Finanz- und Logistikdienstleister sowie florierende E-Commerce-Zentren. Wir unterstützen öffentliche Institutionen und Unternehmen bei der Einhaltung von NIS-2, ISO 27001 und BSI IT-Grundschutz.",
       en: "As Thuringia's capital, Erfurt is home to ministries, financial services, and major logistics clusters. We assist government bodies and enterprises with NIS-2, ISO 27001, and BSI IT-Grundschutz compliance."
@@ -593,7 +591,7 @@ export const locationsData = [
     regionalHighlights: [
       { de: "NIS-2 Readiness & BSI Auditbegleitung", en: "NIS-2 readiness and official BSI audit support" },
       { de: "Erfurter Kreuz Industrie-Absicherung", en: "Industrial cybersecurity for Erfurter Kreuz manufacturing hub" },
-      { de: "Direkte Vor-Ort-Reaktionsbereitschaft", en: "Rapid direct on-site emergency dispatch SLA" }
+      { de: "Direkte Vor-Ort-Reaktionsbereitschaft", en: "Rapid direct on-site emergency dispatch" }
     ]
   },
   {
@@ -609,7 +607,6 @@ export const locationsData = [
     },
     address: "Theaterplatz 8, 99423 Weimar",
     phone: "+49 152 33513651",
-    slaMinutes: 0,
     description: {
       de: "In Weimar stehen Vertraulichkeit und der Schutz von Berufsgeheimnissen im Vordergrund. Wir sichern Anwaltskanzleien, Steuerberater, Notariate und wissenschaftliche Institute gegen Wirtschaftsspionage und Datenabfluss ab.",
       en: "Weimar is characterized by high legal and research density. We defend law firms, audit practices, and scientific institutes against corporate espionage, data theft, and ransomware threats."
@@ -633,7 +630,6 @@ export const locationsData = [
     },
     address: "Heinrichstraße 14, 07545 Gera",
     phone: "+49 152 33513651",
-    slaMinutes: 0,
     description: {
       de: "Gera und Ostthüringen sind geprägt von traditionsreicher Industrie, Zulieferern und starken regionalen Gesundheitsversorgern. Wir schützen Produktionsstraßen (OT/SCADA) vor Stillstand durch Krypto-Trojaner und stellen 24/7 Überwachung bereit.",
       en: "Gera represents Eastern Thuringia's industrial core. We insulate manufacturing OT networks against ransomware shutdowns and deliver round-the-clock SOC telemetry for regional enterprises."
@@ -657,7 +653,6 @@ export const locationsData = [
     },
     address: "Technologiepark 1, 07629 Hermsdorf",
     phone: "+49 152 33513651",
-    slaMinutes: 0,
     description: {
       de: "Hermsdorf ist mit dem Tridelta-Areal ein europäisches Kompetenzzentrum für technische Keramik, Elektronik und Mikrokomponenten am Schnittpunkt von A4 und A9. Dank unserer Lage vor Ort erreichen wir Betriebe im Gewerbegebiet auf direktem Weg.",
       en: "Hermsdorf is a European benchmark for technical ceramics and microelectronics positioned at the vital A4/A9 intersection. We reach local facilities rapidly for direct on-site forensic tasks."

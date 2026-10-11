@@ -272,7 +272,7 @@ export default function ContactPage() {
               </div>
             </div>
             <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.65rem' }}>
-              {lang === 'de' ? 'SLA < 30–90 Min in ganz Thüringen' : 'On-site SLA < 30–90m across Thuringia'}
+              {lang === 'de' ? 'Vor-Ort-Bereitschaft in ganz Thüringen' : 'Direct on-site response across Thuringia'}
             </div>
           </div>
 
@@ -572,7 +572,7 @@ export default function ContactPage() {
                     >
                       {locationsData.map((l) => (
                         <option key={l.slug} value={l.city}>
-                          {l.city} ({lang === 'de' ? `SLA < ${l.slaMinutes}m` : `< ${l.slaMinutes}m SLA`})
+                          {l.city}
                         </option>
                       ))}
                       <option value="Sonstige">{lang === 'de' ? 'Anderer Ort in Thüringen / Mitteldeutschland' : 'Other Regional Hub'}</option>
@@ -677,7 +677,7 @@ export default function ContactPage() {
                     <>
                       <Send size={18} />
                       {isEmergency
-                        ? (lang === 'de' ? 'Notfall-Meldung absenden (Priorität HOCH – Rückruf < 15 Min)' : 'Dispatch Emergency Alert (Highest Priority)')
+                        ? (lang === 'de' ? 'Notfall-Meldung absenden (Priorität HOCH – Sofortiger Rückruf)' : 'Dispatch Emergency Alert (Highest Priority – Immediate Callback)')
                         : (lang === 'de' ? 'Vertrauliche Sicherheitsanfrage senden' : 'Send Confidential Security Inquiry')}
                     </>
                   )}
@@ -741,7 +741,7 @@ export default function ContactPage() {
                 style={{ textDecoration: 'none' }}
               >
                 <MapPin size={12} color="var(--accent-blue)" />
-                {loc.city} (&lt; {loc.slaMinutes}m)
+                {loc.city}
               </Link>
             ))}
             <Link 

@@ -146,14 +146,14 @@ export default function LiveConsole() {
         {activeTab === 'thueringen-mesh' && (
           <div>
             <div style={{ color: 'var(--accent-cyan)', marginBottom: '0.4rem' }}>
-              &gt; EMERGENCY DISPATCH SLA RADII // CENTRAL THURINGIA:
+              &gt; EMERGENCY DISPATCH REGIONAL NETWORK // CENTRAL THURINGIA:
             </div>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '0.4rem', color: '#cbd5e1' }}>
-              <div>[JENA] Hub Carl-Zeiss-Promenade: <strong>&lt; 30 MIN ON-SITE</strong> (Status: STANDBY)</div>
-              <div>[ERFURT] Hub Anger: <strong>&lt; 45 MIN ON-SITE</strong> (Status: STANDBY)</div>
-              <div>[WEIMAR] Hub Theaterplatz: <strong>&lt; 35 MIN ON-SITE</strong> (Status: STANDBY)</div>
-              <div>[GERA] Hub Heinrichstraße: <strong>&lt; 40 MIN ON-SITE</strong> (Status: STANDBY)</div>
-              <div>[HERMSDORF] Hub Tridelta / A4: <strong>&lt; 20 MIN ON-SITE</strong> (Status: STANDBY)</div>
+              <div>[JENA] Hub Carl-Zeiss-Promenade: <strong>VOR-ORT BEREITSCHAFT</strong> (Status: STANDBY)</div>
+              <div>[ERFURT] Hub Anger: <strong>VOR-ORT BEREITSCHAFT</strong> (Status: STANDBY)</div>
+              <div>[WEIMAR] Hub Theaterplatz: <strong>VOR-ORT BEREITSCHAFT</strong> (Status: STANDBY)</div>
+              <div>[GERA] Hub Heinrichstraße: <strong>VOR-ORT BEREITSCHAFT</strong> (Status: STANDBY)</div>
+              <div>[HERMSDORF] Hub Tridelta / A4: <strong>VOR-ORT BEREITSCHAFT</strong> (Status: STANDBY)</div>
             </div>
           </div>
         )}

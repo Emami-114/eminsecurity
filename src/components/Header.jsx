@@ -12,13 +12,11 @@ import {
   Users,
   Code2,
   FileCheck2,
-  Building2,
-  MapPin,
   Flame,
   ArrowRight
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
-import { servicesData, complianceData, locationsData } from '../data/translations';
+import { servicesData, complianceData } from '../data/translations';
 
 export default function Header() {
   const { lang, toggleLanguage, t } = useLanguage();
@@ -26,13 +24,11 @@ export default function Header() {
 
   const [servicesOpen, setServicesOpen] = useState(false);
   const [complianceOpen, setComplianceOpen] = useState(false);
-  const [locationsOpen, setLocationsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     setServicesOpen(false);
     setComplianceOpen(false);
-    setLocationsOpen(false);
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
@@ -42,7 +38,6 @@ export default function Header() {
       if (navRef.current && !navRef.current.contains(event.target)) {
         setServicesOpen(false);
         setComplianceOpen(false);
-        setLocationsOpen(false);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -145,7 +140,6 @@ export default function Header() {
               onClick={() => {
                 setServicesOpen(!servicesOpen);
                 setComplianceOpen(false);
-                setLocationsOpen(false);
               }}
               style={{
                 display: 'flex',
@@ -256,7 +250,6 @@ export default function Header() {
               onClick={() => {
                 setComplianceOpen(!complianceOpen);
                 setServicesOpen(false);
-                setLocationsOpen(false);
               }}
               style={{
                 display: 'flex',
@@ -365,7 +358,7 @@ export default function Header() {
 
           {/* Magazine & News */}
           <NavLink
-            to="/magazin"
+            to="/magazine"
             style={({ isActive }) => ({
               display: 'flex',
               alignItems: 'center',
@@ -373,118 +366,31 @@ export default function Header() {
               color: isActive ? 'var(--accent-blue)' : 'var(--text-main)',
               fontSize: '0.94rem',
               fontWeight: 600,
-              padding: '0.5rem 0'
+              padding: '0.5rem 0',
+              textDecoration: 'none',
+              transition: 'color var(--transition-fast)'
             })}
           >
             {t('nav.magazine')}
-
           </NavLink>
 
-          {/* Standorte Dropdown */}
-          <div style={{ position: 'relative' }}>
-            <button
-              onClick={() => {
-                setLocationsOpen(!locationsOpen);
-                setServicesOpen(false);
-                setComplianceOpen(false);
-              }}
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.35rem',
-                background: 'none',
-                border: 'none',
-                color: locationsOpen ? 'var(--accent-blue)' : 'var(--text-main)',
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.94rem',
-                fontWeight: 600,
-                cursor: 'pointer',
-                padding: '0.5rem 0'
-              }}
-            >
-              <MapPin size={15} color="#0062ff" />
-              {t('nav.locations')}
-              <ChevronDown
-                size={15}
-                style={{
-                  transform: locationsOpen ? 'rotate(180deg)' : 'none',
-                  transition: 'transform var(--transition-fast)'
-                }}
-              />
-            </button>
-
-            {locationsOpen && (
-              <div style={{
-                position: 'absolute',
-                top: 'calc(100% + 14px)',
-                left: '-60px',
-                width: '320px',
-                backgroundColor: '#ffffff',
-                border: '1px solid var(--border-subtle)',
-                borderRadius: 'var(--radius-md)',
-                padding: '0.85rem',
-                boxShadow: 'var(--shadow-lg)',
-                zIndex: 110
-              }}>
-                <div style={{
-                  fontSize: '0.72rem',
-                  fontWeight: 600,
-                  color: 'var(--text-faint)',
-                  padding: '0.4rem 0.6rem 0.6rem',
-                  borderBottom: '1px solid var(--border-subtle)',
-                  marginBottom: '0.4rem',
-                  letterSpacing: '0.05em'
-                }}>
-                  THÜRINGEN REGIONALE HUBS
-                </div>
-                {locationsData.map((loc) => (
-                  <Link
-                    key={loc.slug}
-                    to={`/locations/${loc.slug}`}
-                    style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      padding: '0.55rem 0.65rem',
-                      borderRadius: 'var(--radius-sm)',
-                      transition: 'background var(--transition-fast)'
-                    }}
-                    onMouseEnter={(e) => e.currentTarget.style.backgroundColor = 'var(--bg-subtle)'}
-                    onMouseLeave={(e) => e.currentTarget.style.backgroundColor = 'transparent'}
-                  >
-                    <div>
-                      <div style={{ fontWeight: 600, fontSize: '0.92rem', color: '#0f172a' }}>
-                        {loc.city}
-                      </div>
-                      <div style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
-                        {loc.focusArea[lang].slice(0, 30)}...
-                      </div>
-                    </div>
-                    <span className="tech-badge emerald" style={{ fontSize: '0.68rem', padding: '0.1rem 0.45rem' }}>
-                      &lt; {loc.slaMinutes}m
-                    </span>
-                  </Link>
-                ))}
-                <div style={{
-                  borderTop: '1px solid var(--border-subtle)',
-                  paddingTop: '0.6rem',
-                  marginTop: '0.4rem',
-                  textAlign: 'center'
-                }}>
-                  <Link
-                    to="/locations"
-                    style={{
-                      fontSize: '0.85rem',
-                      color: 'var(--accent-blue)',
-                      fontWeight: 600
-                    }}
-                  >
-                    {lang === 'de' ? 'Alle Standorte & Einsatzradien' : 'All Regional Hubs'}
-                  </Link>
-                </div>
-              </div>
-            )}
-          </div>
+          {/* Contact */}
+          <NavLink
+            to="/contact"
+            style={({ isActive }) => ({
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.4rem',
+              color: isActive ? 'var(--accent-blue)' : 'var(--text-main)',
+              fontSize: '0.94rem',
+              fontWeight: 600,
+              padding: '0.5rem 0',
+              textDecoration: 'none',
+              transition: 'color var(--transition-fast)'
+            })}
+          >
+            {t('nav.contact')}
+          </NavLink>
         </nav>
 
         {/* Right CTA & Controls */}
@@ -587,13 +493,13 @@ export default function Header() {
 
           <div style={{ marginBottom: '1.25rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-blue)', marginBottom: '0.5rem' }}>
-              MAGAZIN &amp; STANDORTE
+              MAGAZIN &amp; KONTAKT
             </div>
             <Link to="/magazine" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
-              Magazin &amp; News (Stadt Berlin Hack)
+              {t('nav.magazine')} (Threat Intelligence)
             </Link>
-            <Link to="/locations" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
-              Thüringen Standorte (Jena, Erfurt, Weimar, Gera, Hermsdorf)
+            <Link to="/contact" style={{ display: 'block', padding: '0.45rem 0', color: 'var(--text-main)' }}>
+              {t('nav.contact')} (Anfrage &amp; Notfall)
             </Link>
           </div>
 

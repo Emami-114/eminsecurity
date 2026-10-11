@@ -202,7 +202,7 @@ export default function Footer() {
                   >
                     <span>{loc.city}</span>
                     <span style={{ fontSize: '0.75rem', color: '#64748b' }}>
-                      &lt; {loc.slaMinutes}m
+                      Thüringen
                     </span>
                   </Link>
                 </li>

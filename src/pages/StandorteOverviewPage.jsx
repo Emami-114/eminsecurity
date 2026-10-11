@@ -39,7 +39,7 @@ export default function StandorteOverviewPage() {
                   </h2>
                 </div>
                 <span className="tech-badge emerald">
-                  &lt; {loc.slaMinutes} Min SLA
+                  {lang === 'de' ? 'Vor Ort in Thüringen' : 'On-Site Presence'}
                 </span>
               </div>
 

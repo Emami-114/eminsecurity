@@ -79,7 +79,7 @@ export default function SitemapPage() {
               {locationsData.map((loc) => (
                 <li key={loc.slug}>
                   <Link to={`/locations/${loc.slug}`}>
-                    Standort {loc.city} (SLA &lt; {loc.slaMinutes}m)
+                    Standort {loc.city}
                   </Link>
                 </li>
               ))}
