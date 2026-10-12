@@ -85,9 +85,9 @@ export default function StandorteOverviewPage() {
               </p>
             </div>
             <div>
-              <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>2. Physische Pentests</h3>
+              <h3 style={{ fontSize: '1.1rem', color: 'var(--text-main)' }}>2. Vor-Ort Systemintegration</h3>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)' }}>
-                Prüfung von Serverräumen, Ausweiskartenlesern und Werkstoren gegen Social-Engineering-Einbrüche vor Ort.
+                Planung, Verkabelung, Serverraum-Einrichtung und persönliche Betreuung Ihrer Hard- und Software direkt vor Ort in Ihrem Unternehmen.
               </p>
             </div>
             <div>

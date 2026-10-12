@@ -21,8 +21,8 @@ export default function JobsPage() {
         </h1>
         <p className="lead" style={{ marginBottom: '2.5rem' }}>
           {lang === 'de'
-            ? 'Wir arbeiten an vorderster Front der IT-Sicherheit in Mitteldeutschland. Bei uns gibt es keine langweiligen Routine-Tickets, sondern anspruchsvolle Pentests, hochkomplexe Incident-Response-Einsätze und direkte Verantwortung.'
-            : 'We operate at the technical frontier of cyber defense in Central Germany, conducting deep offensive simulations and incident response investigations.'}
+            ? 'Wir arbeiten an vorderster Front moderner IT-Infrastruktur und Security in Mitteldeutschland. Bei uns gibt es anspruchsvolle Systemintegrationen, Cloud-Migrationen, individuelle Softwareprojekte und hochmoderne SIEM-Überwachung.'
+            : 'We operate at the technical frontier of modern enterprise IT and cyber resilience in Central Germany, delivering robust infrastructure, cloud migrations, and real-time security monitoring.'}
         </p>
 
         {/* Status Notification Box as explicitly requested by user */}
@@ -45,8 +45,8 @@ export default function JobsPage() {
             </h2>
             <p style={{ margin: 0, fontSize: '0.95rem', color: '#cbd5e1', lineHeight: 1.6 }}>
               {lang === 'de'
-                ? 'Unser Kernteam ist derzeit vollständig besetzt und wir haben aktuell keine vakanten Planstellen ausgeschrieben. Dennoch halten wir stets Ausschau nach außergewöhnlichen Talenten und schätzen Leidenschaft für IT-Sicherheit: Initiativbewerbungen sind bei uns ausdrücklich willkommen!'
-                : 'Our core engineering cell is currently fully staffed with no active vacancies. However, we are perpetually keen to meet exceptional practitioners in offensive and defensive security. Proactive applications are warmly invited!'}
+                ? 'Unser Kernteam ist derzeit vollständig besetzt und wir haben aktuell keine vakanten Planstellen ausgeschrieben. Dennoch halten wir stets Ausschau nach außergewöhnlichen Talenten und schätzen Leidenschaft für Systemintegration, Cloud und IT-Sicherheit: Initiativbewerbungen sind bei uns ausdrücklich willkommen!'
+                : 'Our core engineering cell is currently fully staffed with no active vacancies. However, we are perpetually keen to meet exceptional practitioners in systems integration, cloud architecture, and security operations. Proactive applications are warmly invited!'}
             </p>
           </div>
         </div>
@@ -60,11 +60,11 @@ export default function JobsPage() {
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <div style={{ paddingBottom: '1.25rem', borderBottom: '1px solid var(--border-subtle)' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.35rem' }}>
-                <Terminal size={18} color="var(--accent-cyan)" />
-                <h3 style={{ margin: 0, fontSize: '1.1rem' }}>Penetration Tester / Red Teamer (m/w/d)</h3>
+                <Server size={18} color="var(--accent-cyan)" />
+                <h3 style={{ margin: 0, fontSize: '1.1rem' }}>IT-Systemintegrator &amp; Cloud Engineer (m/w/d)</h3>
               </div>
               <p style={{ fontSize: '0.88rem', color: 'var(--text-muted)', margin: 0 }}>
-                Erfahrung in manueller Web/API-Exploitation, Active Directory Angriffspfaden oder Reverse Engineering. Zertifikate (OSCP, OSEP, CRTO) oder praktische Referenzen (HTB Pro Labs, Bug-Bounty-Profile) sind gerne gesehen.
+                Erfahrung in Microsoft 365, Azure, Windows Server / Linux, Hyper-V/Proxmox Virtualisierung, Netzwerkarchitektur (VLAN/VPN) und strukturierter Systemadministration.
               </p>
             </div>
 

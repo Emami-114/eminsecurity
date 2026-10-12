@@ -11,13 +11,13 @@ export default function Nis2QuickCheck() {
   const [mfa, setMfa] = useState(true);
   const [immutableBackup, setImmutableBackup] = useState(false);
   const [incidentPlan, setIncidentPlan] = useState(false);
-  const [pentestDone, setPentestDone] = useState(false);
+  const [monitoringActive, setMonitoringActive] = useState(false);
 
   let score = 20;
   if (mfa) score += 25;
   if (immutableBackup) score += 25;
   if (incidentPlan) score += 15;
-  if (pentestDone) score += 15;
+  if (monitoringActive) score += 15;
 
   const isAffected = employees !== 'under50' || sector === 'healthcare';
 
@@ -121,8 +121,8 @@ export default function Nis2QuickCheck() {
             <span>24h-Meldeplan &amp; Incident Runbook</span>
           </label>
           <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
-            <input type="checkbox" checked={pentestDone} onChange={(e) => setPentestDone(e.target.checked)} style={{ accentColor: '#0062ff' }} />
-            <span>Regelmäßige Penetrationstests (letzte 12 Monate)</span>
+            <input type="checkbox" checked={monitoringActive} onChange={(e) => setMonitoringActive(e.target.checked)} style={{ accentColor: '#0062ff' }} />
+            <span>Aktives SIEM / IDS Monitoring &amp; Schwachstellen-Audits</span>
           </label>
         </div>
       </div>

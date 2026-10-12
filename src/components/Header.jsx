@@ -13,7 +13,10 @@ import {
   Code2,
   FileCheck2,
   Flame,
-  ArrowRight
+  ArrowRight,
+  Cloud,
+  PhoneCall,
+  ShieldCheck
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { servicesData, complianceData } from '../data/translations';
@@ -45,11 +48,11 @@ export default function Header() {
   }, []);
 
   const serviceIcons = {
-    'offensive-security': <Terminal size={17} color="#0062ff" />,
-    'defensive-security': <Shield size={17} color="#10b981" />,
-    'it-administration': <Server size={17} color="#0284c7" />,
-    'awareness-training': <Users size={17} color="#f59e0b" />,
-    'software-testing': <Code2 size={17} color="#8b5cf6" />
+    'systemintegration': <Server size={17} color="#0062ff" />,
+    'cloud-services': <Cloud size={17} color="#0284c7" />,
+    'softwareentwicklung': <Code2 size={17} color="#8b5cf6" />,
+    'voip-telefonie': <PhoneCall size={17} color="#f59e0b" />,
+    'security-ueberwachung': <ShieldCheck size={17} color="#10b981" />
   };
 
   return (
@@ -111,7 +114,7 @@ export default function Header() {
               letterSpacing: '-0.02em',
               lineHeight: 1.1
             }}>
-              Emin<span style={{ color: 'var(--accent-blue)' }}>Security</span>
+              Emin<span style={{ color: 'var(--accent-blue)' }}>Sec</span>
             </div>
             <div style={{
               fontFamily: 'var(--font-body)',
@@ -120,7 +123,7 @@ export default function Header() {
               color: 'var(--text-muted)',
               letterSpacing: '0.04em'
             }}>
-              Cyber Defense
+              IT-Systemhaus & Security
             </div>
           </div>
         </Link>
@@ -188,7 +191,7 @@ export default function Header() {
                   marginBottom: '0.4rem',
                   letterSpacing: '0.05em'
                 }}>
-                  SICHERHEITSLEISTUNGEN // BSI &amp; ISO KONFORM
+                  IT-SYSTEMHAUS &amp; SECURITY // MANAGED SERVICES
                 </div>
                 {servicesData.map((svc) => (
                   <Link
@@ -461,7 +464,7 @@ export default function Header() {
         }}>
           <div style={{ marginBottom: '1.25rem' }}>
             <div style={{ fontSize: '0.75rem', fontWeight: 700, color: 'var(--accent-blue)', marginBottom: '0.5rem' }}>
-              LEISTUNGEN
+              IT-SYSTEMHAUS &amp; SERVICES
             </div>
             {servicesData.map((svc) => (
               <Link

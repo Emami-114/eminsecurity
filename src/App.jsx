@@ -6,11 +6,11 @@ import Footer from './components/Footer';
 // Pages
 import HomePage from './pages/HomePage';
 import ServicesOverviewPage from './pages/ServicesOverviewPage';
-import OffensiveSecurityPage from './pages/services/OffensiveSecurityPage';
-import DefensiveSecurityPage from './pages/services/DefensiveSecurityPage';
-import ItAdministrationPage from './pages/services/ItAdministrationPage';
-import AwarenessTrainingPage from './pages/services/AwarenessTrainingPage';
-import SoftwareTestingPage from './pages/services/SoftwareTestingPage';
+import SystemintegrationPage from './pages/services/SystemintegrationPage';
+import CloudServicesPage from './pages/services/CloudServicesPage';
+import SoftwareDevelopmentPage from './pages/services/SoftwareDevelopmentPage';
+import VoipCommunicationPage from './pages/services/VoipCommunicationPage';
+import SecurityMonitoringPage from './pages/services/SecurityMonitoringPage';
 
 import ComplianceOverviewPage from './pages/ComplianceOverviewPage';
 import Nis2Page from './pages/compliance/Nis2Page';
@@ -49,21 +49,33 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           
-          {/* Services (English routing) */}
+          {/* Services (5 Core Pillars) */}
           <Route path="/services" element={<ServicesOverviewPage />} />
-          <Route path="/services/offensive-security" element={<OffensiveSecurityPage />} />
-          <Route path="/services/defensive-security" element={<DefensiveSecurityPage />} />
-          <Route path="/services/it-administration" element={<ItAdministrationPage />} />
-          <Route path="/services/awareness-training" element={<AwarenessTrainingPage />} />
-          <Route path="/services/software-testing" element={<SoftwareTestingPage />} />
+          <Route path="/services/systemintegration" element={<SystemintegrationPage />} />
+          <Route path="/services/cloud-services" element={<CloudServicesPage />} />
+          <Route path="/services/softwareentwicklung" element={<SoftwareDevelopmentPage />} />
+          <Route path="/services/voip-telefonie" element={<VoipCommunicationPage />} />
+          <Route path="/services/security-ueberwachung" element={<SecurityMonitoringPage />} />
 
-          {/* Legacy /leistungen redirects */}
+          {/* Legacy & alias redirects */}
+          <Route path="/services/it-administration" element={<Navigate to="/services/systemintegration" replace />} />
+          <Route path="/services/offensive-security" element={<Navigate to="/services/security-ueberwachung" replace />} />
+          <Route path="/services/defensive-security" element={<Navigate to="/services/security-ueberwachung" replace />} />
+          <Route path="/services/software-testing" element={<Navigate to="/services/softwareentwicklung" replace />} />
+          <Route path="/services/awareness-training" element={<Navigate to="/services" replace />} />
+
+          {/* German /leistungen redirects */}
           <Route path="/leistungen" element={<Navigate to="/services" replace />} />
-          <Route path="/leistungen/offensive-security" element={<Navigate to="/services/offensive-security" replace />} />
-          <Route path="/leistungen/defensive-security" element={<Navigate to="/services/defensive-security" replace />} />
-          <Route path="/leistungen/it-administration" element={<Navigate to="/services/it-administration" replace />} />
-          <Route path="/leistungen/awareness-training" element={<Navigate to="/services/awareness-training" replace />} />
-          <Route path="/leistungen/software-testing" element={<Navigate to="/services/software-testing" replace />} />
+          <Route path="/leistungen/systemintegration" element={<Navigate to="/services/systemintegration" replace />} />
+          <Route path="/leistungen/cloud-services" element={<Navigate to="/services/cloud-services" replace />} />
+          <Route path="/leistungen/softwareentwicklung" element={<Navigate to="/services/softwareentwicklung" replace />} />
+          <Route path="/leistungen/voip-telefonie" element={<Navigate to="/services/voip-telefonie" replace />} />
+          <Route path="/leistungen/security-ueberwachung" element={<Navigate to="/services/security-ueberwachung" replace />} />
+          <Route path="/leistungen/offensive-security" element={<Navigate to="/services/security-ueberwachung" replace />} />
+          <Route path="/leistungen/defensive-security" element={<Navigate to="/services/security-ueberwachung" replace />} />
+          <Route path="/leistungen/it-administration" element={<Navigate to="/services/systemintegration" replace />} />
+          <Route path="/leistungen/software-testing" element={<Navigate to="/services/softwareentwicklung" replace />} />
+          <Route path="/leistungen/awareness-training" element={<Navigate to="/services" replace />} />
 
           {/* Compliance */}
           <Route path="/compliance" element={<ComplianceOverviewPage />} />

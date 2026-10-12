@@ -17,7 +17,9 @@ import {
   Lock,
   Award,
   Layers,
-  ChevronRight
+  ChevronRight,
+  Cloud,
+  PhoneCall
 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { servicesData, locationsData, magazineArticles } from '../data/translations';
@@ -25,7 +27,7 @@ import Nis2QuickCheck from '../components/Nis2QuickCheck';
 
 export default function HomePage() {
   const { lang, t } = useLanguage();
-  const [activeTab, setActiveTab] = useState('offensive');
+  const [activeTab, setActiveTab] = useState('systemhaus');
 
   // Dynamic Typewriter Animation for Target Audiences (Mittelstand, Praxen, Kliniken, Industrie...)
   const [typeIndex, setTypeIndex] = useState(0);
@@ -65,11 +67,11 @@ export default function HomePage() {
   }, [displayedWord, isDeleting, typeIndex, lang]);
 
   const serviceIcons = {
-    'offensive-security': <Terminal size={22} color="#0062ff" />,
-    'defensive-security': <Shield size={22} color="#10b981" />,
-    'it-administration': <Server size={22} color="#0284c7" />,
-    'awareness-training': <Users size={22} color="#f59e0b" />,
-    'software-testing': <Code2 size={22} color="#8b5cf6" />
+    'systemintegration': <Server size={22} color="#0062ff" />,
+    'cloud-services': <Cloud size={22} color="#0284c7" />,
+    'softwareentwicklung': <Code2 size={22} color="#8b5cf6" />,
+    'voip-telefonie': <PhoneCall size={22} color="#f59e0b" />,
+    'security-ueberwachung': <ShieldCheck size={22} color="#10b981" />
   };
 
   return (
@@ -94,7 +96,7 @@ export default function HomePage() {
                 letterSpacing: '-0.025em',
                 minHeight: '2.4em'
               }}>
-                {lang === 'de' ? 'Kompromisslose IT-Sicherheit für ' : 'Uncompromising IT Security for '}
+                {lang === 'de' ? 'Ihr Security-First IT-Systemhaus für ' : 'Your Security-First IT Systems Integrator for '}
                 <br />
                 <span className="hero-typed-target">
                   {displayedWord}
@@ -269,122 +271,122 @@ export default function HomePage() {
 
                 <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                   <button
-                    onClick={() => setActiveTab('offensive')}
-                    className={`btn btn-sm ${activeTab === 'offensive' ? 'btn-primary' : 'btn-glass-hero'}`}
-                    style={activeTab !== 'offensive' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
+                    onClick={() => setActiveTab('systemhaus')}
+                    className={`btn btn-sm ${activeTab === 'systemhaus' ? 'btn-primary' : 'btn-glass-hero'}`}
+                    style={activeTab !== 'systemhaus' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
                   >
-                    Offensive Testing
+                    IT-Systemhaus &amp; Cloud
                   </button>
                   <button
-                    onClick={() => setActiveTab('defensive')}
-                    className={`btn btn-sm ${activeTab === 'defensive' ? 'btn-primary' : 'btn-glass-hero'}`}
-                    style={activeTab !== 'defensive' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
+                    onClick={() => setActiveTab('security')}
+                    className={`btn btn-sm ${activeTab === 'security' ? 'btn-primary' : 'btn-glass-hero'}`}
+                    style={activeTab !== 'security' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
                   >
-                    24/7 SOC &amp; Forensik
+                    Security &amp; Überwachung
                   </button>
                   <button
-                    onClick={() => setActiveTab('compliance')}
-                    className={`btn btn-sm ${activeTab === 'compliance' ? 'btn-primary' : 'btn-glass-hero'}`}
-                    style={activeTab !== 'compliance' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
+                    onClick={() => setActiveTab('digital')}
+                    className={`btn btn-sm ${activeTab === 'digital' ? 'btn-primary' : 'btn-glass-hero'}`}
+                    style={activeTab !== 'digital' ? { border: '1px solid rgba(255, 255, 255, 0.12)' } : {}}
                   >
-                    NIS-2 &amp; ISO 27001
+                    Software &amp; VoIP
                   </button>
                 </div>
               </div>
 
               {/* Dashboard Content Panel */}
               <div style={{ padding: '2.25rem 2.5rem', backgroundColor: 'rgba(8, 13, 24, 0.75)' }}>
-                {activeTab === 'offensive' && (
+                {activeTab === 'systemhaus' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
                       <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        WEB &amp; API PENTESTING
+                        NETZWERK &amp; SERVER
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Manuelle Prüfung nach OWASP ASVS 4.0</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Stabile Systemintegration</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Identifikation von Logikfehlern, Authentifizierungs-Bypasses und API-Schwachstellen durch zertifizierte OSCP-Engineers.
+                        Hochverfügbare LAN/WLAN-Infrastruktur, VLAN-Segmentierung, Windows Server, Proxmox-Cluster und Firewalls.
                       </p>
                     </div>
                     <div>
                       <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        ACTIVE DIRECTORY AUDITS
+                        MICROSOFT 365 &amp; CLOUD
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Angriffspfade zur Domänenübernahme</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Modern Workplace &amp; Backups</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Systematisches Aufdecken von Kerberoasting, schwachen ACLs und NTLM-Schwachstellen vor realen Erpressern.
+                        Reibungslose Migration, CIS-gehärtete Tenants, Conditional Access und unveränderliche Cloud-Backups (WORM).
                       </p>
                     </div>
                     <div>
                       <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        PROOF-OF-CONCEPT BERICHT
+                        PROAKTIVER HELPDESK
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Verständlich für Vorstand &amp; IT-Team</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Vor-Ort-Betreuung Thüringen</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Exakte Nachweise, CVSS v4.0 Risikobewertung, konkrete Code-Fixes und kostenloser Retest innerhalb von 60 Tagen.
+                        24/7 Sensor-Monitoring, automatisiertes Patchmanagement und schnelle persönliche Vor-Ort-Hilfe bei Störungen.
                       </p>
                     </div>
                   </div>
                 )}
 
-                {activeTab === 'defensive' && (
+                {activeTab === 'security' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
                       <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        24/7 SOC-AS-A-SERVICE
+                        SIEM LOG-MANAGEMENT
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Permanente Telemetrie-Überwachung</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Zentrale Telemetrie-Analyse</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Deutsche Analysten überwachen Ihre Endpoints, Server und Netzwerke rund um die Uhr ohne Alarm-Müdigkeit.
+                        Lückenlose Erfassung aller Sicherheits-Logs (Wazuh, Sentinel) zur Früherkennung unautorisierter Zugriffsversuche.
                       </p>
                     </div>
                     <div>
                       <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        INCIDENT FORENSIK
+                        IDS / IPS &amp; NETZWERKSCHUTZ
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Beweissicherung &amp; Eindämmung</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Automatisierte Angriffsabwehr</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        RAM-Forensik, Triage, Isolation infizierter Systeme und gerichtsverwertbare Berichte für BSI und Cyberversicherer.
+                        Echtzeit-Erkennung von Portscans und Exploit-Versuchen mit sofortiger automatisierter IP-Sperre am Perimeter.
                       </p>
                     </div>
                     <div>
                       <div style={{ color: '#10b981', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        VOR-ORT-EINSATZGARANTIE
+                        MDM &amp; KI INCIDENT DETECTION
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Direkte Präsenz in ganz Thüringen</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Next-Gen EDR &amp; Intune</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Unsere Forensiker rücken bei aktiven Vorfällen direkt an Ihr Rechenzentrum in Jena, Erfurt, Weimar, Gera oder Hermsdorf aus.
+                        Zentrale Verwaltung aller Laptops &amp; Smartphones gepaart mit KI-gestützter Ransomware-Isolierung in Millisekunden.
                       </p>
                     </div>
                   </div>
                 )}
 
-                {activeTab === 'compliance' && (
+                {activeTab === 'digital' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
-                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        NIS-2 UMSETZUNGSGESETZ
+                      <div style={{ color: '#8b5cf6', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
+                        INDIVIDUELLE SOFTWARE
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Haftungsvermeidung für Geschäftsführer</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Maßgeschneiderte Web-Apps</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Umsetzung der 10 technischen Mindestkontrollen, Etablierung des 24h-Frühwarnprozesses und Supply-Chain-Audits.
+                        Entwicklung schlanker, wartbarer Business-Applikationen mit React, TypeScript, Node.js und Python.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        ISO/IEC 27001:2022
+                      <div style={{ color: '#8b5cf6', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
+                        API &amp; PROZESSAUTOMATION
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Zertifizierungsvorbereitung</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Systemintegration ERP / CRM</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Pragmatischer Aufbau eines schlanken ISMS nach den 93 Annex A Kontrollen inklusive Begleitung durch Lead Auditoren.
+                        Schnittstellen zur Beseitigung isolierter Dateninseln und automatisierte Workflows ohne manuelle Medienbrüche.
                       </p>
                     </div>
                     <div>
-                      <div style={{ color: '#38bdf8', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
-                        PRAXEN &amp; KLINIKEN (§ 75b SGB V)
+                      <div style={{ color: '#f59e0b', fontWeight: 700, fontSize: '0.85rem', marginBottom: '0.4rem', letterSpacing: '0.03em' }}>
+                        VOIP &amp; TEAMS TELEFONIE
                       </div>
-                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Telematik &amp; Patientenschutz</h4>
+                      <h4 style={{ fontSize: '1.1rem', color: '#f8fafc', marginBottom: '0.5rem' }}>Moderne Cloud-Telefonie</h4>
                       <p style={{ fontSize: '0.9rem', color: '#94a3b8', margin: 0 }}>
-                        Sichere Segmentierung von Praxisnetzen, Schutz vor Datenabfluss nach § 203 StGB und Erfüllung der KBV-Richtlinien.
+                        Flexible Cloud-PBX Telefonanlagen, IVR-Sprachmenüs, SRTP-Verschlüsselung und Microsoft Teams Integration.
                       </p>
                     </div>
                   </div>
@@ -417,10 +419,10 @@ export default function HomePage() {
 
             <div style={{ padding: '0.5rem' }}>
               <div style={{ fontFamily: 'var(--font-display)', fontSize: '2.4rem', fontWeight: 700, color: '#10b981' }}>
-                {t('metrics.pentesters')}
+                {t('metrics.availability')}
               </div>
               <div style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '0.2rem', fontWeight: 500 }}>
-                {t('metrics.pentestersLabel')}
+                {t('metrics.availabilityLabel')}
               </div>
             </div>
 

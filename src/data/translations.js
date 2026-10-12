@@ -18,27 +18,27 @@ export const translations = {
       button: "Sofort-Einsatz anfordern"
     },
     hero: {
-      tag: "CYBER DEFENSE & OFFENSIVE ENGINEERING // THÜRINGEN",
-      title: "Kompromisslose IT-Sicherheit für Mittelstand, Kliniken & Praxen",
-      description: "EminSecurity schützt kritische Infrastrukturen, Unternehmen und medizinische Einrichtungen in Jena, Erfurt, Weimar, Gera und Hermsdorf. Keine theoretischen Konzepte, sondern reale Angriffs-Simulationen, 24/7 SOC-Überwachung und zertifizierte Incident Response.",
-      ctaPrimary: "Audit & Beratung anfragen",
-      ctaSecondary: "Live Bedrohungslage prüfen",
-      slaNotice: "Vor-Ort-Einsatz in Thüringen: Schnelle Sofort-Bereitschaft"
+      tag: "SECURITY-FIRST IT-SYSTEMHAUS // THÜRINGEN",
+      title: "Ihr Security-First IT-Systemhaus für Mittelstand, Kanzleien & Praxen",
+      description: "EminSecurity verbindet ganzheitliche IT-Systemintegration, Cloud-Lösungen, VoIP und individuelle Softwareentwicklung mit professioneller Sicherheitsüberwachung: SIEM, IDS/IPS, MDM und KI-basierte Incident Detection für maximale Stabilität und Sicherheit in Thüringen.",
+      ctaPrimary: "IT-Beratung anfragen",
+      ctaSecondary: "Leistungen im Überblick",
+      slaNotice: "Vor-Ort-Betreuung in Thüringen: Schnelle Reaktionszeiten & persönlicher Service"
     },
     metrics: {
       responseTime: "Vor Ort",
-      responseTimeLabel: "Direkte Vor-Ort-Bereitschaft Thüringen",
-      pentesters: "100%",
-      pentestersLabel: "Zertifizierte Engineers (OSCP/CISSP)",
+      responseTimeLabel: "Persönliche Vor-Ort-Betreuung in Thüringen",
+      availability: "99.9%",
+      availabilityLabel: "Systemverfügbarkeit & proaktives Monitoring",
       incidentsHandled: "24/7/365",
-      incidentsHandledLabel: "SOC & Incident Bereitschaft",
-      satisfaction: "0%",
-      satisfactionLabel: "Erfolgreiche Fremdzugriffe bei SOC-Kunden"
+      incidentsHandledLabel: "SIEM & Incident Detection Bereitschaft",
+      satisfaction: "100%",
+      satisfactionLabel: "Security-First: Ganzheitliche Systemresilienz"
     },
     servicesOverview: {
-      heading: "Spezialisierte Sicherheitsleistungen",
-      subheading: "Vom gezielten Hacking-Angriff bis zum 24/7-Schutzschirm für Ihre Organisation.",
-      viewAll: "Alle Leistungen im Detail ansehen"
+      heading: "Ganzheitliche IT-Systemhaus & Security Leistungen",
+      subheading: "Von stabiler Systemintegration, Cloud & VoIP bis zu modernster Überwachung mit SIEM, IDS/IPS, MDM und KI.",
+      viewAll: "Alle 5 Kernleistungen im Detail ansehen"
     },
     complianceSection: {
       heading: "Regulatorik & Rechtssicherheit",
@@ -60,8 +60,8 @@ export const translations = {
       subheading: "Individuelle Schutzprofile zugeschnitten auf spezifische Risikolandschaften und Gesetzesanforderungen."
     },
     footer: {
-      tagline: "EminSecurity - Spezialisierte Cyber-Abwehr, Penetration Testing und IT-Systemintegration für Thüringen und den Mitteldeutschen Raum.",
-      servicesCol: "Leistungen",
+      tagline: "EminSecurity - Ihr Security-First IT-Systemhaus für Systemintegration, Cloud-Lösungen, VoIP, Softwareentwicklung und proaktive Sicherheitsüberwachung in Thüringen.",
+      servicesCol: "IT-Systemhaus & Services",
       complianceCol: "Regulierung",
       locationsCol: "Regionale Standorte",
       companyCol: "Unternehmen",
@@ -89,27 +89,27 @@ export const translations = {
       button: "Dispatch Emergency Team"
     },
     hero: {
-      tag: "CYBER DEFENSE & OFFENSIVE ENGINEERING // THURINGIA",
-      title: "Uncompromising IT Security for Enterprises, Hospitals & Clinics",
-      description: "EminSecurity defends critical infrastructure, medium-sized enterprises, and healthcare providers across Jena, Erfurt, Weimar, Gera, and Hermsdorf. Real offensive penetration testing, 24/7 SOC operations, and certified incident response.",
-      ctaPrimary: "Request Security Audit",
-      ctaSecondary: "Check Threat Intelligence",
-      slaNotice: "On-site dispatch across Thuringia: Rapid direct response readiness"
+      tag: "SECURITY-FIRST IT SYSTEMS INTEGRATOR // THURINGIA",
+      title: "Your Security-First IT Systems Integrator for Enterprises & Clinics",
+      description: "EminSecurity delivers robust IT systems integration, modern cloud architectures, VoIP, and custom software engineering protected by real-time security monitoring: SIEM, IDS/IPS, MDM, and AI-driven incident detection across Central Germany.",
+      ctaPrimary: "Request IT Consultation",
+      ctaSecondary: "Explore Capabilities",
+      slaNotice: "On-site dispatch across Thuringia: Rapid direct response and personal support"
     },
     metrics: {
       responseTime: "On-Site",
-      responseTimeLabel: "Direct Dispatch Readiness Thuringia",
-      pentesters: "100%",
-      pentestersLabel: "Certified Senior Engineers (OSCP/CISSP)",
+      responseTimeLabel: "Direct Personal On-Site Support in Thuringia",
+      availability: "99.9%",
+      availabilityLabel: "System Availability & Proactive Telemetry",
       incidentsHandled: "24/7/365",
-      incidentsHandledLabel: "SOC & Active Incident Readiness",
-      satisfaction: "0%",
-      satisfactionLabel: "Breaches among SOC Retainer Clients"
+      incidentsHandledLabel: "SIEM & Incident Detection Readiness",
+      satisfaction: "100%",
+      satisfactionLabel: "Security-First: End-to-End Resilience"
     },
     servicesOverview: {
-      heading: "Specialized Security Capabilities",
-      subheading: "From ruthless adversary simulation to 24/7 continuous perimeter and endpoint defense.",
-      viewAll: "Explore All Security Capabilities"
+      heading: "Comprehensive IT Systems & Security Capabilities",
+      subheading: "From resilient infrastructure, cloud & VoIP to proactive surveillance with SIEM, IDS/IPS, MDM, and AI.",
+      viewAll: "Explore All 5 Core Capabilities"
     },
     complianceSection: {
       heading: "Regulatory Compliance & Legal Rigor",
@@ -131,8 +131,8 @@ export const translations = {
       subheading: "Tailored security architectures aligned with regulatory duties and operational risk environments."
     },
     footer: {
-      tagline: "EminSecurity - Specialized Cyber Defense, Penetration Testing, and IT System Integration for Thuringia and Central Germany.",
-      servicesCol: "Capabilities",
+      tagline: "EminSecurity - Your Security-First IT Systems Integrator for infrastructure, cloud, VoIP, custom software, and proactive security monitoring across Thuringia.",
+      servicesCol: "IT Solutions & Services",
       complianceCol: "Compliance",
       locationsCol: "Regional Hubs",
       companyCol: "Company",
@@ -145,179 +145,191 @@ export const translations = {
 
 export const servicesData = [
   {
-    id: "offensive-security",
-    path: "/services/offensive-security",
+    id: "systemintegration",
+    path: "/services/systemintegration",
     title: {
-      de: "Offensive Security & Pentesting",
-      en: "Offensive Security & Pentesting"
+      de: "Systemintegration & IT-Administration",
+      en: "System Integration & IT Administration"
     },
-    category: "Offensive",
+    category: "Infrastruktur & Support",
     shortDesc: {
-      de: "Kontrollierte Angriffe nach den Methoden realer Cyber-Krimineller. Wir decken Schwachstellen auf, bevor Angreifer sie ausnutzen.",
-      en: "Controlled adversary simulation matching real-world threat actors. We identify and exploit vulnerabilities before attackers do."
+      de: "Ganzheitliche IT-Infrastruktur für Ihr Unternehmen: Professionelle Netzwerkarchitektur, Server- & Client-Management, Active Directory Härtung, proaktives Monitoring und schneller Vor-Ort-Support.",
+      en: "Holistic IT infrastructure management: Robust network design, server and endpoint management, Active Directory hardening, proactive monitoring, and direct on-site support."
     },
     subServices: [
       {
-        title: { de: "Penetration Testing (Web & API)", en: "Penetration Testing (Web & API)" },
-        desc: { de: "OWASP Top 10, Logikfehler in Business-Anwendungen, Authentifizierungs-Bypasses und REST/GraphQL Sicherheitsprüfungen.", en: "OWASP Top 10, business logic flaws, authentication bypasses, and REST/GraphQL API audits." }
+        title: { de: "Netzwerkarchitektur & Segmentierung", en: "Network Architecture & Segmentation" },
+        desc: { de: "Planung, Aufbau und Absicherung von LAN, WLAN, VLANs, Routing und stabilen VPN-Tunneln für Standort- und Homeoffice-Kopplungen.", en: "Planning and engineering high-availability LAN, Wi-Fi, VLAN micro-segmentation, and hardened site-to-site VPNs." }
       },
       {
-        title: { de: "Netzwerk & Infrastruktur-Pentest", en: "Network & Infrastructure Pentest" },
-        desc: { de: "Interne und externe Überprüfung von Firewalls, VPN-Endpunkten, Active Directory und Routern.", en: "Internal and external audit of firewalls, VPN gateways, Active Directory, and network routing." }
+        title: { de: "Server- & Client-Management", en: "Server & Client Management" },
+        desc: { de: "Betreuung von Windows Server, Linux, Hyper-V, Proxmox, Arbeitsplatz-Rollouts, standardisierten Software-Paketierungen und Lifecycle-Management.", en: "Administration of Windows Server, Linux, virtualization clusters, workstation lifecycle rollouts, and endpoint fleets." }
       },
       {
-        title: { de: "Schwachstellenanalyse & Scanning", en: "Vulnerability Assessment & Scanning" },
-        desc: { de: "Systematische Identifikation veralteter Softwarekomponenten, Fehlkonfigurationen und offener Ports mit verifizierter Risikobewertung.", en: "Systematic scanning and expert verification of outdated components, misconfigurations, and attack surfaces." }
+        title: { de: "Active Directory & Identity Management", en: "Active Directory & Identity Management" },
+        desc: { de: "Sichere Benutzer- und Berechtigungsverwaltung, Gruppenrichtlinien (GPOs), Entra ID Hybrid-Sync und Tiered Administration Modelle.", en: "Structured user and privilege governance, Group Policy Objects, Entra ID hybrid sync, and tiered administration tiers." }
       },
       {
-        title: { de: "Red Teaming & Adversary Simulation", en: "Red Teaming & Adversary Simulation" },
-        desc: { de: "Ganzheitliche Simulation gezielter Angriffe inklusive Spear-Phishing, Ausnutzen physischer Barrieren und Evasion von EDR-Lösungen.", en: "Holistic adversary simulation including targeted phishing, physical bypasses, and EDR evasion testing." }
+        title: { de: "Proaktives Monitoring & IT-Helpdesk", en: "Proactive Monitoring & IT Helpdesk" },
+        desc: { de: "24/7 System-Health-Checks, automatisiertes Patchmanagement sowie schneller Vor-Ort- und Remote-Support bei Störungen.", en: "24/7 telemetry health checks, automated security patching, and responsive on-site and remote user support." }
       },
       {
-        title: { de: "Social Engineering & Physische Audits", en: "Social Engineering & Physical Audits" },
-        desc: { de: "Vor-Ort-Überprüfung von Zutrittskontrollen, Serverräumen und Mitarbeitersensibilität gegen Manipulation.", en: "On-site physical security testing of server rooms, badges, and employee resistance against manipulation." }
+        title: { de: "Backup-Strategien & Disaster Recovery", en: "Backup Strategy & Disaster Recovery" },
+        desc: { de: "3-2-1 Backup-Konzepte mit unveränderlichen Datensicherungen (WORM/Air-Gap) und regelmäßigen Wiederherstellungstests.", en: "3-2-1 backup blueprints featuring immutable storage tiers and routine disaster recovery drill validations." }
       }
     ],
-    standards: ["BSI Pentest-Leitfaden", "OWASP ASVS 4.0", "PTES Standard", "MITRE ATT&CK"],
+    standards: ["BSI IT-Grundschutz", "ISO/IEC 27001", "ITIL v4 Best Practices", "CIS Critical Security Controls"],
     deliverable: {
-      de: "Management Summary mit Executive Risk Score, detaillierter technischer Proof-of-Concept-Report, priorisierte Maßnahmenmatrix nach CVSS v3.1/v4.0.",
-      en: "Executive Risk Summary, granular technical PoC exploitation report, and prioritized remediation matrix mapped to CVSS v4.0."
+      de: "Vollständige Infrastrukturdokumentation, Netzwerkpläne, Wartungsprotokolle und feste Service Level Agreements (SLAs).",
+      en: "Comprehensive infrastructure topology maps, maintenance runbooks, and guaranteed Service Level Agreements (SLAs)."
     }
   },
   {
-    id: "defensive-security",
-    path: "/services/defensive-security",
+    id: "cloud-services",
+    path: "/services/cloud-services",
     title: {
-      de: "Defensive Security & 24/7 SOC",
-      en: "Defensive Security & 24/7 SOC"
+      de: "Cloud-Dienste & Modern Workplace",
+      en: "Cloud Services & Modern Workplace"
     },
-    category: "Defensive",
+    category: "Cloud & Hybrid",
     shortDesc: {
-      de: "Permanente Überwachung, proaktives Threat Hunting und blitzschnelle Notfall-Forensik zur Abwehr von Ransomware und Einbrüchen.",
-      en: "Continuous monitoring, proactive threat hunting, and rapid forensic incident containment to defeat intrusions."
+      de: "Sichere und flexible Cloud-Lösungen: Microsoft 365, Azure- & Hybrid-Cloud-Architekturen, DSGVO-konformes Cloud-Backup und nahtloses Arbeiten von überall.",
+      en: "Secure, flexible cloud environments: Microsoft 365 deployments, Azure & hybrid cloud architectures, GDPR-compliant cloud backups, and productive modern workplaces."
     },
     subServices: [
       {
-        title: { de: "SOC-as-a-Service (24/7 Monitoring)", en: "SOC-as-a-Service (24/7 Monitoring)" },
-        desc: { de: "Zentralisierte Erkennung verdächtiger Aktivitäten auf Endpoints, Servern und im Datenverkehr durch erfahrene Security Analysts.", en: "Continuous monitoring across endpoints, servers, and networks by battle-tested analysts." }
+        title: { de: "Microsoft 365 Migration & Härtung", en: "Microsoft 365 Migration & Hardening" },
+        desc: { de: "Reibungslose Migration von Exchange, Teams, SharePoint & OneDrive – gehärtet nach BSI- und CIS-Benchmarks inklusive Conditional Access.", en: "Frictionless migration to Exchange Online, Teams, SharePoint & OneDrive – secured via CIS benchmarks and Conditional Access." }
       },
       {
-        title: { de: "Incident Response & Cyber-Forensik", en: "Incident Response & Forensics" },
-        desc: { de: "Sofortige Eindämmung bei Ransomware-Befall, forensische Spurensicherung nach BSI-Standards und Wiederherstellungsbegleitung.", en: "Immediate malware containment, court-admissible forensic evidence acquisition, and guided recovery." }
+        title: { de: "Hybrid- & Cloud-Infrastruktur (Azure / Hetzner)", en: "Hybrid & Cloud Infrastructure" },
+        desc: { de: "Skalierbare Cloud-Server, IaaS-Ressourcen und nahtlose Verknüpfung Ihrer lokalen Infrastruktur mit hochverfügbaren Rechenzentren.", en: "Scalable virtual servers, cloud networking, and seamless interconnection of on-premise hardware with redundant data centers." }
       },
       {
-        title: { de: "SIEM & EDR/XDR Implementierung", en: "SIEM & EDR/XDR Architecture" },
-        desc: { de: "Einrichtung und Tuning führender Erkennungssysteme (Wazuh, Microsoft Defender for Endpoint, CrowdStrike, Sentinel) ohne Alarm-Müdigkeit.", en: "Deployment and fine-tuning of leading detection stacks without alert fatigue." }
+        title: { de: "Ransomware-sicheres Cloud-Backup", en: "Ransomware-Resilient Cloud Backup" },
+        desc: { de: "Auslagerung verschlüsselter Backups in deutsche Rechenzentren mit unveränderlicher Aufbewahrung (Object Lock/WORM).", en: "Offsite encrypted cloud repositories hosted in certified German facilities featuring immutable Object Lock retention." }
       },
       {
-        title: { de: "Cyber Analysen & Threat Hunting", en: "Cyber Analysis & Threat Hunting" },
-        desc: { de: "Hypothesenbasiertes Suchen nach verdeckten Persistenzmechanismen, kompromittierten Konten und Data-Exfiltration-Kanälen.", en: "Hypothesis-driven search for stealthy persistence, compromised credentials, and covert data exfiltration." }
+        title: { de: "Modern Workplace & Zero-Trust Zugriff", en: "Modern Workplace & Zero Trust Access" },
+        desc: { de: "Sichere Kollaboration für Remote- und Homeoffice-Teams mit Multi-Faktor-Authentifizierung (MFA) und Datenverlustschutz (DLP).", en: "Secure collaboration suites for hybrid workforces powered by adaptive multi-factor authentication (MFA) and data loss prevention." }
       }
     ],
-    standards: ["NIST SP 800-61", "MITRE D3FEND", "ISO/IEC 27035", "BSI CS 001"],
+    standards: ["CIS Microsoft 365 Benchmarks", "BSI Cloud Security C5", "DSGVO Art. 32", "ISO/IEC 27017"],
     deliverable: {
-      de: "24/7 Eskalationsmatrix, monatliche Threat-Berichte, lückenlose Vorfallsdokumentation für Behörden (BSI, Datenschutzbeauftragte, Versicherungen).",
-      en: "24/7 escalation runbooks, monthly telemetry briefs, and comprehensive breach audit trails for insurers and regulators."
+      de: "Tenant-Konfigurationsbericht, Berechtigungskonzepte, automatisierte Backup-Reports und strukturierte Mitarbeitereinweisungen.",
+      en: "Tenant security audits, access control policies, automated backup reports, and user onboarding workshops."
     }
   },
   {
-    id: "it-administration",
-    path: "/services/it-administration",
+    id: "softwareentwicklung",
+    path: "/services/softwareentwicklung",
     title: {
-      de: "IT-Administration & Systemintegration",
-      en: "IT Administration & Systems Integration"
+      de: "Individuelle Softwareentwicklung",
+      en: "Custom Software Development"
     },
-    category: "Infrastructure",
+    category: "Software & Schnittstellen",
     shortDesc: {
-      de: "Gelebte Resilienz: Sichere Systemarchitekturen, Active Directory Härtung, Zero-Trust-Konzepte und unveränderliche Backups.",
-      en: "Operational cyber resilience: hardened system architectures, Active Directory tiering, Zero Trust, and immutable backups."
+      de: "Maßgeschneiderte Softwarelösungen, Schnittstellenintegrationen (APIs) und digitale Prozessautomatisierungen, die Ihre Betriebsabläufe beschleunigen und Systeme verbinden.",
+      en: "Bespoke business applications, API system integrations, and intelligent workflow automation designed to accelerate and modernize business operations."
     },
     subServices: [
       {
-        title: { de: "Active Directory & Identity Härtung", en: "Active Directory & Identity Hardening" },
-        desc: { de: "Admin-Tiering-Modell, Bereinigung von Kerberoasting/AS-REP Roasting Schwachstellen, Durchsetzung von MFA und Privileged Access Management.", en: "Tiered administration models, Kerberoasting mitigation, robust MFA enforcement, and PAM implementations." }
+        title: { de: "Individuelle Web- & Fachanwendungen", en: "Custom Web & Business Applications" },
+        desc: { de: "Entwicklung hochperformanter, benutzerfreundlicher und wartbarer Business-Applikationen mit modernen Technologien.", en: "Engineering scalable, intuitive, and maintainable enterprise web applications tailored to your specific workflows." }
       },
       {
-        title: { de: "Zero-Trust Netzwerkarchitektur", en: "Zero Trust Network Architecture" },
-        desc: { de: "Mikrosegmentierung, Abschottung von Produktionsnetzen (OT/SCADA) und medizinischen Geräten (IoMT) gegen Office-Netzwerke.", en: "Micro-segmentation, isolating industrial OT/SCADA and medical IoMT devices from corporate office LANs." }
+        title: { de: "API- & Systemintegration (ERP / CRM)", en: "API & System Integration (ERP / CRM)" },
+        desc: { de: "Verbindung isolierter Insellösungen: Nahtloser Datenaustausch zwischen ERP, CRM, Warenwirtschaft, Zeiterfassung und DMS.", en: "Bridging isolated software silos: Automated bi-directional data synchronization between ERP, CRM, inventory, and accounting." }
       },
       {
-        title: { de: "Immutable Backups & Disaster Recovery", en: "Immutable Backups & Disaster Recovery" },
-        desc: { de: "Air-gapped und WORM-gesicherte Datensicherungen, die von Ransomware nicht gelöscht oder verschlüsselt werden können, inklusive Wiederanlauftests.", en: "Air-gapped, WORM-locked backup repositories resilient against ransomware wipe attempts with verified recovery drills." }
+        title: { de: "Prozessautomatisierung & Workflows", en: "Workflow & Process Automation" },
+        desc: { de: "Automatisierung wiederkehrender manueller Abläufe durch Skripte, Bots und Middleware – für weniger Fehler und spürbare Zeitersparnis.", en: "Automating repetitive operational tasks with custom scripts, event hooks, and middleware to eliminate human error." }
       },
       {
-        title: { de: "Cloud & Hybrid Security (M365 / Azure / Hetzner)", en: "Cloud & Hybrid Security" },
-        desc: { de: "Sichere Konfiguration nach CIS-Benchmarks, Conditional Access, Data Loss Prevention (DLP) und Tenant-Absicherung.", en: "Configuration hardening via CIS Benchmarks, Conditional Access policies, DLP, and tenant-level lock downs." }
+        title: { de: "Modernisierung von Altsystemen (Refactoring)", en: "Legacy Software Modernization" },
+        desc: { de: "Sichere Migration und Weiterentwicklung historisch gewachsener Datenbestände, Excel-Monolithen und veralteter Software.", en: "Auditing, refactoring, and migrating outdated legacy databases and fragile software stacks into maintainable architectures." }
       }
     ],
-    standards: ["CIS Critical Security Controls", "BSI IT-Grundschutz", "Microsoft Enterprise Access Model"],
+    standards: ["Clean Code Architecture", "OWASP Top 10 Secure Coding", "REST / GraphQL Standards", "CI/CD & GitOps"],
     deliverable: {
-      de: "Vollständige Infrastruktur-Dokumentation, Härtungs-Skripte (PowerShell/Ansible), Notfall-Wiederherstellungs-Runbooks.",
-      en: "Comprehensive architecture maps, automated hardening scripts, and verified disaster recovery runbooks."
+      de: "Vollständiger Quellcode, OpenAPI/Swagger-Dokumentation, automatisierte Testabdeckung und langfristige Wartungsverträge.",
+      en: "Full source code ownership, OpenAPI specifications, automated test suites, and ongoing maintenance agreements."
     }
   },
   {
-    id: "awareness-training",
-    path: "/services/awareness-training",
+    id: "voip-telefonie",
+    path: "/services/voip-telefonie",
     title: {
-      de: "Awareness-Schulungen & Phishing-Simulation",
-      en: "Security Awareness & Phishing Drills"
+      de: "Kommunikation & VoIP-Telefonie",
+      en: "Business Communication & VoIP"
     },
-    category: "Human Factor",
+    category: "Kommunikation & UCC",
     shortDesc: {
-      de: "Verwandeln Sie Ihre Mitarbeiter in eine wirksame menschliche Firewall. Praxisnah, ohne belehrenden Zeigefinger, mit Live-Hacking-Demos.",
-      en: "Empower staff into a vigilant human firewall with practical drills, real-world simulations, and live-hacking demos."
+      de: "Moderne, standortunabhängige Cloud-Telefonie und Unified Communications: Perfekte Erreichbarkeit per Festnetz, Smartphone und Microsoft Teams für Büro und Homeoffice.",
+      en: "Modern, location-independent cloud PBX telephony and Unified Communications: Seamless communication across desk phones, smartphones, and Microsoft Teams."
     },
     subServices: [
       {
-        title: { de: "Maßgeschneiderte Phishing-Simulationen", en: "Customized Phishing Simulations" },
-        desc: { de: "Branchenspezifische Simulationen (z. B. angebliche Rechnungen, TI-Wartungsnachrichten für Praxen) mit sofortigem Lerneffekt bei Klick.", en: "Industry-aligned drills mimicking real invoices or vendor alerts with constructive micro-learning feedback." }
+        title: { de: "Cloud-Telefonanlagen (Cloud PBX)", en: "Cloud Phone Systems (Cloud PBX)" },
+        desc: { de: "Flexible, zukunftssichere Telefonielösungen (z. B. 3CX, Placetel) ohne teure Vor-Ort-Hardware, monatlich anpassbar an Ihre Teamgröße.", en: "Flexible, software-defined cloud PBX solutions eliminating obsolete local hardware boxes, scaling dynamically with your team." }
       },
       {
-        title: { de: "Live-Hacking Workshops für Teams & Führungskräfte", en: "Live-Hacking Workshops" },
-        desc: { de: "Anschauliche Demonstration, wie einfach Passwörter abgefangen werden und wie CEO-Fraud und Deepfakes heute funktionieren.", en: "Compelling live demonstrations of password spraying, credential harvesting, CEO fraud, and deepfakes." }
+        title: { de: "Microsoft Teams Telefonie-Integration", en: "Microsoft Teams Telephony Integration" },
+        desc: { de: "Direkt aus Microsoft Teams weltweit telefonieren: Nahtlose Verknüpfung Ihrer bestehenden Telefonnummern und SIP-Trunks mit Teams.", en: "Direct routing and calling from inside Microsoft Teams: Connect existing landline numbers seamlessly into your collaboration hub." }
       },
       {
-        title: { de: "Schulung für Praxis- & Klinikpersonal", en: "Medical Staff Security Training" },
-        desc: { de: "Sensibilisierung im Umgang mit Telematik-Infrastruktur, Patientendaten, USB-Medien und Social Engineering am Empfang.", en: "Targeted training on medical telemetry, patient health records (§ 203 StGB), and front-desk manipulation." }
+        title: { de: "Intelligentes Anrufmanagement & Warteschlangen", en: "Intelligent Call Routing & Queues" },
+        desc: { de: "Professionelle Begrüßungsansagen, IVR-Sprachmenüs, zeitgesteuerte Weiterleitungen, Besetztlampenfelder und Fax-to-Mail.", en: "Professional greeting prompts, IVR voice menus, after-hours time routing, hunt groups, and digital Fax-to-Mail services." }
+      },
+      {
+        title: { de: "Hardware & Konferenzlösungen", en: "IP Hardware & Conference Systems" },
+        desc: { de: "Ausstattung mit ergonomischen Tischtelefonen, DECT-Mehrzellensystemen für Werkstatt/Praxis, Headsets und Konferenzsystemen.", en: "Turnkey provisioning of desk phones, multi-cell DECT systems for clinics and workshops, headsets, and conference rooms." }
       }
     ],
-    standards: ["ISO/IEC 27001 Annex A.7", "BSI ORG.3", "DSGVO Art. 39"],
+    standards: ["SIP / SRTP Verschlüsselung", "TLS 1.3", "QoS (Quality of Service)", "DSGVO-konforme Telefonie"],
     deliverable: {
-      de: "Teilnehmerzertifikate für Compliance-Audits, anonymisierte Klick- und Meldequoten-Analysen, Schulungsunterlagen.",
-      en: "Verifiable certificates for regulatory compliance, anonymized engagement reporting, and actionable reference guides."
+      de: "Konfigurationsplan, Rufnummern-Matrix, Schulung der Mitarbeiter und dauerhafter Betreuungsservice.",
+      en: "Call routing matrix, user provisioning, hands-on employee training, and ongoing technical support."
     }
   },
   {
-    id: "software-testing",
-    path: "/services/software-testing",
+    id: "security-ueberwachung",
+    path: "/services/security-ueberwachung",
     title: {
-      de: "Software Security & Code Audits",
-      en: "Software Security & Code Audits"
+      de: "Security & Überwachung (SIEM, IDS/IPS, MDM, KI)",
+      en: "Security & Monitoring (SIEM, IDS/IPS, MDM, AI)"
     },
-    category: "Application",
+    category: "Managed Security",
     shortDesc: {
-      de: "Sicherheit im Entwicklungszyklus (DevSecOps): Quellcode-Analysen, Architekturprüfungen und Absicherung von Software-Lieferketten.",
-      en: "Security baked into your development lifecycle: source code reviews, architecture audits, and supply-chain defense."
+      de: "Lückenloser Schutzschirm für Ihre IT: Zentrales SIEM Log-Management, netzwerkweites IDS/IPS, zentrales Mobile Device Management (MDM) und KI-gestützte Incident Detection in Echtzeit.",
+      en: "Comprehensive security surveillance for your IT: Centralized SIEM telemetry, network-wide IDS/IPS, unified Mobile Device Management (MDM), and AI-driven incident detection in real time."
     },
     subServices: [
       {
-        title: { de: "Manueller Source Code Audit", en: "Manual Source Code Review" },
-        desc: { de: "Gründliche Analyse in C/C++, Rust, Java, Python, Go, TypeScript nach versteckten Race Conditions, Buffer Overflows und Logikfehlern.", en: "Rigorous manual inspection of C/C++, Rust, Java, Python, Go, and TypeScript codebases for subtle vulnerabilities." }
+        title: { de: "SIEM Implementierung & Log-Management", en: "SIEM Implementation & Log Management" },
+        desc: { de: "Zentralisierte Erfassung, Korrelation und rechtskonforme Archivierung aller sicherheitsrelevanten Logs (Wazuh, Microsoft Sentinel) ohne Alert-Müdigkeit.", en: "Centralized aggregation, behavioral correlation, and tamper-proof archival of security logs across servers and network nodes." }
       },
       {
-        title: { de: "DevSecOps & CI/CD Pipeline Absicherung", en: "DevSecOps & CI/CD Pipeline Hardening" },
-        desc: { de: "Integration automatisierter SAST/DAST-Tools, Dependency-Scanning (SBOM) und Secrets-Detection direkt in GitHub Actions oder GitLab CI.", en: "Integrating automated SAST/DAST, SBOM dependency scanning, and secret detectors directly into CI/CD pipelines." }
+        title: { de: "IDS / IPS (Intrusion Detection & Prevention)", en: "IDS / IPS (Intrusion Detection & Prevention)" },
+        desc: { de: "Echtzeit-Überwachung des Datenverkehrs zur automatischen Erkennung und Blockade von Portscans, Exploit-Versuchen und unautorisierten Zugriffen.", en: "Continuous inspection of network packets to automatically intercept port scans, exploit payloads, and unauthorized intrusions." }
       },
       {
-        title: { de: "Medizintechnik- & IoT-Sicherheitsprüfungen", en: "IoMT & Embedded Device Testing" },
-        desc: { de: "Prüfung vernetzter Diagnosegeräte, Firmware-Analysen und Schnittstellen gemäß MDR (Medical Device Regulation).", en: "Security audits of connected diagnostic devices, firmware binaries, and interfaces under EU MDR regulations." }
+        title: { de: "Mobile Device Management (MDM / Intune)", en: "Mobile Device Management (MDM / Intune)" },
+        desc: { de: "Zentrale Verwaltung und Durchsetzung von Sicherheitsrichtlinien für Laptops, Smartphones und Tablets (iOS, Android, Windows) mit Fernlöschung.", en: "Centralized policy enforcement, encryption, compliance verification, and remote wipe for mobile devices and laptops." }
+      },
+      {
+        title: { de: "KI-basierte Incident Detection & Next-Gen EDR", en: "AI-Powered Incident Detection & Next-Gen EDR" },
+        desc: { de: "Verhaltensbasierte Bedrohungserkennung mittels KI, die neuartige Ransomware und Zero-Day-Muster sekundenschnell stoppt und isoliert.", en: "Machine-learning driven anomaly detection that identifies and instantly isolates ransomware execution and covert lateral movement." }
+      },
+      {
+        title: { de: "Incident Response & 24/7 Notfalleinsatz", en: "Incident Response & 24/7 Emergency Dispatch" },
+        desc: { de: "Schnelle Vor-Ort-Eindämmung bei akuten Angriffen in Thüringen, forensische Beweissicherung und Unterstützung bei behördlichen Meldungen.", en: "Rapid containment of active cyber attacks in Thuringia, court-admissible forensic triage, and regulator compliance reporting." }
       }
     ],
-    standards: ["OWASP SAMM", "BSIMM", "IEC 62304 / IEC 81001-5-1", "CWE/SANS Top 25"],
+    standards: ["NIST SP 800-61", "MITRE D3FEND / ATT&CK", "BSI IT-Grundschutz (DER.1)", "NIS-2 Art. 21 Risikomaßnahmen"],
     deliverable: {
-      de: "Entwicklerfreundlicher Fehlerbericht mit exakten Code-Zeilen, reproduzierbaren Exploits und konkreten Code-Fixes.",
-      en: "Developer-centric bug report with line-level references, reproducible exploit triggers, and verified patch code."
+      de: "24/7 Alarmierungsmatrix, monatliche Sicherheits- und Telemetrieberichte, lückenlose Audit-Logs und garantierte Incident-Reaktionszeiten.",
+      en: "24/7 alerting escalation matrices, monthly telemetry executive briefs, audit-proof logging trails, and verified incident SLAs."
     }
   }
 ];
@@ -428,7 +440,7 @@ Unser Incident Response Team bei EminSecurity hat die technischen Indikatoren (I
 
 ### Erkenntnisse für Thüringer Kommunen, Stadtwerke und Mittelständler
 
-Der Berliner Vorfall zeigt schonungslos die Schwachstellen auf, die wir auch bei vielen Einrichtungen in Jena, Erfurt oder Gera im Rahmen unserer Pentests antreffen:
+Der Berliner Vorfall zeigt schonungslos die Schwachstellen auf, die wir auch bei vielen Einrichtungen in Jena, Erfurt oder Gera im Rahmen unserer Sicherheits- und Infrastruktur-Audits antreffen:
 - **Vertrauen in externe Dienstleister ohne Zero-Trust:** Fernwartungszugänge müssen auf Just-in-Time (JIT) Basis freigegeben und jede Aktion per Session-Recording überwacht werden.
 - **Fehlende Mikrosegmentierung:** Fachanwendungen und Verwaltungsnetze dürfen nicht im selben logischen Subnetz wie Standard-Arbeitsplatz-PCs liegen.
 - **Unzureichendes Log-Management:** Ohne ein aktives SOC dauerte die Erkennung der ersten verdächtigen Token-Nutzung in Berlin über 18 Tage.
@@ -552,8 +564,8 @@ export const locationsData = [
     city: "Jena",
     slug: "jena",
     title: {
-      de: "Cyber Security & Pentesting Jena",
-      en: "Cyber Security & Pentesting Jena"
+      de: "IT-Systemhaus & Cyber Security Jena",
+      en: "IT Systems Integrator & Security Jena"
     },
     focusArea: {
       de: "High-Tech Industrie, Optik, Photonik, Universitätsklinikum Jena (UKJ) Zulieferer & Startups",
@@ -562,8 +574,8 @@ export const locationsData = [
     address: "Carl-Zeiss-Promenade 10, 07745 Jena",
     phone: "+49 152 33513651",
     description: {
-      de: "Jena ist das Herz der mitteldeutschen High-Tech-Industrie. Weltmarktführer in Optik und Präzisionsfertigung sowie innovative Medizintechnik-Unternehmen vertrauen auf unsere Penetrationstests und 24/7 Abwehrsysteme. Unser Einsatzteam ist auf direktem Weg schnell bei Ihnen vor Ort.",
-      en: "Jena is the innovation engine of Central Germany. Global photonics pioneers and medical device manufacturers rely on EminSecurity for offensive security testing and 24/7 incident response with direct regional on-site presence."
+      de: "Jena ist das Herz der mitteldeutschen High-Tech-Industrie. Weltmarktführer in Optik und Präzisionsfertigung sowie innovative Medizintechnik-Unternehmen vertrauen auf unsere Systemintegration, Cloud-Lösungen und 24/7 Abwehrsysteme. Unser Einsatzteam ist auf direktem Weg schnell bei Ihnen vor Ort.",
+      en: "Jena is the innovation engine of Central Germany. Global photonics pioneers and medical device manufacturers rely on EminSecurity for IT systems integration, cloud infrastructure, and 24/7 security monitoring with direct regional on-site presence."
     },
     regionalHighlights: [
       { de: "Vor-Ort Incident Response in Thüringen", en: "Direct on-site incident response across Thuringia" },

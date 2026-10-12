@@ -18,13 +18,13 @@ export default function AboutUsPage() {
         </span>
         <h1>
           {lang === 'de'
-            ? 'EminSecurity: Cyber-Sicherheit aus Überzeugung'
-            : 'EminSecurity: Cyber Defense by Engineering Conviction'}
+            ? 'EminSecurity: Ihr Security-First IT-Systemhaus'
+            : 'EminSecurity: Security-First IT Systems Integrator'}
         </h1>
         <p className="lead" style={{ marginBottom: '2.5rem' }}>
           {lang === 'de'
-            ? 'Wir haben EminSecurity mit einer klaren Vision gegründet: Mittelständische Unternehmen, Kliniken und Arztpraxen in Thüringen und Mitteldeutschland vor existenzbedrohenden Cyber-Angriffen zu schützen. Ohne leere Marketingversprechen, sondern mit der handwerklichen Präzision von echten Hackern und Verteidigern.'
-            : 'We founded EminSecurity with a resolute mission: shielding critical regional enterprises and medical institutions against existential cyber threats with deep offensive technical mastery.'}
+            ? 'Wir haben EminSecurity mit einer klaren Vision gegründet: Mittelständische Unternehmen, Kliniken und Kanzleien in Thüringen mit stabiler IT-Infrastruktur, modernen Cloud-Arbeitsplätzen und lückenloser Sicherheitsüberwachung (SIEM, IDS/IPS, MDM, KI) zu unterstützen. Ohne leere Versprechen, sondern mit handwerklichem Sachverstand.'
+            : 'We founded EminSecurity with a resolute mission: empowering regional enterprises, clinics, and law firms with robust IT systems integration, modern cloud workplaces, and continuous security surveillance (SIEM, IDS/IPS, MDM, AI).'}
         </p>
 
         {/* 3 Principles */}
@@ -35,7 +35,7 @@ export default function AboutUsPage() {
               <h3 style={{ margin: 0, fontSize: '1.15rem' }}>Keine Verkäufer, nur Engineers</h3>
             </div>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-              Bei uns sprechen Sie ab der ersten Minute mit erfahrenen Penetration Testern oder Incident Respondern, die Ihre Infrastruktur technisch verstehen und sofort fundierte Antworten geben.
+              Bei uns sprechen Sie ab der ersten Minute mit erfahrenen Systemingenieuren und Security-Architekten, die Ihre IT-Infrastruktur verstehen und sofort fundierte Antworten geben.
             </p>
           </div>
 
@@ -45,17 +45,17 @@ export default function AboutUsPage() {
               <h3 style={{ margin: 0, fontSize: '1.15rem' }}>Pragmatismus statt Panikmache</h3>
             </div>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-              Wir nutzen keine Schreckensszenarien, um unnötige Software zu verkaufen. Wir priorisieren Maßnahmen nach tatsächlichem Schadenspotenzial und Ihrem realistischen Budget.
+              Wir nutzen keine Schreckensszenarien, um unnötige Software zu verkaufen. Wir priorisieren Maßnahmen nach tatsächlichem Nutzen, Stabilität und Ihrem realistischen Budget.
             </p>
           </div>
 
           <div className="cyber-card">
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.75rem' }}>
               <Eye size={22} color="#38bdf8" />
-              <h3 style={{ margin: 0, fontSize: '1.15rem' }}>Offensive Perspektive</h3>
+              <h3 style={{ margin: 0, fontSize: '1.15rem' }}>Security-First Prinzip</h3>
             </div>
             <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-              Nur wer weiß, wie Angreifer Netzwerke infiltrieren und EDR-Systeme austricksen, kann eine wirksame Verteidigung und belastbare Sicherheitsarchitektur aufbauen.
+              Wir bauen und verwalten IT-Infrastrukturen so, dass sie von Tag 1 an resilient gegen Ransomware und Ausfälle sind – geschützt durch permanente SIEM- und Netzwerküberwachung.
             </p>
           </div>
         </div>

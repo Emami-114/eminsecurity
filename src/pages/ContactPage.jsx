@@ -32,7 +32,7 @@ export default function ContactPage() {
     company: '',
     email: '',
     phone: '',
-    serviceType: isEmergencyParam ? 'incident' : 'pentest',
+    serviceType: isEmergencyParam ? 'incident' : 'systemintegration',
     location: prefillLocation || 'Jena',
     urgency: isEmergencyParam ? 'critical' : 'normal',
     message: prefillSubject ? `Anfrage bzgl. ${prefillSubject}` : '',
@@ -59,7 +59,7 @@ export default function ContactPage() {
     setFormData((prev) => ({
       ...prev,
       urgency: newUrgency,
-      serviceType: newUrgency === 'critical' && prev.serviceType === 'pentest' ? 'incident' : prev.serviceType
+      serviceType: newUrgency === 'critical' && prev.serviceType === 'systemintegration' ? 'incident' : prev.serviceType
     }));
   };
 
@@ -376,7 +376,7 @@ export default function ContactPage() {
                         company: '',
                         email: '',
                         phone: '',
-                        serviceType: 'pentest',
+                        serviceType: 'systemintegration',
                         location: 'Jena',
                         urgency: 'normal',
                         message: '',
@@ -540,7 +540,7 @@ export default function ContactPage() {
                 <div className="grid-2" style={{ gap: '1.25rem' }}>
                   <div className="form-group">
                     <label className="form-label" htmlFor="contact-service">
-                      {lang === 'de' ? 'Gewünschte Sicherheitsleistung' : 'Required Capability'}
+                      {lang === 'de' ? 'Gewünschte IT-Systemhaus &amp; Security Leistung' : 'Required Capability'}
                     </label>
                     <select 
                       id="contact-service"
@@ -549,13 +549,13 @@ export default function ContactPage() {
                       value={formData.serviceType}
                       onChange={(e) => setFormData({ ...formData, serviceType: e.target.value })}
                     >
-                      <option value="incident">{lang === 'de' ? '🚨 Notfall Incident Response / Forensik' : '🚨 Emergency Incident Response'}</option>
-                      <option value="pentest">{lang === 'de' ? '🛡️ Penetration Testing & Schwachstellenanalyse' : '🛡️ Penetration Testing & Audits'}</option>
-                      <option value="soc">{lang === 'de' ? '👁️ 24/7 SOC & Blue Teaming' : '👁️ 24/7 SOC & Blue Teaming'}</option>
+                      <option value="systemintegration">{lang === 'de' ? '⚙️ Systemintegration &amp; IT-Administration' : '⚙️ System Integration &amp; IT Administration'}</option>
+                      <option value="cloud">{lang === 'de' ? '☁️ Cloud-Dienste &amp; Microsoft 365' : '☁️ Cloud Services &amp; Microsoft 365'}</option>
+                      <option value="software">{lang === 'de' ? '💻 Individuelle Softwareentwicklung &amp; APIs' : '💻 Custom Software &amp; APIs'}</option>
+                      <option value="voip">{lang === 'de' ? '📞 Kommunikation &amp; VoIP-Telefonie' : '📞 Business Communication &amp; VoIP'}</option>
+                      <option value="security-monitoring">{lang === 'de' ? '🛡️ Security &amp; Überwachung (SIEM, IDS/IPS, MDM, KI)' : '🛡️ Security &amp; Monitoring (SIEM, IDS, MDM, AI)'}</option>
                       <option value="nis2">{lang === 'de' ? '📋 NIS-2 / ISO 27001 Compliance' : '📋 NIS-2 / ISO 27001 Compliance'}</option>
-                      <option value="it-admin">{lang === 'de' ? '⚙️ IT-Administration & Systemhärtung' : '⚙️ IT Administration & Hardening'}</option>
-                      <option value="awareness">{lang === 'de' ? '🎓 Awareness & Phishing-Schulung' : '🎓 Awareness & Phishing Training'}</option>
-                      <option value="software">{lang === 'de' ? '💻 Software Security & Code Audit' : '💻 Software Security & Code Audit'}</option>
+                      <option value="incident">{lang === 'de' ? '🚨 Notfall Incident Response / Akuter Vorfall' : '🚨 Emergency Incident Response'}</option>
                     </select>
                   </div>
 

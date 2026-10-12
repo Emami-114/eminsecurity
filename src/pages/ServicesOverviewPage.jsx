@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Terminal, Server, Users, Code2, ArrowRight } from 'lucide-react';
+import { Server, Cloud, Code2, PhoneCall, ShieldCheck, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { servicesData } from '../data/translations';
 
@@ -8,11 +8,11 @@ export default function ServicesOverviewPage() {
   const { lang } = useLanguage();
 
   const serviceIcons = {
-    'offensive-security': <Terminal size={26} color="var(--accent-blue)" />,
-    'defensive-security': <Shield size={26} color="var(--accent-emerald)" />,
-    'it-administration': <Server size={26} color="var(--accent-cyan)" />,
-    'awareness-training': <Users size={26} color="var(--accent-amber)" />,
-    'software-testing': <Code2 size={26} color="#7c3aed" />
+    'systemintegration': <Server size={26} color="var(--accent-blue)" />,
+    'cloud-services': <Cloud size={26} color="var(--accent-cyan)" />,
+    'softwareentwicklung': <Code2 size={26} color="#7c3aed" />,
+    'voip-telefonie': <PhoneCall size={26} color="var(--accent-amber)" />,
+    'security-ueberwachung': <ShieldCheck size={26} color="var(--accent-emerald)" />
   };
 
   return (
@@ -26,17 +26,17 @@ export default function ServicesOverviewPage() {
         {/* Header */}
         <div style={{ maxWidth: '880px', marginBottom: '3.5rem' }}>
           <span className="tech-badge blue" style={{ marginBottom: '0.75rem' }}>
-            ENGINEERING CAPABILITIES // END-TO-END
+            IT-SYSTEMHAUS &amp; MANAGED SERVICES // LEISTUNGSSPEKTRUM
           </span>
           <h1>
             {lang === 'de'
-              ? 'Ganzheitliche Sicherheitsleistungen von Offensive bis Defensive'
-              : 'Holistic Cyber Defense: From Offensive Exploits to 24/7 Shielding'}
+              ? 'Ganzheitliche IT-Systemhaus & Security Leistungen'
+              : 'End-to-End IT Systems & Security Capabilities'}
           </h1>
           <p className="lead">
             {lang === 'de'
-              ? 'Wir bieten keine Standard-Softwarepakete von der Stange, sondern maßgeschneiderte Sicherheitsarchitekturen und fundierte technische Überprüfungen nach BSI- und OWASP-Standards.'
-              : 'No generic software bundles: we deliver rigorous technical audits, hardened system integration, and tailored cyber defense architectures.'}
+              ? 'Von stabiler Systemintegration, flexiblen Cloud-Diensten und moderner VoIP-Telefonie bis hin zu individueller Softwareentwicklung und lückenloser Sicherheitsüberwachung mit SIEM, IDS/IPS, MDM und KI-gestützter Erkennung.'
+              : 'From reliable systems integration, cloud solutions, and VoIP to custom software engineering and proactive surveillance with SIEM, IDS/IPS, MDM, and AI-driven telemetry.'}
           </p>
         </div>
 
@@ -137,28 +137,28 @@ export default function ServicesOverviewPage() {
             UNSER VORGEHENSMODELL // METHODOLOGY
           </span>
           <h2 style={{ fontSize: '1.6rem', marginBottom: '1rem', color: 'var(--text-main)' }}>
-            {lang === 'de' ? 'Strukturierter 4-Phasen-Prozess' : 'Structured 4-Phase Security Lifecycle'}
+            {lang === 'de' ? 'Strukturierter 4-Phasen-Prozess für Ihre IT' : 'Structured 4-Phase IT Implementation Lifecycle'}
           </h2>
           <div className="grid-4" style={{ marginTop: '1.5rem' }}>
             <div style={{ padding: '1.25rem', borderLeft: '3px solid var(--accent-blue)', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
               <div style={{ fontFamily: 'var(--font-mono)', color: 'var(--accent-blue)', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 1</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Scoping &amp; Recon</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Definition des Prüfrahmens (Rules of Engagement), Asset-Identifikation und OSINT-Aufklärung.</p>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Analyse &amp; Audit</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Genaue Bestandsaufnahme Ihrer bestehenden IT-Systeme, Identifikation von Flaschenhälsen und Sicherheitsrisiken.</p>
             </div>
             <div style={{ padding: '1.25rem', borderLeft: '3px solid #0284c7', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
               <div style={{ fontFamily: 'var(--font-mono)', color: '#0284c7', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 2</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Deep Inspection</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Manuelle Schwachstellenanalyse, Ausnutzung (Exploitation), Privilegieneskalation und Lateral Movement.</p>
-            </div>
-            <div style={{ padding: '1.25rem', borderLeft: '3px solid #10b981', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#059669', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 3</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Report &amp; Debrief</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Technischer Nachweis mit CVSS-Scoring, Executive Summary und Vor-Ort-Präsentation mit der Geschäftsführung.</p>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Konzeption &amp; Design</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Maßgeschneiderte Architektur für Netzwerke, Cloud-Workplaces, VoIP-Telefonie und Sicherheitsüberwachung.</p>
             </div>
             <div style={{ padding: '1.25rem', borderLeft: '3px solid #7c3aed', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
-              <div style={{ fontFamily: 'var(--font-mono)', color: '#7c3aed', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 4</div>
-              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Remediation &amp; Retest</h3>
-              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Unterstützung bei der Schließung der Sicherheitslücken und kostenloser Retest zur Validierung der Fixes.</p>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#7c3aed', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 3</div>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Rollout &amp; Migration</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Reibungslose Umsetzung im laufenden Betrieb ohne Ausfallzeiten, saubere Datenübernahme und Mitarbeitereinweisung.</p>
+            </div>
+            <div style={{ padding: '1.25rem', borderLeft: '3px solid #10b981', backgroundColor: '#ffffff', border: '1px solid var(--border-subtle)', borderLeftWidth: '3px', borderRadius: 'var(--radius-sm)' }}>
+              <div style={{ fontFamily: 'var(--font-mono)', color: '#059669', fontSize: '0.85rem', fontWeight: 600 }}>PHASE 4</div>
+              <h3 style={{ fontSize: '1.05rem', margin: '0.35rem 0', color: 'var(--text-main)' }}>Managed Care &amp; SIEM</h3>
+              <p style={{ fontSize: '0.85rem', margin: 0, color: 'var(--text-muted)', lineHeight: 1.5 }}>Laufende Wartung, 24/7 SIEM &amp; Incident Detection, proaktives Patchmanagement und Vor-Ort-Support in Thüringen.</p>
             </div>
           </div>
         </div>
