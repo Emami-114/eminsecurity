@@ -21,7 +21,7 @@ export default function EmergencyBanner() {
         flexWrap: 'wrap',
         gap: '0.75rem'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '0.6rem' }}>
           <span className="pulse-indicator crimson" />
           <span style={{
             color: '#ef4444',

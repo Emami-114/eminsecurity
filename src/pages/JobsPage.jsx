@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Briefcase, Info, Mail, Key, Terminal, Shield, ArrowRight } from 'lucide-react';
+import { Briefcase, Info, Mail, Key, Terminal, Shield, ArrowRight, Server } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function JobsPage() {

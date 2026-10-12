@@ -423,17 +423,20 @@ export default function ContactPage() {
 
                   {/* Urgency selector pills */}
                   <div style={{ 
-                    display: 'inline-flex', 
+                    display: 'flex',
+                    flexWrap: 'wrap', 
                     padding: '4px', 
                     backgroundColor: 'var(--bg-subtle)', 
                     borderRadius: 'var(--radius-pill)',
-                    border: '1px solid var(--border-subtle)'
+                    border: '1px solid var(--border-subtle)',
+                    gap: '4px',
+                    maxWidth: '100%'
                   }}>
                     <button
                       type="button"
                       onClick={() => handleUrgencyChange('normal')}
                       style={{
-                        padding: '0.45rem 1rem',
+                        padding: '0.5rem 0.95rem',
                         fontSize: '0.85rem',
                         fontWeight: 600,
                         border: 'none',
@@ -441,7 +444,8 @@ export default function ContactPage() {
                         cursor: 'pointer',
                         transition: 'all 0.15s ease',
                         backgroundColor: formData.urgency === 'normal' ? 'var(--accent-blue)' : 'transparent',
-                        color: formData.urgency === 'normal' ? '#ffffff' : 'var(--text-muted)'
+                        color: formData.urgency === 'normal' ? '#ffffff' : 'var(--text-muted)',
+                        flex: '1 1 auto'
                       }}
                     >
                       🛡️ {lang === 'de' ? 'Reguläre Beratung' : 'Standard Inquiry'}
@@ -450,7 +454,7 @@ export default function ContactPage() {
                       type="button"
                       onClick={() => handleUrgencyChange('critical')}
                       style={{
-                        padding: '0.45rem 1rem',
+                        padding: '0.5rem 0.95rem',
                         fontSize: '0.85rem',
                         fontWeight: 600,
                         border: 'none',
@@ -458,7 +462,8 @@ export default function ContactPage() {
                         cursor: 'pointer',
                         transition: 'all 0.15s ease',
                         backgroundColor: formData.urgency === 'critical' ? 'var(--accent-crimson)' : 'transparent',
-                        color: formData.urgency === 'critical' ? '#ffffff' : 'var(--text-muted)'
+                        color: formData.urgency === 'critical' ? '#ffffff' : 'var(--text-muted)',
+                        flex: '1 1 auto'
                       }}
                     >
                       🚨 {lang === 'de' ? 'Akuter Notfall' : 'Acute Incident'}

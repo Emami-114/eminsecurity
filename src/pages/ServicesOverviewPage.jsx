@@ -47,7 +47,7 @@ export default function ServicesOverviewPage() {
               key={svc.id} 
               id={svc.id}
               className="cyber-card" 
-              style={{ padding: '2.5rem' }}
+              style={{ padding: 'clamp(1.25rem, 3.5vw, 2.5rem)' }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>

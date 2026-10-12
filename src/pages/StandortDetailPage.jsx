@@ -27,18 +27,18 @@ export default function StandortDetailPage() {
           backgroundColor: 'var(--bg-surface)',
           border: '1px solid var(--border-subtle)',
           borderRadius: 'var(--radius-md)',
-          padding: '2.5rem',
+          padding: 'clamp(1.25rem, 3.5vw, 2.5rem)',
           marginBottom: '3rem',
           boxShadow: 'var(--shadow-sm)',
           position: 'relative'
         }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1.5rem', marginBottom: '1.5rem' }}>
-            <div style={{ flex: '1 1 520px' }}>
+            <div style={{ flex: '1 1 280px', minWidth: 0 }}>
               <span className="tech-badge emerald" style={{ marginBottom: '0.85rem' }}>
                 <Clock size={13} />
                 {lang === 'de' ? 'VOR-ORT EINSATZBEREITSCHAFT: DIREKT & PERSÖNLICH' : 'ON-SITE READINESS: DIRECT & RAPID'}
               </span>
-              <h1 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.6rem)', margin: '0.5rem 0', color: 'var(--text-main)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
+              <h1 style={{ fontSize: 'clamp(1.75rem, 3.5vw, 2.6rem)', margin: '0.5rem 0', color: 'var(--text-main)', letterSpacing: '-0.02em', lineHeight: 1.2 }}>
                 {loc.title[lang]}
               </h1>
               <div style={{ fontSize: '1.05rem', color: 'var(--accent-blue)', fontFamily: 'var(--font-mono)', fontWeight: 600 }}>
@@ -51,7 +51,8 @@ export default function StandortDetailPage() {
               border: '1px solid var(--border-subtle)',
               padding: '1.25rem 1.5rem',
               borderRadius: 'var(--radius-sm)',
-              minWidth: '270px'
+              flex: '1 1 240px',
+              maxWidth: '100%'
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--text-faint)', fontSize: '0.78rem', marginBottom: '0.4rem', fontFamily: 'var(--font-mono)' }}>
                 <MapPin size={14} color="var(--accent-blue)" />

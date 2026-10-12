@@ -99,7 +99,7 @@ export default function Nis2QuickCheck() {
       {/* Checkbox controls */}
       <div style={{
         backgroundColor: 'var(--bg-subtle)',
-        padding: '1.25rem',
+        padding: 'clamp(1rem, 2.5vw, 1.25rem)',
         borderRadius: 'var(--radius-sm)',
         border: '1px solid var(--border-subtle)',
         marginBottom: '1.5rem'
@@ -108,20 +108,20 @@ export default function Nis2QuickCheck() {
           {lang === 'de' ? '3. BEREITS IMPLEMENTIERTE SICHERHEITSMASSNAHMEN:' : '3. CURRENTLY IMPLEMENTED CONTROLS:'}
         </div>
         <div className="grid-2" style={{ gap: '0.85rem' }}>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
-            <input type="checkbox" checked={mfa} onChange={(e) => setMfa(e.target.checked)} style={{ accentColor: '#0062ff' }} />
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={mfa} onChange={(e) => setMfa(e.target.checked)} style={{ accentColor: '#0062ff', marginTop: '0.2rem', flexShrink: 0 }} />
             <span>MFA für alle Benutzer &amp; VPN</span>
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
-            <input type="checkbox" checked={immutableBackup} onChange={(e) => setImmutableBackup(e.target.checked)} style={{ accentColor: '#0062ff' }} />
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={immutableBackup} onChange={(e) => setImmutableBackup(e.target.checked)} style={{ accentColor: '#0062ff', marginTop: '0.2rem', flexShrink: 0 }} />
             <span>Unveränderliche Backups (WORM / Airgap)</span>
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
-            <input type="checkbox" checked={incidentPlan} onChange={(e) => setIncidentPlan(e.target.checked)} style={{ accentColor: '#0062ff' }} />
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={incidentPlan} onChange={(e) => setIncidentPlan(e.target.checked)} style={{ accentColor: '#0062ff', marginTop: '0.2rem', flexShrink: 0 }} />
             <span>24h-Meldeplan &amp; Incident Runbook</span>
           </label>
-          <label style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
-            <input type="checkbox" checked={monitoringActive} onChange={(e) => setMonitoringActive(e.target.checked)} style={{ accentColor: '#0062ff' }} />
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: '0.6rem', cursor: 'pointer', fontSize: '0.9rem', color: '#1e293b' }}>
+            <input type="checkbox" checked={monitoringActive} onChange={(e) => setMonitoringActive(e.target.checked)} style={{ accentColor: '#0062ff', marginTop: '0.2rem', flexShrink: 0 }} />
             <span>Aktives SIEM / IDS Monitoring &amp; Schwachstellen-Audits</span>
           </label>
         </div>
@@ -132,15 +132,15 @@ export default function Nis2QuickCheck() {
         backgroundColor: '#f8fafc',
         border: '1px solid var(--border-subtle)',
         borderRadius: 'var(--radius-sm)',
-        padding: '1.25rem 1.5rem',
+        padding: 'clamp(1rem, 2.5vw, 1.5rem)',
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
         justifyContent: 'space-between',
-        gap: '1.5rem'
+        gap: '1.25rem'
       }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem' }}>
+        <div style={{ flex: '1 1 260px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.35rem', flexWrap: 'wrap' }}>
             <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-muted)' }}>
               {lang === 'de' ? 'NIS-2 BETROFFENHEIT:' : 'NIS-2 SCOPE:'}
             </span>
@@ -166,6 +166,7 @@ export default function Nis2QuickCheck() {
         <Link
           to={`/kontakt?subject=NIS-2%20Audit%20Anfrage%20(Score:%20${score}%)`}
           className="btn btn-primary btn-sm"
+          style={{ width: '100%', maxWidth: '380px', justifyContent: 'center' }}
         >
           {lang === 'de' ? 'Kostenfreien NIS-2 Initial-Audit anfragen' : 'Request NIS-2 Initial Audit'}
           <ArrowRight size={14} />

@@ -368,11 +368,19 @@ export default function Footer() {
         @media (max-width: 992px) {
           .footer-links-grid {
             grid-template-columns: repeat(3, 1fr) !important;
+            gap: 2rem !important;
           }
         }
         @media (max-width: 640px) {
           .footer-links-grid {
             grid-template-columns: 1fr 1fr !important;
+            gap: 1.5rem !important;
+          }
+        }
+        @media (max-width: 440px) {
+          .footer-links-grid {
+            grid-template-columns: 1fr !important;
+            gap: 1.75rem !important;
           }
         }
       `}</style>

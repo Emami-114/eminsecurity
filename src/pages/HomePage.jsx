@@ -90,11 +90,10 @@ export default function HomePage() {
               <h1 style={{
                 marginBottom: '1.25rem',
                 color: '#ffffff',
-                fontSize: 'clamp(2.1rem, 3.8vw, 3.4rem)',
+                fontSize: 'clamp(1.8rem, 4vw + 0.4rem, 3.4rem)',
                 lineHeight: 1.2,
                 fontWeight: 700,
-                letterSpacing: '-0.025em',
-                minHeight: '2.4em'
+                letterSpacing: '-0.025em'
               }}>
                 {lang === 'de' ? 'Ihr Security-First IT-Systemhaus für ' : 'Your Security-First IT Systems Integrator for '}
                 <br />
@@ -136,19 +135,22 @@ export default function HomePage() {
               </div>
 
               {/* Hero CTAs */}
-              <div style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                alignItems: 'center',
-                gap: '1rem',
-                marginBottom: '1.75rem'
-              }}>
+              <div
+                className="hero-cta-group"
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  alignItems: 'center',
+                  gap: '1rem',
+                  marginBottom: '1.75rem'
+                }}
+              >
                 <Link
                   to="/contact"
                   className="btn btn-primary"
                   style={{
-                    padding: '0.9rem 1.95rem',
-                    fontSize: '1.02rem',
+                    padding: '0.85rem 1.85rem',
+                    fontSize: '1rem',
                     boxShadow: '0 4px 20px rgba(0, 98, 255, 0.45)'
                   }}
                 >
@@ -159,8 +161,8 @@ export default function HomePage() {
                   to="/services"
                   className="btn btn-glass-hero"
                   style={{
-                    padding: '0.9rem 1.95rem',
-                    fontSize: '1.02rem'
+                    padding: '0.85rem 1.85rem',
+                    fontSize: '1rem'
                   }}
                 >
                   {lang === 'de' ? 'Leistungsübersicht' : 'Explore Capabilities'}
@@ -269,7 +271,7 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <div className="dashboard-tabs" style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
                   <button
                     onClick={() => setActiveTab('systemhaus')}
                     className={`btn btn-sm ${activeTab === 'systemhaus' ? 'btn-primary' : 'btn-glass-hero'}`}
@@ -295,7 +297,7 @@ export default function HomePage() {
               </div>
 
               {/* Dashboard Content Panel */}
-              <div style={{ padding: '2.25rem 2.5rem', backgroundColor: 'rgba(8, 13, 24, 0.75)' }}>
+              <div className="dashboard-panel" style={{ padding: 'clamp(1.25rem, 3vw, 2.5rem)', backgroundColor: 'rgba(8, 13, 24, 0.75)' }}>
                 {activeTab === 'systemhaus' && (
                   <div className="grid-3" style={{ gap: '1.75rem' }}>
                     <div>
@@ -792,7 +794,7 @@ export default function HomePage() {
               : 'Schedule a confidential security assessment with our senior defense engineers across Thuringia.'}
           </p>
 
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <div className="hero-cta-group" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
             <Link to="/contact" className="btn btn-primary" style={{ padding: '0.85rem 1.85rem' }}>
               {lang === 'de' ? 'Sicherheitsaudit unverbindlich anfragen' : 'Request Security Audit'}
               <ArrowRight size={16} />
