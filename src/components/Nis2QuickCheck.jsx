@@ -23,7 +23,7 @@ export default function Nis2QuickCheck() {
 
   return (
     <div className="cyber-card" style={{
-      backgroundColor: '#ffffff',
+      backgroundColor: 'var(--bg-surface)',
       border: '1px solid var(--border-subtle)',
       boxShadow: 'var(--shadow-md)'
     }}>

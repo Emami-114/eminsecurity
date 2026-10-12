@@ -403,7 +403,7 @@ export default function HomePage() {
       <section style={{
         paddingTop: '3rem',
         paddingBottom: '3rem',
-        backgroundColor: '#f8fafc',
+        backgroundColor: 'var(--bg-subtle)',
         borderBottom: '1px solid var(--border-subtle)'
       }}>
         <div className="container">
@@ -450,7 +450,7 @@ export default function HomePage() {
       {/* =========================================================================
           CORE CAPABILITIES (LEISTUNGEN)
          ========================================================================= */}
-      <section className="section-spacing" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--border-subtle)' }}>
+      <section className="section-spacing" style={{ backgroundColor: 'var(--bg-canvas)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1rem', marginBottom: '3rem' }}>
             <div>
@@ -535,7 +535,7 @@ export default function HomePage() {
           REGIONAL THÜRINGEN HUBS
           Jena, Erfurt, Weimar, Gera, Hermsdorf
          ========================================================================= */}
-      <section className="section-spacing" style={{ backgroundColor: '#f8fafc', borderBottom: '1px solid var(--border-subtle)' }}>
+      <section className="section-spacing" style={{ backgroundColor: 'var(--bg-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div style={{ maxWidth: '820px', marginBottom: '3rem' }}>
             <span className="tech-badge blue" style={{ marginBottom: '0.6rem' }}>
@@ -581,7 +581,7 @@ export default function HomePage() {
           </div>
 
           <div style={{
-            backgroundColor: '#ffffff',
+            backgroundColor: 'var(--bg-surface)',
             border: '1px solid var(--border-subtle)',
             padding: '1.5rem',
             borderRadius: 'var(--radius-md)',
@@ -608,7 +608,7 @@ export default function HomePage() {
       {/* =========================================================================
           INTERACTIVE NIS-2 QUICK CHECK TOOL
          ========================================================================= */}
-      <section className="section-spacing" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--border-subtle)' }}>
+      <section className="section-spacing" style={{ backgroundColor: 'var(--bg-canvas)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div style={{ maxWidth: '820px', marginBottom: '2.5rem' }}>
             <span className="tech-badge amber" style={{ marginBottom: '0.6rem' }}>
@@ -626,7 +626,7 @@ export default function HomePage() {
           THREAT INTELLIGENCE & MAGAZINE
           Featuring Stadt Berlin Hack Sept 2026
          ========================================================================= */}
-      <section className="section-spacing" style={{ backgroundColor: '#f8fafc', borderBottom: '1px solid var(--border-subtle)' }}>
+      <section className="section-spacing" style={{ backgroundColor: 'var(--bg-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '1rem', marginBottom: '3rem' }}>
             <div>
@@ -688,9 +688,9 @@ export default function HomePage() {
       </section>
 
       {/* =========================================================================
-          TARGET SECTORS (BRAN格外XPERTISE)
+          TARGET SECTORS (BRANCHENEXPERTISE)
          ========================================================================= */}
-      <section className="section-spacing" style={{ backgroundColor: '#ffffff', borderBottom: '1px solid var(--border-subtle)' }}>
+      <section className="section-spacing" style={{ backgroundColor: 'var(--bg-canvas)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div style={{ maxWidth: '820px', marginBottom: '3rem' }}>
             <span className="tech-badge blue" style={{ marginBottom: '0.6rem' }}>
